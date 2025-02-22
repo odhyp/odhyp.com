@@ -60,13 +60,15 @@ I use Notion to keep my projects organized, housing documentation, tasks, and ro
 Outside of coding, you can find me here:
 
 - Writing tech-related articles on my [blog], where I share tips, notes, and ideas.
-- Slaying Elder Dragons in [Monster Hunter: World].
-- Listening to [alternative rock].
+- Slaying Elder Dragons in [Monster Hunter: World] via [Steam].
+- Listening to [alternative rock] via [Spotify].
 - Hanging out with my wife and [two cats].
 
 [blog]: /blog
 [Monster Hunter: World]: https://www.monsterhunter.com/world/
+[Steam]: https://steamcommunity.com/valgtreiz
 [alternative rock]: https://open.spotify.com/playlist/37i9dQZF1DX9GRpeH4CL0S
+[Spotify]: https://open.spotify.com/user/oz_dhy
 [two cats]: https://www.instagram.com/tuna_thekitty/
 
 ## Contact
@@ -78,8 +80,6 @@ I'm currently focused on other projects, but I'm always happy to expand my netwo
 {{< icon name="github" title="GitHub" url="https://github.com/odhyp/" >}}
 {{< icon name="x" title="X" url="https://x.com/valgtreiz" >}}
 {{< icon name="instagram" title="Instagram" url="https://www.instagram.com/odhypradhana" >}}
-{{< icon name="steam" title="Steam" url="https://steamcommunity.com/valgtreiz" >}}
-{{< icon name="spotify" title="Spotify" url="https://open.spotify.com/user/oz_dhy" >}}
 {{< /wrapper >}}
 
 ## Questions or Feedback?
