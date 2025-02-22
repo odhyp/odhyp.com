@@ -55,6 +55,20 @@ For front-end development, I mainly use Hugo and JavaScript for building fast, c
 
 I use Notion to keep my projects organized, housing documentation, tasks, and roadmaps. These tools form the backbone of my development process, enabling me to deliver efficient, scalable, and interactive solutions across a variety of projects.
 
+## Work Experience
+
+{{< work-experience startDate="Oct 2024" endDate="Present" title="Accountant" orgName="BPKA DIY" orgLink="https://bpka.jogjaprov.go.id/" >}}
+Prepare and create financial reports for the Special Region of Yogyakarta, ensuring accuracy and compliance with government standards.
+{{< /work-experience >}}
+
+{{< work-experience startDate="Jan 2022" endDate="Sep 2024" title="Human Resource Manager" orgName="KPPD Bantul" orgLink="https://samsat-jogjaprov.id/profilbantul.php" >}}
+Managed employee attendance, allowances, promotions, retirements, and periodic salary increases.
+{{< /work-experience >}}
+
+{{< work-experience startDate="Mar 2021" endDate="Sep 2024" title="Payroll Manager" orgName="KPPD Bantul" orgLink="https://samsat-jogjaprov.id/profilbantul.php" >}}
+Managed payroll for 40 employees, ensuring timely disbursements and streamlining processes with automation.
+{{< /work-experience >}}
+
 ## Hobby & Interests
 
 Outside of coding, you can find me here:
