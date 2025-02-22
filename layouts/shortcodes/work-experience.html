@@ -1,7 +1,7 @@
-<div class="mb-8 flex flex-col sm:grid sm:grid-cols-[1fr_2fr]">
+<div class="mb-8 flex flex-col sm:grid sm:grid-cols-[1fr_2fr] sm:gap-x-8">
   <div class="space-x-2 text-sm sm:text-base">
     <span>{{ .Get "startDate" }}</span>
-    <span>—</span>
+    <span class="opacity-75">—</span>
     <span class="<!-- {{ if eq (.Get "endDate") "Present" }}font-semibold text-emerald-400{{ end }} --></span>">{{ .Get "endDate" }}</span>
   </div>
 
