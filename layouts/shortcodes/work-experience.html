@@ -1,0 +1,16 @@
+<div class="mb-8 flex flex-col sm:grid sm:grid-cols-[1fr_2fr]">
+  <div class="space-x-2 text-sm sm:text-base">
+    <span>{{ .Get "startDate" }}</span>
+    <span>—</span>
+    <span class="<!-- {{ if eq (.Get "endDate") "Present" }}font-semibold text-emerald-400{{ end }} --></span>">{{ .Get "endDate" }}</span>
+  </div>
+
+  <div class="sm:space-y-2">
+    <div>
+      <span class="font-semibold">{{ .Get "title" }}</span>
+      <span>at</span>
+      <a href='{{ .Get "orgLink" }}'>{{ .Get "orgName" }}</a>
+    </div>
+    <p class="m-0! opacity-75">{{ .Inner }}</p>
+  </div>
+</div>
