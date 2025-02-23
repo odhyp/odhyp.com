@@ -12,5 +12,5 @@ SIPD-RI Helper is a simple command-line Python application to help with SIPD-RI 
 
 {{< wrapper class="flex w-full flex-col items-center justify-center gap-x-4 gap-y-4 sm:flex-row" >}}
 {{< cta title="View Repository" icon="github" href="https://github.com/odhyp/sipd-ri" >}}
-{{< cta title="Visit Website" icon="globe" href="https://odhyp.github.io/sipd-ri/" >}}
+{{< cta title="Visit Documentation" icon="book-solid" href="https://odhyp.github.io/sipd-ri/" >}}
 {{< /wrapper >}}
