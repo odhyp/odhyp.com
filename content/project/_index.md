@@ -3,8 +3,6 @@ title = "Projects"
 layout = "project"
 +++
 
-# Projects
-
 {{% important %}}
 I'm in the process of migrating the old projects. Thanks for your patience!
 {{% /important %}}
