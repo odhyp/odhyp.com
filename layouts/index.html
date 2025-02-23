@@ -13,7 +13,7 @@
     better, faster decisions.
   </p>
 
-  <div class="flex">
+  <div class="flex hidden">
     <a
       class="group relative flex overflow-hidden rounded-md border border-neutral-800 px-6 py-4 text-sm transition-colors ease-in-out hover:border-emerald-300 hover:bg-emerald-300/10"
       href="mailto:pradhana.odhy@gmail.com"
@@ -38,11 +38,11 @@
 <!-- INTRO END -->
 
 <!-- FEATURED PROJECTS START -->
-<section class="site-container mb-32 flex hidden flex-col gap-y-4 md:gap-y-6">
+<section class="site-container mb-32 flex flex-col gap-y-4 md:gap-y-6">
   <h2 class="text-2xl font-bold">Featured Projects</h2>
 
   <!-- FEATURED PROJECT CONTAINER -->
-  <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+  <div class="flex flex-col gap-y-6">
     {{ $featuredProjects := where (where (where .Site.Pages ".Section"
     "project") "Kind" "page") "Params.featured" true }} {{ range sort
     $featuredProjects "Date" "desc" }}

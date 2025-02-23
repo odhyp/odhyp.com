@@ -1,9 +1,53 @@
 {{ define "main" }}
-<section class="site-container mb-16 flex flex-col">
-  <article>{{ .Content }}</article>
+<section class="site-container mb-16 flex flex-col gap-y-6">
+  {{ $featuredProjects := where (where (where .Site.Pages ".Section" "project")
+  "Kind" "page") "Params.featured" true }}
 
-  <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
-    {{ range where .Site.RegularPages "Section" "project" }}
+  <!-- Featured Project Count -->
+  {{ $projectCount := len $featuredProjects }}
+
+  <article>
+    <h1 class="flex items-baseline gap-x-2">
+      Projects
+      <span class="hidden text-2xl opacity-50">({{ $projectCount }})</span>
+    </h1>
+
+    {{ .Content }}
+  </article>
+
+  <div class="flex flex-col gap-y-6 divide-y divide-neutral-800">
+    {{ range sort $featuredProjects "Date" "desc" }}
+
+    <!-- BLOG LIST START -->
+    {{- partial "component/project-list.html" . -}}
+    <!-- BLOG LIST END -->
+
+    {{ end }}
+  </div>
+</section>
+
+<section class="site-container mb-16 flex flex-col gap-y-6">
+  {{ $otherProjects := where (where (where .Site.Pages ".Section" "project")
+  "Kind" "page") "Params.featured" false }}
+
+  <!-- Other Project Count -->
+  {{ $projectCount := len $otherProjects }}
+
+  <article>
+    <h2 class="flex items-baseline gap-x-2">
+      Other Projects
+      <span class="text-xl opacity-50">({{ $projectCount }})</span>
+    </h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt maiores
+      beatae, officia eaque blanditiis, pariatur dolor, fugit rem omnis atque
+      repellat inventore? Voluptatibus quidem voluptas ut nulla quam molestias
+      nostrum?
+    </p>
+  </article>
+
+  <div class="flex flex-col gap-y-6">
+    {{ range sort $otherProjects "Date" "desc" }}
 
     <!-- BLOG LIST START -->
     {{- partial "component/project-list.html" . -}}
