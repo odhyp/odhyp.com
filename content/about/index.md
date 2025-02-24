@@ -6,7 +6,7 @@ layout = "about"
 # About
 
 {{< wrapper class="flex flex-col gap-y-8 sm:grid sm:grid-cols-[3fr_5fr] sm:gap-x-8 sm:items-center" >}}
-<img src="https://avatars.githubusercontent.com/u/78688788?v=4" alt="Odhy's Profile Picture" class="m-0!">
+<img src="https://avatars.githubusercontent.com/u/78688788?v=4" alt="Odhy's Profile Picture" class="m-0! rounded-md!">
 
 I'm Odhy, an accountant at an Indonesian government institution. My coding journey began as a way to address challenges in my daily work, and I've since become proficient in Python development, creating automation, web applications, data visualizations, and building front-end interfaces using Hugo, JavaScript, and Tailwind CSS.
 {{< /wrapper >}}
