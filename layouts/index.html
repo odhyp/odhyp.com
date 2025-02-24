@@ -55,21 +55,4 @@
 </section>
 <!-- FEATURED PROJECTS END -->
 
-<!-- RECENT BLOG START -->
-<section class="site-container mb-32 flex flex-col gap-y-4 md:gap-y-6">
-  <h2 class="text-2xl font-bold">Recent Posts</h2>
-
-  <!-- RECENT BLOG CONTAINER -->
-  <div class="flex flex-col gap-y-4">
-    {{ range first 5 (where .Site.RegularPages "Section" "blog") }}
-
-    <!-- BLOG LIST START -->
-    {{- partial "component/blog-list.html" . -}}
-    <!-- BLOG LIST END -->
-
-    {{ end }}
-  </div>
-</section>
-<!-- RECENT BLOG END -->
-
 {{ end }}
