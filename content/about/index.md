@@ -87,7 +87,7 @@ Outside of coding, you can find me here:
 
 ## Contact
 
-I'm currently focused on other projects, but I'm always happy to expand my network and connect with fellow enthusiasts. Feel free to drop me an email or connect with me on these platforms:
+Reaching out? Feel free to drop me an email or connect with me on these platforms:
 
 {{< wrapper class="flex flex-wrap gap-x-4 gap-y-1 items-center justify-start" >}}
 {{< icon name="gmail" title="Gmail" url="mailto:pradhana.odhy@gmail.com" >}}
