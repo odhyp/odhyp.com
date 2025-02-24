@@ -68,3 +68,8 @@ code::after {
 #TableOfContents ol li ol li {
   @apply m-0!;
 }
+
+/* Giscus */
+.giscus {
+  @apply rounded-lg bg-neutral-950/50;
+}
