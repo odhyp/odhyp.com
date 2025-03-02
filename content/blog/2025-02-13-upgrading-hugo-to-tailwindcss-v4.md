@@ -58,20 +58,18 @@ Error: Loading PostCSS Plugin failed: Cannot find module '@tailwindcss/oxide-lin
 Since `tailwind.config.js` is no longer used, migrate your custom styles to `styles.css` and add `@import "tailwindcss"`. Here's what it looks like now:
 
 ```js
-@import "tailwindcss";
+@import "tailwindcss"; // The new TailwindCSS import method
+
+@plugin "@tailwindcss/typography"; // Import plugins
 
 @theme {
-  // Your custom tailwind class here
-  --color-custom-100: oklch(0.99 0 0);
-  --color-custom-200: oklch(0.98 0.04 113.22);
-  --color-custom-300: oklch(0.94 0.11 115.03);
-  --color-custom-400: oklch(0.92 0.19 114.08);
-  --color-custom-500: oklch(0.84 0.18 117.33);
-  --color-custom-600: oklch(0.53 0.12 118.34);
+  --color-custom-100: oklch(0.98 0.04 113.22); // Custom TailwindCSS class
+  --color-custom-200: oklch(0.94 0.11 115.03);
+  ...
 }
 
 .example {
-  @apply text-custom-400; // Your custom styles here
+  @apply text-custom-400; // Custom styles
 }
 ```
 
@@ -96,4 +94,4 @@ If you’re interested in seeing how this site is structured, you can visit the 
 For those who are starting a new Hugo project with TailwindCSS v4, you can use the [Hugo TailwindCSS Starter Template] to quickly get up and running. This template is a clean starting point with TailwindCSS v4 already configured, so you can focus on building your content.
 
 [site repository]: https://github.com/odhyp/odhyp.com
-[Hugo TailwindCSS Starter Template]: https://github.com/odhyp/odhyp.com
+[Hugo TailwindCSS Starter Template]: https://github.com/odhyp/hugo-tailwindcss-starter
