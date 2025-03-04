@@ -4,6 +4,18 @@ Welcome to my digital workspace—where I reflect, debug, and occasionally screa
 
 Built with Hugo, JavaScript, and TailwindCSS. Deployed in Vercel.
 
+## Roadmap
+
+- [ ] Work on the taxonomy pages
+- [ ] Add dark/light theme
+- [ ] Add search feature
+- [ ] Add back-to-top button
+- [ ] Add better header (fixed top)
+- [ ] Add testimonial section in landing page
+- [ ] Add CTA for work inquiry
+- [ ] Add RSS button in header
+- [ ] Add tags button in header
+
 ## Self-reminder
 
 A quick note for my future self.
@@ -94,9 +106,9 @@ Blog page has `tags`, while Project page has `featured`, `categories`, and `cove
 
 **Key takeaways:**
 
-* **Angle brackets (`{{< >}}`)** are the default for most block shortcodes, processing content as Markdown.
-* **Percent signs (`{{% %}}`)** are used for raw HTML content *and* within shortcode definition files.
-* **Inline/self-closing** shortcodes can use either syntax (usually angle brackets for consistency).
+- **Angle brackets (`{{< >}}`)** are the default for most block shortcodes, processing content as Markdown.
+- **Percent signs (`{{% %}}`)** are used for raw HTML content *and* within shortcode definition files.
+- **Inline/self-closing** shortcodes can use either syntax (usually angle brackets for consistency).
 
 <!-- LINKS -->
 [Iconoir]: https://iconoir.com/
