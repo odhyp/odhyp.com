@@ -15,26 +15,29 @@ html {
 }
 
 html {
-  @apply scrollbar-thumb-neutral-800 scrollbar-thin scrollbar-track-neutral-900;
+  @apply scrollbar-thumb-neutral-700 scrollbar-thin scrollbar-track-neutral-800;
 }
 
 body {
   @apply selection:bg-teal-300 selection:text-teal-900;
 }
 
-/* Section container */
-.site-container {
-  @apply mx-auto w-full max-w-2xl;
+/* Containers */
+section {
+  @apply mb-8 w-full max-w-full;
 }
 
-/* Prose container */
 article {
-  @apply prose prose-invert prose-img:rounded-lg;
+  @apply prose prose-invert prose-img:rounded-lg lg:prose-lg mx-auto w-full max-w-prose px-8 md:px-0;
+}
+
+.site-container {
+  @apply container mx-auto space-y-6 px-8 py-16 md:space-y-8 xl:px-16;
 }
 
 /* Code block and Inline-code block */
 pre {
-  @apply scrollbar-thumb-neutral-800 scrollbar-thin scrollbar-track-neutral-900 rounded-lg bg-neutral-900! p-4;
+  @apply scrollbar-thumb-neutral-700 scrollbar-thin scrollbar-track-neutral-800 rounded-lg bg-neutral-800! p-4;
 }
 
 code:not(pre > *) {
@@ -67,9 +70,4 @@ code::after {
 
 #TableOfContents ol li ol li {
   @apply m-0!;
-}
-
-/* Giscus */
-.giscus {
-  @apply rounded-lg bg-neutral-950/50;
 }
