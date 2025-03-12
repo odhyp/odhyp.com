@@ -1,58 +1,165 @@
 {{ define "main" }}
-<!-- INTRO START -->
-<section class="site-container mb-32 flex flex-col gap-y-4 md:gap-y-6">
-  <h1 class="text-4xl leading-snug font-bold sm:text-5xl">
-    Automating Workflows,<br />
-    Visualizing Data,<br />
-    Simplifying Systems. 🐍
-  </h1>
+<!-- LANDING BACKGROUND START -->
+<div class="absolute h-screen w-full">
+  <!-- GRID PATTERN -->
+  <div
+    class="absolute inset-0 -z-50 bg-neutral-900 bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_3rem]"
+  ></div>
 
-  <p class="text-white-prose text-lg opacity-80">
-    I'm Odhy. I use Python to build automation, data visualization, and web
-    applications, creating streamlined systems that empower businesses to make
-    better, faster decisions.
-  </p>
+  <!-- GRADIENT #1 -->
+  <div
+    class="absolute inset-0 -z-40 bg-gradient-to-r from-neutral-900 via-neutral-900/50 to-transparent"
+  ></div>
 
-  <div class="flex hidden">
-    <a
-      class="group relative flex overflow-hidden rounded-md border border-neutral-800 px-6 py-4 text-sm transition-colors ease-in-out hover:border-emerald-300 hover:bg-emerald-300/10"
-      href="mailto:pradhana.odhy@gmail.com"
-      onclick="openMail(event)"
-    >
-      <div
-        class="flex items-center gap-x-2 transition-all ease-in-out group-hover:-translate-y-16 group-hover:opacity-0"
+  <!-- GRADIENT #2 -->
+  <div
+    class="absolute inset-0 -z-40 bg-gradient-to-b from-neutral-900 from-5% via-neutral-900/50 to-neutral-900/75"
+  ></div>
+
+  <!-- GRADIENT #3 -->
+  <div
+    class="absolute inset-0 -z-40 bg-gradient-to-t from-neutral-900 from-5% via-neutral-900/50 to-neutral-900/75"
+  ></div>
+</div>
+<!-- LANDING BACKGROUND END -->
+
+<!-- HERO START -->
+<section class="relative mt-16">
+  <div class="w-full">
+    <div class="site-container">
+      <h1
+        class="max-w-6xl text-4xl leading-tight font-light tracking-tight sm:text-5xl md:text-6xl md:leading-16 lg:text-7xl lg:leading-20"
       >
-        <i class="iconoir-suitcase text-lg"></i>
-        <span>Fancy a work?</span>
+        <span class="font-semibold sm:font-bold">Streamlined systems</span>
+        built through automation, data visualization, and web development.
+      </h1>
+      <h2 class="max-w-2xl text-xl text-white/75 md:text-2xl">
+        I'm Odhy, a Python enthusiast who loves automating workflows, analyzing
+        and visualizing data, and sharing ideas through writing.
+      </h2>
+      <div>
+        <a
+          href="mailto:pradhana.odhy@gmail.com"
+          target="_blank"
+          class="group flex w-fit items-center gap-x-2 rounded-md border-2 border-neutral-800 bg-neutral-800 px-8 py-2 text-white/75 transition-all ease-in-out hover:border-neutral-600 hover:text-white"
+        >
+          <iconify-icon
+            icon="material-symbols:mail-rounded"
+            width="20"
+            height="20"
+            class="scale-100 transition-transform duration-300 ease-in-out group-hover:scale-0"
+          ></iconify-icon>
+          <iconify-icon
+            icon="material-symbols:outgoing-mail-rounded"
+            width="22"
+            height="22"
+            class="absolute scale-0 transition-transform duration-300 ease-in-out group-hover:scale-100"
+          ></iconify-icon>
+          <span>Get in Touch</span>
+        </a>
       </div>
-
-      <div
-        class="absolute -bottom-8 flex items-center gap-x-2 opacity-0 transition-all ease-in-out group-hover:-translate-y-12 group-hover:opacity-100"
-      >
-        <i class="iconoir-mail-out text-lg"></i>
-        <span class="">Send an email!</span>
-      </div>
-    </a>
+    </div>
   </div>
 </section>
-<!-- INTRO END -->
+<!-- HERO END -->
 
 <!-- FEATURED PROJECTS START -->
-<section class="site-container mb-32 flex flex-col gap-y-4 md:gap-y-6">
-  <h2 class="text-2xl font-bold">Featured Projects</h2>
+<section class="mt-16">
+  <div class="relative w-full">
+    <div class="site-container">
+      <h2 class="text-3xl font-medium md:text-4xl md:leading-16 lg:text-5xl">
+        Featured Projects
+      </h2>
+      <h3 class="max-w-2xl text-xl text-white/75 md:text-2xl">
+        A selection of my most impactful projects—built to solve problems,
+        improve efficiency, and explore new ideas.
+      </h3>
 
-  <!-- FEATURED PROJECT CONTAINER -->
-  <div class="flex flex-col gap-y-6">
-    {{ $featuredProjects := where (where (where .Site.Pages ".Section"
-    "project") "Kind" "page") "Params.featured" true }} {{ range sort
-    $featuredProjects "Date" "desc" }}
+      <!-- PROJECT LIST -->
+      <div
+        class="mt-16 grid grid-cols-1 gap-y-4 lg:grid-cols-2 lg:gap-8 2xl:grid-cols-3"
+      >
+        {{ $featuredProjects := where (where (where .Site.Pages ".Section"
+        "projects") "Kind" "page") "Params.featured" true }} {{ range sort
+        $featuredProjects "Date" "desc" }}
 
-    <!-- PROJECT LIST START -->
-    {{- partial "component/project-list.html" . -}}
-    <!-- PROJECT LIST END -->
-    {{ end }}
+        <!-- PROJECT CARDS START -->
+        <div
+          class="group flex w-full flex-col items-start justify-start gap-x-8 gap-y-4 rounded-lg border-2 border-neutral-800 bg-neutral-900 p-6 transition-colors ease-in-out hover:border-neutral-700 md:flex-row"
+        >
+          <div
+            class="flex items-center justify-center rounded-md bg-neutral-800 p-3"
+          >
+            <iconify-icon
+              icon='simple-icons:{{ default "python" .Params.icon | lower }}'
+              width="32"
+              height="32"
+              class="text-white"
+            ></iconify-icon>
+          </div>
+
+          <div class="space-y-2">
+            <a
+              href="{{ .RelPermalink }}"
+              class="flex w-fit items-center gap-x-2 font-medium"
+            >
+              <span>{{ .Title }}</span>
+              <iconify-icon
+                icon="material-symbols:arrow-outward-rounded"
+                width="16"
+                height="16"
+                class="scale-0 text-white/50 transition-transform duration-300 ease-in-out group-hover:scale-100"
+              ></iconify-icon>
+            </a>
+            <span class="line-clamp-3 text-white/50 lg:line-clamp-3"
+              >{{ .Description }}
+            </span>
+          </div>
+        </div>
+        {{ end }}
+        <!-- PROJECT CARDS END -->
+      </div>
+    </div>
   </div>
 </section>
 <!-- FEATURED PROJECTS END -->
 
+<!-- WRITINGS START -->
+<section>
+  <div class="w-full">
+    <div class="site-container">
+      <h2 class="text-3xl font-medium md:text-4xl md:leading-16 lg:text-5xl">
+        Writings
+      </h2>
+      <h3 class="max-w-2xl text-xl text-white/75 md:text-2xl">
+        A growing collection of insights, explorations, and ideas in my Digital
+        Garden. A place to share knowledge, spark curiosity, and document my
+        journey.
+      </h3>
+
+      <!-- WRITINGS LIST -->
+      {{ range .Site.RegularPages }}
+
+      <!--  -->
+      {{ if eq .Section "writings" }}
+      <div class="flex w-fit flex-col border p-2">
+        <span>{{ .Title }}</span>
+        <span>{{ .Description }}</span>
+        <span>{{ .Params.type }}</span>
+        <span>{{ .Params.stage }}</span>
+        <div>
+          {{- partial "terms.html" (dict "taxonomy" "categories" "page" .) -}}
+        </div>
+        <div>
+          {{- partial "terms.html" (dict "taxonomy" "tags" "page" .) -}}
+        </div>
+      </div>
+      {{ end }}
+
+      <!--  -->
+      {{ end }}
+    </div>
+  </div>
+</section>
+<!-- WRITINGS END -->
 {{ end }}
