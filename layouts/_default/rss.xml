@@ -1,51 +1,31 @@
 {{- $authorEmail := "" }}
-{{- with site.Params.author }}
-  {{- if reflect.IsMap . }}
-    {{- with .email }}
-      {{- $authorEmail = . }}
-    {{- end }}
-  {{- end }}
-{{- end }}
-
 {{- $authorName := "" }}
 {{- with site.Params.author }}
   {{- if reflect.IsMap . }}
-    {{- with .name }}
-      {{- $authorName = . }}
-    {{- end }}
+    {{- with .email }}{{ $authorEmail = . }}{{ end }}
+    {{- with .name }}{{ $authorName = . }}{{ end }}
   {{- else }}
-    {{- $authorName  = . }}
+    {{- $authorName = . }}
   {{- end }}
 {{- end }}
 
-{{- $pctx := . }}
-{{- if .IsHome }}{{ $pctx = .Site }}{{ end }}
-{{- $pages := slice }}
-{{- if or $.IsHome $.IsSection }}
-{{- $pages = $pctx.RegularPages }}
-{{- else }}
-{{- $pages = $pctx.Pages }}
-{{- end }}
-{{- $limit := .Site.Config.Services.RSS.Limit }}
-{{- if ge $limit 1 }}
-{{- $pages = $pages | first $limit }}
-{{- end }}
 {{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>{{ if eq .Title .Site.Title }}{{ .Site.Title }}{{ else }}{{ with .Title }}{{ . }} on {{ end }}{{ .Site.Title }}{{ end }}</title>
-    <description>Writings on programming, tech, and etc.</description>
+    <title>{{ if eq .Title .Site.Title }}{{ .Site.Title }}{{ else }}{{ .Title }} on {{ .Site.Title }}{{ end }}</title>
+    <description>Writings on programming, tech, and more.</description>
     <link>{{ .Permalink }}</link>
     <language>{{ site.Language.LanguageCode }}</language>
     <generator>Hugo</generator>
 
-    {{ range where (where .Site.Pages ".Section" "writings") "Kind" "page" }}
+    {{ range where .Site.RegularPages "Kind" "page" }}
     <item>
       <title>{{ .Title }}</title>
       <link>{{ .Permalink }}</link>
       <guid isPermaLink="true">{{ .Permalink }}</guid>
       <pubDate>{{ .PublishDate.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
-      <description>{{ .Summary | transform.XMLEscape | safeHTML }}</description>
+      <author>{{ $authorEmail }} ({{ $authorName }})</author>
+      <description>{{ if .Summary }}{{ .Summary | transform.XMLEscape | safeHTML }}{{ else }}{{ .Content | truncate 200 | transform.XMLEscape | safeHTML }}{{ end }}</description>
     </item>
     {{- end }}
   </channel>
