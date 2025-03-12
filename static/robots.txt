@@ -1,3 +1,5 @@
 User-agent: *
+Disallow: /drafts/
 Allow: /
+
 Sitemap: https://odhyp.com/sitemap.xml

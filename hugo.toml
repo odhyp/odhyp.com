@@ -2,7 +2,6 @@ baseURL = 'https://odhyp.com/'
 title = 'Odhy Pradhana'
 languageCode = 'en-us'
 defaultContentLanguage = "en"
-enableRobotsTXT = true
 
 # SEO Optimization
 [params]
