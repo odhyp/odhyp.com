@@ -6,7 +6,7 @@ enableRobotsTXT = true
 
 # SEO Optimization
 [params]
-author = "Odhy Pradhana"
+author = { name = "Odhy Pradhana", email = "pradhana.odhy@gmail.com" }
 description = "Personal website about automation, data visualization, and web development."
 google_site_verification = "YOUR_VERIFICATION_CODE"
 
@@ -36,11 +36,15 @@ minifyOutput = true
 # Robots.txt Configuration
 [outputs]
 home = ["HTML", "RSS", "JSON"]
+section = ["HTML", "RSS"]
+taxonomy = ["HTML", "RSS"]
+term = ["HTML", "RSS"]
 
-# Sitemap Configuration 
 [sitemap]
-changefreq = "monthly"
-priority = 0.8
+changefreq = "weekly"
+filename = "sitemap.xml"
+priority = 0.5
+
 
 # Enable Google Analytics
 [services]
