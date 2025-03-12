@@ -1,6 +1,10 @@
 baseURL = 'https://odhyp.com/'
 languageCode = 'en-us'
-title = 'Odhy'
+title = 'Odhy Pradhana'
+
+[params.author]
+name = "Odhy Pradhana"
+email = "pradhana.odhy@gmail.com"
 
 # Custom taxonomies
 [taxonomies]
@@ -10,11 +14,9 @@ tag = "tags"
 # Markup highlighting configuration
 [markup]
 [markup.highlight]
-style = "monokai"
+style = "onedark"
 tabWidth = 4
 [markup.tableOfContents]
 startLevel = 2
 endLevel = 3
 ordered = true
-[markup.goldmark.renderer]
-unsafe = true

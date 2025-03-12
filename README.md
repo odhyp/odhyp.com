@@ -1,6 +1,6 @@
-# Odhy's Digital Space :sunglasses:
+# Odhy's Digital Garden 🪴
 
-Welcome to my digital workspace—where I reflect, debug, and occasionally scream at my code.
+Welcome to my digital garden—where I plant ideas, debug thoughts, and occasionally scream at my code.
 
 Built with Hugo, JavaScript, and TailwindCSS. Deployed in Vercel.
 
