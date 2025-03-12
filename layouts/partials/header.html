@@ -1,41 +1,169 @@
 <header class="">
-  <nav class="site-container flex items-center justify-start px-6">
-    <ul class="flex items-center gap-x-5 py-6">
-      <!-- HOME -->
+  <div
+    class="container mx-auto flex h-20 items-center justify-between px-8 py-6"
+  >
+    <!-- LOGO START -->
+    <a href="/" class="group">
+      <img
+        src="/android-chrome-512x512.png"
+        alt="Logo"
+        class="size-8 transition-transform ease-in-out group-hover:scale-105 lg:size-10"
+      />
+    </a>
+    <!-- LOGO END -->
+
+    <!-- HEADER MENU START -->
+    <ul class="hidden md:flex md:items-center md:gap-x-8">
       <li>
         <a
-          class="opacity-50 transition-opacity ease-in-out hover:opacity-100"
-          href="/"
-          >home</a
+          href="/projects"
+          class="text-white/75 transition-colors ease-in-out hover:text-white"
+          >Projects</a
         >
       </li>
 
-      <!-- PROJECTS -->
+      <li class="relative flex items-center gap-x-1">
+        <a
+          href="/writings"
+          class="text-white/75 transition-colors ease-in-out hover:text-white"
+          >Writings
+        </a>
+
+        <!-- WRITINGS DROPDOWN BUTTON START -->
+        <button
+          id="dropdown-writings-button"
+          type="button"
+          class="group flex cursor-pointer items-center justify-center rounded-full p-0.5 text-white/75 hover:bg-neutral-800 hover:text-white"
+        >
+          <iconify-icon
+            icon="material-symbols:keyboard-arrow-down-rounded"
+            width="24"
+            height="24"
+            class="scale-100 transition-transform duration-300 ease-in-out group-hover:scale-0 group-focus:scale-0"
+          ></iconify-icon>
+          <iconify-icon
+            icon="material-symbols:arrow-downward-alt-rounded"
+            width="20"
+            height="20"
+            class="absolute scale-0 transition-transform duration-300 ease-in-out group-hover:scale-100 group-focus:scale-100"
+          ></iconify-icon>
+        </button>
+        <!-- WRITINGS DROPDOWN BUTTON END -->
+
+        <!-- WRITINGS DROPDOWN MENU START -->
+        <ul
+          id="dropdown-writings-menu"
+          class="pointer-events-none absolute top-8 left-1/2 z-40 -translate-x-1/2 scale-95 transform divide-y divide-neutral-700 rounded border border-neutral-700 bg-neutral-900 opacity-0 transition-all ease-in-out"
+        >
+          <li>
+            <a
+              href="/articles"
+              class="block w-full px-6 py-3 text-white/75 transition-colors ease-in-out hover:bg-neutral-800 hover:text-white"
+              >Articles
+            </a>
+          </li>
+          <li>
+            <a
+              href="/notes"
+              class="block w-full px-6 py-3 text-white/75 transition-colors ease-in-out hover:bg-neutral-800 hover:text-white"
+              >Notes
+            </a>
+          </li>
+          <li>
+            <a
+              href="/ideas"
+              class="block w-full px-6 py-3 text-white/75 transition-colors ease-in-out hover:bg-neutral-800 hover:text-white"
+              >Ideas</a
+            >
+          </li>
+          <li>
+            <a
+              href="/logs"
+              class="block w-full px-6 py-3 text-white/75 transition-colors ease-in-out hover:bg-neutral-800 hover:text-white"
+              >Logs</a
+            >
+          </li>
+        </ul>
+        <!-- WRITINGS DROPDOWN MENU END -->
+      </li>
+
       <li>
         <a
-          class="opacity-50 transition-opacity ease-in-out hover:opacity-100"
-          href="/project"
-          >projects</a
+          href="/now"
+          class="text-white/75 transition-colors ease-in-out hover:text-white"
+          >Now</a
         >
       </li>
 
-      <!-- BLOG -->
       <li>
         <a
-          class="opacity-50 transition-opacity ease-in-out hover:opacity-100"
-          href="/blog"
-          >blog</a
-        >
-      </li>
-
-      <!-- ABOUT -->
-      <li>
-        <a
-          class="opacity-50 transition-opacity ease-in-out hover:opacity-100"
           href="/about"
-          >about</a
+          class="text-white/75 transition-colors ease-in-out hover:text-white"
+          >About</a
         >
       </li>
     </ul>
-  </nav>
+    <!-- HEADER MENU END -->
+
+    <!-- HAMBURGER BUTTON START -->
+    <button
+      id="hamburger-button"
+      type="button"
+      class="flex items-center justify-center rounded-md p-2 md:hidden"
+    >
+      <iconify-icon
+        id="menu-open"
+        icon="material-symbols:menu-rounded"
+        width="32"
+        height="32"
+        class=""
+      ></iconify-icon>
+
+      <iconify-icon
+        id="menu-close"
+        icon="material-symbols:close-rounded"
+        width="32"
+        height="32"
+        class="hidden"
+      ></iconify-icon>
+    </button>
+    <!-- HAMBURGER BUTTON END -->
+
+    <!-- HAMBURGER MENU START -->
+    <div
+      id="hamburger-menu"
+      class="fixed inset-0 top-20 z-50 hidden h-dvh translate-x-full bg-neutral-900 transition-transform duration-300 ease-in-out md:hidden"
+    >
+      <ul class="flex flex-col py-8 text-xl font-medium">
+        <li>
+          <a href="/projects" class="block px-8 py-4">Projects</a>
+        </li>
+        <li>
+          <a href="/writings" class="block px-8 py-4">Writings</a>
+
+          <ul class="pl-8 text-lg font-normal">
+            <li>
+              <a href="/articles" class="block px-8 py-4">Articles</a>
+            </li>
+            <li>
+              <a href="/notes" class="block px-8 py-4">Notes</a>
+            </li>
+            <li>
+              <a href="/ideas" class="block px-8 py-4">Ideas</a>
+            </li>
+            <li>
+              <a href="/logs" class="block px-8 py-4">Logs</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="/now" class="block px-8 py-4">Now</a>
+        </li>
+        <li>
+          <a href="/about" class="block px-8 py-4">About</a>
+        </li>
+      </ul>
+    </div>
+    <!-- HAMBURGER MENU END -->
+  </div>
 </header>
