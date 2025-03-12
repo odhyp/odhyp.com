@@ -1,15 +1,23 @@
 baseURL = 'https://odhyp.com/'
-languageCode = 'en-us'
 title = 'Odhy Pradhana'
+languageCode = 'en-us'
+defaultContentLanguage = "en"
+enableRobotsTXT = true
 
-[params.author]
-name = "Odhy Pradhana"
-email = "pradhana.odhy@gmail.com"
+# SEO Optimization
+[params]
+author = "Odhy Pradhana"
+description = "Personal website about automation, data visualization, and web development."
+google_site_verification = "YOUR_VERIFICATION_CODE"
 
 # Custom taxonomies
 [taxonomies]
 category = "categories"
 tag = "tags"
+
+[permalinks]
+projects = "/projects/:slug/"
+writings = "/writings/:slug/"
 
 # Markup highlighting configuration
 [markup]
@@ -20,3 +28,21 @@ tabWidth = 4
 startLevel = 2
 endLevel = 3
 ordered = true
+
+# Minify HTML, CSS, and JS for better performance
+[minify]
+minifyOutput = true
+
+# Robots.txt Configuration
+[outputs]
+home = ["html", "rss", "json", "sitemap", "robots"]
+
+# Sitemap Configuration 
+[sitemap]
+changefreq = "monthly"
+priority = 0.8
+
+# Enable Google Analytics
+[services]
+[services.googleAnalytics]
+id = "UA-XXXXXXXXX-X" # Replace with actual tracking ID
