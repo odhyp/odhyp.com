@@ -1,21 +1,181 @@
-<footer class="">
-  <div class="site-container px-6 py-6 text-center">
-    <span class="text-center text-sm opacity-50"
-      >&copy; {{ now.Year }} Odhy Pradhana. All Rights Reserved.</span
+<footer class="border-t border-neutral-700">
+  <div
+    class="container mx-auto flex flex-col-reverse gap-y-16 px-6 py-16 md:flex-row md:justify-between xl:px-32"
+  >
+    <div class="flex flex-col justify-center gap-y-4">
+      <span class="text-2xl font-medium lg:text-3xl">Follow and Support?</span>
+
+      <div
+        class="flex w-full flex-col gap-2 sm:flex-row md:flex-col lg:flex-row"
+      >
+        <a
+          href="/index.xml"
+          class="flex w-fit items-center gap-x-2 rounded-md border-2 border-neutral-800 bg-neutral-800 px-8 py-2 text-sm text-white/75 transition-all ease-in-out hover:border-neutral-600 hover:text-white"
+        >
+          <iconify-icon
+            icon="material-symbols:rss-feed-rounded"
+            width="16"
+            height="16"
+          ></iconify-icon>
+          <span class="whitespace-nowrap">RSS Feed</span>
+        </a>
+        <a
+          href="https://buymeacoffee.com/odhyp"
+          target="_blank"
+          class="flex w-fit items-center gap-x-2 rounded-md border-2 border-neutral-800 bg-neutral-800 px-8 py-2 text-sm text-white/75 transition-all ease-in-out hover:border-neutral-600 hover:text-white"
+        >
+          <iconify-icon
+            icon="simple-icons:buymeacoffee"
+            width="16"
+            height="16"
+          ></iconify-icon>
+          <span class="whitespace-nowrap">Buy Me a Coffee</span>
+        </a>
+      </div>
+
+      <span class="mt-4 text-sm text-white/50"
+        >&copy; {{ now.Year }} Odhy Pradhana.
+        <br class="hidden md:inline lg:hidden" />All Rights Reserved.</span
+      >
+    </div>
+
+    <div
+      class="grid grid-cols-2 gap-y-8 sm:grid-cols-4 sm:gap-x-4 md:gap-x-8 lg:gap-x-16"
     >
+      <!-- COLUMN SITEMAP -->
+      <div class="flex flex-col gap-y-4">
+        <span class="text-white/50">Sitemap</span>
+        <ul class="space-y-2">
+          <li>
+            <a
+              href="/projects"
+              class="text-white transition-colors ease-in-out md:text-white/75 md:hover:text-white"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a
+              href="/writings"
+              class="text-white transition-colors ease-in-out md:text-white/75 md:hover:text-white"
+              >Writings</a
+            >
+          </li>
+          <li>
+            <a
+              href="/now"
+              class="text-white transition-colors ease-in-out md:text-white/75 md:hover:text-white"
+              >Now</a
+            >
+          </li>
+          <li>
+            <a
+              href="/about"
+              class="text-white transition-colors ease-in-out md:text-white/75 md:hover:text-white"
+              >About</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <!-- COLUMN WRITINGS -->
+      <div class="flex flex-col gap-y-4">
+        <span class="text-white/50">Writings</span>
+        <ul class="space-y-2">
+          <li>
+            <a
+              href="/articles"
+              class="text-white transition-colors ease-in-out md:text-white/75 md:hover:text-white"
+              >Articles</a
+            >
+          </li>
+          <li>
+            <a
+              href="/notes"
+              class="text-white transition-colors ease-in-out md:text-white/75 md:hover:text-white"
+              >Notes</a
+            >
+          </li>
+          <li>
+            <a
+              href="/ideas"
+              class="text-white transition-colors ease-in-out md:text-white/75 md:hover:text-white"
+              >Ideas</a
+            >
+          </li>
+          <li>
+            <a
+              href="/logs"
+              class="text-white transition-colors ease-in-out md:text-white/75 md:hover:text-white"
+              >Logs</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <!-- COLUMN SOCIAL -->
+      <div class="flex flex-col gap-y-4">
+        <span class="text-white/50">Social</span>
+        <ul class="space-y-2">
+          <li>
+            <a
+              href="https://github.com/odhyp"
+              target="_blank"
+              class="text-white transition-colors ease-in-out md:text-white/75 md:hover:text-white"
+              >GitHub
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/odhypradhana"
+              target="_blank"
+              class="text-white transition-colors ease-in-out md:text-white/75 md:hover:text-white"
+              >Instagram
+            </a>
+          </li>
+          <!-- TODO: Update link X/Twitter -->
+          <li>
+            <a
+              href=""
+              target="_blank"
+              class="text-white transition-colors ease-in-out md:text-white/75 md:hover:text-white"
+              >X (Twitter)
+            </a>
+          </li>
+          <!-- TODO: Update link LinkedIn -->
+          <li>
+            <a
+              href=""
+              target="_blank"
+              class="text-white transition-colors ease-in-out md:text-white/75 md:hover:text-white"
+              >LinkedIn
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- COLUMN CONTACT -->
+      <div class="flex flex-col gap-y-4">
+        <span class="text-white/50">Contact</span>
+        <ul class="space-y-2">
+          <li>
+            <a
+              href="mailto:pradhana.odhy@gmail.com"
+              target="_blank"
+              class="text-white transition-colors ease-in-out md:text-white/75 md:hover:text-white"
+              >Email</a
+            >
+          </li>
+          <!-- TODO: Update link Upwork -->
+          <li>
+            <a
+              href=""
+              target="_blank"
+              class="text-white transition-colors ease-in-out md:text-white/75 md:hover:text-white"
+              >Upwork
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </footer>
-
-<script>
-  function openMail(event) {
-    event.preventDefault();
-
-    const email = "pradhana.odhy@gmail.com";
-    const subject = encodeURIComponent("Hello from your website");
-    const body = encodeURIComponent(
-      "Hi Odhy, I saw your website and wanted to reach out",
-    );
-
-    window.open(`mailto:${email}?subject=${subject}&body=${body}`, "_blank");
-  }
-</script>
