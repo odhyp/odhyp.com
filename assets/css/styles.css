@@ -28,7 +28,7 @@ section {
 }
 
 article {
-  @apply prose prose-invert prose-img:rounded-lg lg:prose-lg mx-auto w-full max-w-prose px-8 md:px-0;
+  @apply prose prose-invert prose-img:rounded-lg lg:prose-lg mx-auto w-full max-w-prose;
 }
 
 .site-container {
