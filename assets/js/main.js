@@ -5,6 +5,7 @@
 // 02. OPEN EXTERNAL LINKS IN NEW TAB
 // 03. DROPDOWN MENU - WRITINGS
 // 04. HAMBURGER MENU
+// 05. UPDATE RELATIVE DATES
 
 // 00. LOAD ALL FUNCTION ----------------------------------------------------------------
 document.addEventListener("DOMContentLoaded", () => {
@@ -12,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   openExternalLinksInNewTab();
   dropdownHeaderWritings();
   hamburgerMenu();
+  updateRelativeDates();
 });
 
 // 01. CODE BLOCK COPY ------------------------------------------------------------------
@@ -196,5 +198,45 @@ function hamburgerMenu() {
       menuOpen.classList.remove("hidden");
       menuClose.classList.add("hidden");
     }
+  });
+}
+
+// 05. UPDATE RELATIVE DATES ------------------------------------------------------------
+function updateRelativeDates() {
+  function timeAgo(date) {
+    const now = new Date();
+    const past = new Date(date);
+    const seconds = Math.floor((now - past) / 1000);
+
+    const intervals = {
+      year: 31536000,
+      month: 2592000,
+      week: 604800,
+      day: 86400,
+      hour: 3600,
+      minute: 60,
+    };
+
+    for (let unit in intervals) {
+      let interval = Math.floor(seconds / intervals[unit]);
+      let remainder = seconds % intervals[unit];
+
+      if (interval >= 1) {
+        if (unit === "day" && interval === 1) return "Yesterday";
+        if (interval === 1) return `Over a ${unit} ago`;
+
+        // If remainder is more than 75% of the next interval, say "Almost X"
+        if (remainder >= intervals[unit] * 0.75) {
+          return `Almost ${interval + 1} ${unit}${interval + 1 > 1 ? "s" : ""} ago`;
+        }
+
+        return `Over ${interval} ${unit}${interval > 1 ? "s" : ""} ago`;
+      }
+    }
+    return "Just now";
+  }
+
+  document.querySelectorAll(".relative-time").forEach((el) => {
+    el.textContent = timeAgo(el.dataset.time);
   });
 }
