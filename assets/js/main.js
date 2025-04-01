@@ -206,7 +206,9 @@ function updateRelativeDates() {
   function timeAgo(date) {
     const now = new Date();
     const past = new Date(date);
-    const seconds = Math.floor((now - past) / 1000);
+    let seconds = Math.floor((now - past) / 1000);
+
+    if (seconds < 0) return "In the future";
 
     const intervals = {
       year: 31536000,
@@ -217,22 +219,38 @@ function updateRelativeDates() {
       minute: 60,
     };
 
+    const vowelSoundExceptions = ["hour"];
+
     for (let unit in intervals) {
       let interval = Math.floor(seconds / intervals[unit]);
       let remainder = seconds % intervals[unit];
 
       if (interval >= 1) {
-        if (unit === "day" && interval === 1) return "Yesterday";
-        if (interval === 1) return `Over a ${unit} ago`;
+        // Special case: "Yesterday" (between 24-48 hours ago)
+        if (unit === "day" && interval === 1 && seconds < 172800)
+          return "Yesterday";
 
-        // If remainder is more than 75% of the next interval, say "Almost X"
-        if (remainder >= intervals[unit] * 0.75) {
-          return `Almost ${interval + 1} ${unit}${interval + 1 > 1 ? "s" : ""} ago`;
+        // Use "Nearly": If remainder is above 90% of the next unit
+        if (remainder >= intervals[unit] * 0.9) {
+          return `Nearly ${interval + 1} ${unit}${interval + 1 > 1 ? "s" : ""} ago`;
         }
 
-        return `Over ${interval} ${unit}${interval > 1 ? "s" : ""} ago`;
+        // Use "An": For vowel sounds, including exceptions (e.g., "An hour ago")
+        let article =
+          interval === 1 &&
+          (["a", "e", "i", "o", "u"].includes(unit[0]) ||
+            vowelSoundExceptions.includes(unit))
+            ? "An"
+            : "A";
+
+        // Singular: "A minute ago", "An hour ago", "A day ago"
+        if (interval === 1) return `${article} ${unit} ago`;
+
+        // Plural: "2 days ago", "5 hours ago"
+        return `${interval} ${unit}s ago`;
       }
     }
+
     return "Just now";
   }
 
