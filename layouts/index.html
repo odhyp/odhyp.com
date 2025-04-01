@@ -75,7 +75,7 @@
         improve efficiency, and explore new ideas.
       </h3>
 
-      <!-- PROJECT LIST -->
+      <!-- FEATURED PROJECT LIST START -->
       <div
         class="mt-16 grid grid-cols-1 gap-y-4 lg:grid-cols-2 lg:gap-8 2xl:grid-cols-3"
       >
@@ -84,41 +84,12 @@
         $featuredProjects "Date" "desc" }}
 
         <!-- PROJECT CARDS START -->
-        <div
-          class="group flex w-full flex-col items-start justify-start gap-x-8 gap-y-4 rounded-lg border-2 border-neutral-800 bg-neutral-900 p-6 transition-colors ease-in-out hover:border-neutral-700 md:flex-row"
-        >
-          <div
-            class="flex items-center justify-center rounded-md bg-neutral-800 p-3"
-          >
-            <iconify-icon
-              icon='simple-icons:{{ default "python" .Params.icon | lower }}'
-              width="32"
-              height="32"
-              class="text-white"
-            ></iconify-icon>
-          </div>
-
-          <div class="space-y-2">
-            <a
-              href="{{ .RelPermalink }}"
-              class="flex w-fit items-center gap-x-2 font-medium"
-            >
-              <span>{{ .Title }}</span>
-              <iconify-icon
-                icon="material-symbols:arrow-outward-rounded"
-                width="16"
-                height="16"
-                class="scale-0 text-white/50 transition-transform duration-300 ease-in-out group-hover:scale-100"
-              ></iconify-icon>
-            </a>
-            <span class="line-clamp-3 text-white/50 lg:line-clamp-3"
-              >{{ .Description }}
-            </span>
-          </div>
-        </div>
-        {{ end }}
+        {{ partial "project-cards/page-featured.html" . }}
         <!-- PROJECT CARDS END -->
+
+        {{ end }}
       </div>
+      <!-- FEATURED PROJECT LIST END -->
     </div>
   </div>
 </section>
