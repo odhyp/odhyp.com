@@ -3,6 +3,7 @@ title = 'Odhy Pradhana'
 languageCode = 'en-us'
 defaultContentLanguage = "en"
 enableRobotsTXT = true
+enableGitInfo = true
 
 # SEO Optimization
 [params]
