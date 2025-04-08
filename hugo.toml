@@ -13,8 +13,7 @@ google_site_verification = "YOUR_VERIFICATION_CODE"
 
 # Custom taxonomies
 [taxonomies]
-category = "categories"
-tag = "tags"
+topic = "topics"
 
 [permalinks]
 projects = "/projects/:slug/"
