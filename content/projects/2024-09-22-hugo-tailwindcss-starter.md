@@ -4,7 +4,7 @@ featured = true
 title = "Hugo TailwindCSS Starter"
 slug = "hugo-tailwindcss-starter"
 date = 2024-09-22
-categories = ["hugo", "tailwindcss", "vercel", "template"]
+topics = ["hugo", "tailwindcss", "vercel", "template"]
 description = "Starter project for Hugo and TailwindCSS v4, ready to deploy in Vercel."
 icon = "hugo"
 +++

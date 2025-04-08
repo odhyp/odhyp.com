@@ -4,7 +4,7 @@ featured = true
 title = "Flask TailwindCSS Starter"
 slug = "flask-tailwindcss-starter"
 date = 2025-01-12
-categories = ["python", "flask", "tailwindcss", "vercel", "template"]
+topics = ["python", "flask", "tailwindcss", "vercel", "template"]
 description = "Starter project for Flask and TailwindCSS v4, ready to deploy in Vercel."
 icon = "flask"
 +++

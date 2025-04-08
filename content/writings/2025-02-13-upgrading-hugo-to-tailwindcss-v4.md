@@ -9,8 +9,7 @@ stage = "evergreen" # Progress of the idea (sprout, thriving, evergreen)
 cover = ""
 title = "Upgrading a Hugo Website from Tailwind CSS v3 to v4"
 description = "How to upgrade a Hugo website from Tailwind CSS v3 to v4"
-categories = "sample"
-tags = ["hugo", "tailwindcss"]
+topics = ["hugo", "tailwindcss"]
 +++
 
 As part of [this release], I upgraded my site to use TailwindCSS v4. In this post, I'll guide you through the upgrade process—just as I did for my own website, step by step… hopefully.
