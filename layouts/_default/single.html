@@ -1,7 +1,57 @@
 {{ define "main" }}
 <section>
-  This is single page
-  <article>{{ .Content }}</article>
-  <div class="mx-auto w-full max-w-prose">{{- partial "giscus.html" . -}}</div>
+  <div class="w-full">
+    <div class="site-container">
+      <article>
+        <div class="mb-4 flex items-center gap-x-2 text-sm sm:gap-x-4">
+          <!-- Project page -->
+          {{ if eq .Type "projects" }}
+          <div class="flex items-center gap-x-2">
+            {{- partial "writing-cards/stage-icon.html" . -}}
+            <span class="">{{ title .Type }}</span>
+          </div>
+
+          <!-- Writings page -->
+          {{ else }}
+          <div class="flex items-center gap-x-2">
+            {{- partial "writing-cards/stage-icon.html" . -}}
+            <span class="">{{ title .Params.stage }}</span>
+          </div>
+          {{ end }}
+
+          <span class="font-bold">&middot;</span>
+
+          <p class="my-0!">
+            Last tended:&nbsp;
+            <span
+              class="relative-time"
+              data-time='{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}'
+            >
+              {{ .Lastmod.Format "Jan 2, 2006" }}
+            </span>
+          </p>
+        </div>
+
+        <h1 class="my-0! mb-4! text-6xl leading-tight! font-semibold">
+          {{ .Title }}
+        </h1>
+
+        <h3 class="my-0! font-light! italic!">{{ .Description }}</h3>
+
+        <div
+          class="mt-4! flex gap-4 text-sm *:font-normal! *:text-white/50! *:no-underline! *:transition-colors *:ease-in-out *:hover:text-white!"
+        >
+          {{ partial "terms.html" (dict "taxonomy" "topics" "page" .) }}
+        </div>
+
+        <hr class="my-8! border-0! border-b! border-neutral-700!" />
+
+        <div>{{ .Content }}</div>
+      </article>
+      <div class="mx-auto w-full max-w-prose">
+        {{- partial "giscus.html" . -}}
+      </div>
+    </div>
+  </div>
 </section>
 {{ end }}
