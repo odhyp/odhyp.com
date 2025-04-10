@@ -18,7 +18,7 @@
     <language>{{ site.Language.LanguageCode }}</language>
     <generator>Hugo</generator>
 
-    {{ range where .Site.RegularPages "Kind" "page" }}
+    {{ range where .Site.RegularPages "Section" "in" (slice "projects" "writings") }}
     <item>
       <title>{{ .Title }}</title>
       <link>{{ .Permalink }}</link>
