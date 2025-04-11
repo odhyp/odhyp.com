@@ -1,11 +1,14 @@
 {{- with .Params.stage -}}
 
+<!-- Size var -->
+{{- $size := "20" -}}
+
 <!-- Sprout -->
 {{- if eq . "sprout" -}}
 <iconify-icon
   icon="tabler:seedling"
-  width="24"
-  height="24"
+  width="{{ $size }}"
+  height="{{ $size }}"
   class="text-emerald-400"
 ></iconify-icon>
 
@@ -13,8 +16,8 @@
 {{- else if eq . "thriving" -}}
 <iconify-icon
   icon="tabler:plant-2"
-  width="24"
-  height="24"
+  width="{{ $size }}"
+  height="{{ $size }}"
   class="text-emerald-400"
 ></iconify-icon>
 
@@ -22,8 +25,8 @@
 {{- else if eq . "evergreen" -}}
 <iconify-icon
   icon="tabler:christmas-tree"
-  width="24"
-  height="24"
+  width="{{ $size }}"
+  height="{{ $size }}"
   class="text-emerald-400"
 ></iconify-icon>
 {{- end -}} {{- end -}}
