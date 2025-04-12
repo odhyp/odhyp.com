@@ -1,7 +1,8 @@
-{{- with .Params.stage -}}
-
-<!-- Size var -->
+<!-- ICON SIZE -->
 {{- $size := "20" -}}
+
+<!-- WRITINGS PAGE -->
+{{- with .Params.stage -}}
 
 <!-- Sprout -->
 {{- if eq . "sprout" -}}
@@ -30,3 +31,13 @@
   class="text-emerald-400"
 ></iconify-icon>
 {{- end -}} {{- end -}}
+
+<!-- PROJECTS PAGE -->
+{{ if eq .Section "projects" }}
+<iconify-icon
+  icon="material-symbols:code-rounded"
+  width="{{ $size }}"
+  height="{{ $size }}"
+  class="text-emerald-400"
+></iconify-icon>
+{{- end -}}
