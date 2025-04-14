@@ -1,0 +1,85 @@
+<div
+  class="flex w-full flex-col items-center gap-y-4 sm:flex-row sm:justify-center sm:gap-x-8 xl:block xl:w-full xl:max-w-sm xl:space-y-4 xl:pt-40"
+>
+  <!-- PROFILE PIC -->
+  <div class="flex w-full shrink-0 flex-col gap-y-4 sm:max-w-3/5 xl:max-w-full">
+    <img src="{{ .Params.cover }}" alt="That's me" class="mb-0! rounded-lg" />
+
+    <!-- RESUME/CV CTA -->
+    <div>
+      <a
+        href="/resume.pdf"
+        target="_blank"
+        class="flex w-full items-center justify-center gap-x-2 rounded-md border-2 border-neutral-800 bg-neutral-800 px-8 py-2 text-sm text-white/75 no-underline! transition-all ease-in-out hover:border-neutral-600 hover:text-white"
+      >
+        <iconify-icon
+          icon="material-symbols:library-books-rounded"
+          width="16"
+          height="16"
+          class="size-4"
+        ></iconify-icon>
+        <span class="whitespace-nowrap">View Resume</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="flex flex-col gap-y-4">
+    <!-- SOCIAL MEDIA ICONS -->
+    <div
+      class="flex h-full w-full items-center justify-center gap-4 *:text-white/50! *:transition-colors *:ease-in-out *:hover:text-white! sm:flex-col xl:flex-row"
+    >
+      <!-- ICON SIZE -->
+      {{- $size := "24" -}}
+
+      <!-- GMAIL -->
+      <a href="mailto:pradhana.odhy@gmail.com" target="_blank">
+        <iconify-icon
+          icon="simple-icons:gmail"
+          width="{{ $size }}"
+          height="{{ $size }}"
+          class="size-6"
+        ></iconify-icon>
+      </a>
+
+      <!-- GITHUB -->
+      <a href="https://github.com/odhyp/" target="_blank">
+        <iconify-icon
+          icon="simple-icons:github"
+          width="{{ $size }}"
+          height="{{ $size }}"
+          class="size-6"
+        ></iconify-icon>
+      </a>
+
+      <!-- LINKEDIN -->
+      <a href="https://www.linkedin.com/in/odhy/" target="_blank">
+        <iconify-icon
+          icon="simple-icons:linkedin"
+          width="{{ $size }}"
+          height="{{ $size }}"
+          class="size-6"
+        ></iconify-icon>
+      </a>
+
+      <!-- INSTAGRAM -->
+      <a href="https://www.instagram.com/odhypradhana" target="_blank">
+        <iconify-icon
+          icon="simple-icons:instagram"
+          width="{{ $size }}"
+          height="{{ $size }}"
+          class="size-6"
+        ></iconify-icon>
+      </a>
+
+      <!-- X/TWITTER -->
+      <a href="https://x.com/valgtreiz" target="_blank">
+        <iconify-icon
+          icon="simple-icons:x"
+          width="{{ $size }}"
+          height="{{ $size }}"
+          class="size-6"
+        ></iconify-icon>
+      </a>
+    </div>
+  </div>
+</div>
