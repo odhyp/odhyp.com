@@ -3,10 +3,10 @@
     icon='simple-icons:{{ .Get "name" | lower }}'
     width="32"
     height="32"
-    class="size-8 p-1 opacity-75 transition-all ease-in-out group-hover:-translate-y-1 group-hover:opacity-100"
+    class="size-8 p-1 text-white/75 transition-all ease-in-out group-hover:-translate-y-1 group-hover:text-white"
   ></iconify-icon>
   <span
-    class="absolute -bottom-4 left-1/2 -translate-x-1/2 text-sm font-light whitespace-nowrap capitalize opacity-0 transition-all ease-in-out group-hover:opacity-75"
+    class="absolute -bottom-4 left-1/2 -translate-x-1/2 scale-0 text-sm font-light whitespace-nowrap text-white capitalize transition-transform ease-in-out group-hover:scale-100"
     >{{ .Get "title" }}</span
   >
 </a>
