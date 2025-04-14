@@ -10,7 +10,7 @@
   icon="tabler:seedling"
   width="{{ $size }}"
   height="{{ $size }}"
-  class="text-emerald-400"
+  class="size-5 text-emerald-400"
 ></iconify-icon>
 
 <!-- Thriving -->
@@ -19,7 +19,7 @@
   icon="tabler:plant-2"
   width="{{ $size }}"
   height="{{ $size }}"
-  class="text-emerald-400"
+  class="size-5 text-emerald-400"
 ></iconify-icon>
 
 <!-- Evergreen -->
@@ -28,7 +28,7 @@
   icon="tabler:christmas-tree"
   width="{{ $size }}"
   height="{{ $size }}"
-  class="text-emerald-400"
+  class="size-5 text-emerald-400"
 ></iconify-icon>
 {{- end -}} {{- end -}}
 
@@ -38,6 +38,16 @@
   icon="material-symbols:code-rounded"
   width="{{ $size }}"
   height="{{ $size }}"
-  class="text-emerald-400"
+  class="size-5 text-emerald-400"
+></iconify-icon>
+{{- end -}}
+
+<!-- PROJECTS PAGE -->
+{{ if eq .Title "About" }}
+<iconify-icon
+  icon="material-symbols:person-rounded"
+  width="{{ $size }}"
+  height="{{ $size }}"
+  class="size-5 text-emerald-400"
 ></iconify-icon>
 {{- end -}}
