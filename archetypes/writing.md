@@ -9,8 +9,7 @@ stage = "sprout" # Progress of the idea (sprout, thriving, evergreen)
 cover = ""
 title = "{{ .File.ContentBaseName | replaceRE `^\d{4}-\d{2}-\d{2}-` `` | humanize | title }}"
 description = "Add a short summary of the project"
-categories = []
-tags = []
+topics = []
 +++
 
 <!-- Content Here -->
