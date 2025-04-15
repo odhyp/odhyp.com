@@ -44,10 +44,9 @@
           {{ partial "terms.html" (dict "taxonomy" "topics" "page" .) }}
         </div>
 
-        <hr class="my-8! border-0! border-b! border-neutral-700!" />
-
-        <div>{{ .Content }}</div>
+        <div class="mt-16!">{{ .Content }}</div>
       </article>
+
       <div class="mx-auto w-full max-w-prose">
         {{- partial "giscus.html" . -}}
       </div>
