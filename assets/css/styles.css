@@ -76,4 +76,3 @@ code::after {
 .underline-hover {
   @apply relative text-white before:absolute before:-bottom-0.5 before:w-full before:scale-0 before:border-b before:border-b-white before:transition-transform before:ease-in-out hover:before:scale-100;
 }
-
