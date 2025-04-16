@@ -13,7 +13,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>{{ if eq .Title .Site.Title }}{{ .Site.Title }}{{ else }}{{ .Title }} on {{ .Site.Title }}{{ end }}</title>
-    <description>Writings on programming, tech, and more.</description>
+    <description>Writings, projects, and services by Odhy, focused on building systems, exploring ideas, and helping others create.</description>
     <link>{{ .Permalink }}</link>
     <language>{{ site.Language.LanguageCode }}</language>
     <generator>Hugo</generator>
