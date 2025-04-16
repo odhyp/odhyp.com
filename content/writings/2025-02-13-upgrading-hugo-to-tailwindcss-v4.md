@@ -6,9 +6,9 @@ slug = "upgrading-a-hugo-website-from-tailwind-css-v3-to-v4"
 aliases = ["/upgrading-a-hugo-website-from-tailwind-css-v3-to-v4", "/blog/upgrading-hugo-to-tailwindcss-v4"]
 type = "article" # Type of the page (article, note, idea, log)
 stage = "evergreen" # Progress of the idea (sprout, thriving, evergreen)
-cover = ""
+cover = "https://tailwindcss.com/_next/static/media/card.d69e3d8c.jpg"
 title = "Upgrading a Hugo Website from Tailwind CSS v3 to v4"
-description = "How to upgrade a Hugo website from Tailwind CSS v3 to v4"
+description = "A step-by-step guide to upgrading your Hugo site from Tailwind CSS v3 to v4"
 topics = ["hugo", "tailwindcss"]
 +++
 

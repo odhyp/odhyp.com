@@ -6,7 +6,7 @@ slug = "sipd-ri-helper"
 date = 2024-10-27
 topics = ["python", "web-automation"]
 description = "Simple command-line Python application to help with SIPD-RI and office tasks."
-icon = "playwright"
+icon = "python"
 +++
 
 SIPD-RI Helper is a simple command-line Python application to help with SIPD-RI and office tasks.
