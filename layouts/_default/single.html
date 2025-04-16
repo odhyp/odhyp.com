@@ -1,33 +1,56 @@
 {{ define "main" }}
-<section class="site-container mb-16 flex flex-col gap-y-4 md:gap-y-6">
-  <!-- POST TITLE START -->
-  <section class="space-y-4">
-    <h1 class="text-3xl leading-snug font-bold">{{ .Title }}</h1>
+<section>
+  <div class="w-full">
+    <div class="site-container">
+      <article>
+        <div class="mb-4 flex items-center gap-x-2 text-sm sm:gap-x-4">
+          <!-- Project page -->
+          {{ if eq .Type "projects" }}
+          <div class="flex items-center gap-x-2">
+            {{- partial "writing-cards/stage-icon.html" . -}}
+            <span class="">{{ title .Type }}</span>
+          </div>
 
-    <div class="flex items-center gap-x-3 font-medium opacity-50">
-      <span>{{ .Date.Format "January 2, 2006" }}</span>
-      <span>&middot;</span>
-      <span>{{ printf "%d min read" .ReadingTime }}</span>
+          <!-- Writings page -->
+          {{ else }}
+          <div class="flex items-center gap-x-2">
+            {{- partial "writing-cards/stage-icon.html" . -}}
+            <span class="">{{ title .Params.stage }}</span>
+          </div>
+          {{ end }}
+
+          <span class="font-bold">&middot;</span>
+
+          <p class="my-0!">
+            Last tended:&nbsp;
+            <span
+              class="relative-time"
+              data-time='{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}'
+            >
+              {{ .Lastmod.Format "Jan 2, 2006" }}
+            </span>
+          </p>
+        </div>
+
+        <h1 class="my-0! mb-4! text-6xl leading-tight! font-semibold">
+          {{ .Title }}
+        </h1>
+
+        <h3 class="my-0! font-light! italic!">{{ .Description }}</h3>
+
+        <div
+          class="mt-4! flex gap-4 text-sm *:font-normal! *:text-white/50! *:no-underline! *:transition-colors *:ease-in-out *:hover:text-white!"
+        >
+          {{ partial "terms.html" (dict "taxonomy" "topics" "page" .) }}
+        </div>
+
+        <div class="mt-16!">{{ .Content }}</div>
+      </article>
+
+      <div class="mx-auto w-full max-w-prose">
+        {{- partial "giscus.html" . -}}
+      </div>
     </div>
-  </section>
-  <!-- POST TITLE END -->
-
-  <!-- POST CONTENT START -->
-  <article>{{ .Content }}</article>
-  <!-- POST CONTENT END -->
-
-  <!-- POST TAGS START -->
-  <div class="inline space-x-2">
-    <!-- BLOG TAGS -->
-    {{- partial "terms.html" (dict "taxonomy" "tags" "page" .) -}}
-
-    <!-- PROJECT CATEGORIES -->
-    {{- partial "terms.html" (dict "taxonomy" "categories" "page" .) -}}
   </div>
-  <!-- POST TAGS END -->
-
-  <!-- COMMENTS START -->
-  <div class="mt-8">{{- partial "giscus.html" . -}}</div>
-  <!-- COMMENTS END -->
 </section>
 {{ end }}

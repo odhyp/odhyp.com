@@ -1,6 +1,6 @@
-<div class="flex flex-col items-center gap-y-4">
+<figure class="flex flex-col items-center gap-y-4">
   <img class="m-0!" src='{{ .Get "src" }}' alt='{{ .Get "alt" }}' />
-  <p class="text-white-prose m-0! text-sm opacity-50">
+  <figcaption class="text-white-prose m-0! text-sm opacity-50">
     {{ .Get "caption" | markdownify }}
-  </p>
-</div>
+  </figcaption>
+</figure>

@@ -1,0 +1,30 @@
+{{- if eq .Params.type "note" -}}
+<div
+  class="group mb-4 h-fit w-full break-inside-avoid rounded-lg transition-colors duration-300 ease-in-out hover:bg-neutral-800/50"
+>
+  <a href="{{ .RelPermalink }}" class="h-full w-full rounded-md">
+    <!-- PAGE CONTENT -->
+    <div class="flex gap-x-4 p-4">
+      <!-- Growth Stage -->
+      <div class="mt-1 h-fit">
+        {{- partial "writing-cards/stage-icon.html" . -}}
+      </div>
+
+      <!-- Content -->
+      <div class="space-y-1.5">
+        <h3 class="text-lg font-medium">{{ .Title }}</h3>
+        <p class="text-white/50">{{ .Description }}</p>
+        <div class="inline-flex items-center gap-x-2 text-sm text-white/50">
+          <span class="">{{ .Params.type | title }}</span>
+          <div class="h-1 w-1 rounded-full bg-white/50"></div>
+          <span
+            class="relative-time"
+            data-time='{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}'
+            >{{ .Date.Format "Jan 2, 2006" }}</span
+          >
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+{{- end -}}

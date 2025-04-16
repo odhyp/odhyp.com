@@ -1,0 +1,28 @@
+<div
+  class="group h-full w-full rounded-lg border-2 border-neutral-800/50 p-4 transition-colors ease-in-out hover:border-neutral-800/0 hover:bg-neutral-800/50 sm:p-6"
+>
+  <a
+    href="{{ .RelPermalink }}"
+    class="flex h-full w-full gap-4 rounded-md sm:gap-6"
+  >
+    <!-- CARD ICON -->
+    {{ with .Params.icon }}
+    <div
+      class="flex size-14 shrink-0 items-center justify-center rounded-md bg-neutral-800 group-hover:bg-neutral-700/50"
+    >
+      <iconify-icon
+        icon='simple-icons:{{ default "python" . | lower }}'
+        width="32"
+        height="32"
+        class="text-white"
+      ></iconify-icon>
+    </div>
+    {{ end }}
+
+    <!-- CARD CONTENT -->
+    <div class="space-y-2">
+      <h3 class="font-medium">{{ .Title }}</h3>
+      <p class="text-white/50">{{ .Description }}</p>
+    </div>
+  </a>
+</div>

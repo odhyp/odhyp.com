@@ -1,0 +1,33 @@
+{{ define "main" }}
+<section>
+  <div class="w-full">
+    <div class="site-container">
+      <article>
+        <h1 class="my-0! mb-4!">{{ .Title }}</h1>
+        <h3 class="my-0! font-light! italic!">{{ .Description }}</h3>
+      </article>
+
+      <!-- WRITINGS LIST START -->
+      <div class="mt-16 columns-1 gap-4 md:columns-2 xl:columns-3">
+        {{ range .Site.RegularPages }}
+
+        <!-- WRITING CARDS START -->
+        {{ if eq .Section "writings" }}
+
+        <!-- Partials - Article -->
+        {{ partial "writing-cards/page-articles.html" . }}
+
+        <!-- Partials - Notes -->
+        {{ partial "writing-cards/page-notes.html" . }}
+
+        <!-- Partials - Log -->
+        {{ partial "writing-cards/page-logs.html" . }}
+
+        <!-- WRITING CARDS END -->
+        {{ end }} {{ end }}
+      </div>
+      <!-- WRITINGS LIST END -->
+    </div>
+  </div>
+</section>
+{{ end }}

@@ -1,28 +1,26 @@
 <!doctype html>
 <html lang="{{ .Site.LanguageCode }}">
+  <!-- HEAD START -->
   {{ partial "head.html" . }}
+  <!-- HEAD END -->
+
+  <!-- GOOGLE TAG START -->
+  {{ partial "google-tag.html" . }}
+  <!-- GOOGLE TAG END -->
 
   <!-- DEV TOOLS START -->
   {{- partial "dev/dev-tools.html" . -}}
   <!-- DEV TOOLS END -->
 
   <body
-    class="font-inter relative flex min-h-dvh w-full flex-col bg-neutral-950 text-white sm:min-h-screen"
+    class="font-inter relative flex min-h-dvh flex-col bg-neutral-900 text-white sm:min-h-screen"
   >
-    <!-- BACKGROUND START -->
-    <div
-      class="absolute inset-0 -z-50 h-full w-full bg-neutral-950 bg-[radial-gradient(#202020_1px,transparent_1px)] [background-size:32px_32px]"
-    ></div>
-    <!-- BACKGROUND END -->
-
     <!-- HEADER START -->
     {{- partial "header.html" . -}}
     <!-- HEADER END -->
 
     <!-- MAIN START -->
-    <main class="site-container grow px-6 py-16">
-      {{- block "main" . }}{{- end }}
-    </main>
+    <main class="grow">{{- block "main" . }}{{- end }}</main>
     <!-- MAIN END -->
 
     <!-- FOOTER START -->

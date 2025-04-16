@@ -1,9 +1,45 @@
 {{ define "main" }}
-<section class="site-container mb-16 flex flex-col gap-y-4 md:gap-y-6">
-  <article>{{ .Content }}</article>
+<section>
+  <div class="w-full">
+    <div class="site-container">
+      <div class="flex flex-col gap-8 xl:flex-row xl:justify-center">
+        <!-- MAIN CONTENT -->
+        <div class="shrink-0">
+          <article>
+            <div class="mb-4 flex items-center gap-x-2 text-sm sm:gap-x-4">
+              <div class="flex items-center gap-x-2">
+                {{- partial "writing-cards/stage-icon.html" . -}}
+                <span class="">{{ .Title }}</span>
+              </div>
+            </div>
 
-  <!-- COMMENTS START -->
-  <div class="">{{- partial "giscus.html" . -}}</div>
-  <!-- COMMENTS END -->
+            <h1 class="my-0! mb-4!">Odhy Pradhana</h1>
+
+            <h3 class="my-0! font-light! italic!">
+              Accountant &middot; Python Developer
+            </h3>
+
+            <!-- SIDE CONTENT START -->
+            <div class="block xl:hidden">
+              {{- partial "about/side-content.html" . -}}
+            </div>
+            <!-- SIDE CONTENT END -->
+
+            <div class="">{{ .Content }}</div>
+          </article>
+
+          <div class="mx-auto w-full max-w-prose">
+            {{- partial "giscus.html" . -}}
+          </div>
+        </div>
+
+        <!-- SIDE CONTENT START -->
+        <div class="hidden xl:block">
+          {{- partial "about/side-content.html" . -}}
+        </div>
+        <!-- SIDE CONTENT END -->
+      </div>
+    </div>
+  </div>
 </section>
 {{ end }}

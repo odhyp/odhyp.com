@@ -1,9 +1,15 @@
 +++
 draft = false
-title = "Upgrading Hugo to TailwindCSS v4"
-slug = "upgrading-hugo-to-tailwindcss-v4"
+featured = false
 date = 2025-02-13
-tags = ["hugo", "tailwindcss"]
+slug = "upgrading-a-hugo-website-from-tailwind-css-v3-to-v4"
+aliases = ["/upgrading-a-hugo-website-from-tailwind-css-v3-to-v4", "/blog/upgrading-hugo-to-tailwindcss-v4"]
+type = "article" # Type of the page (article, note, idea, log)
+stage = "evergreen" # Progress of the idea (sprout, thriving, evergreen)
+cover = "https://tailwindcss.com/_next/static/media/card.d69e3d8c.jpg"
+title = "Upgrading a Hugo Website from Tailwind CSS v3 to v4"
+description = "A step-by-step guide to upgrading your Hugo site from Tailwind CSS v3 to v4"
+topics = ["hugo", "tailwindcss"]
 +++
 
 As part of [this release], I upgraded my site to use TailwindCSS v4. In this post, I'll guide you through the upgrade process—just as I did for my own website, step by step… hopefully.
@@ -63,7 +69,7 @@ Since `tailwind.config.js` is no longer used, migrate your custom styles to `sty
 @plugin "@tailwindcss/typography"; // Import plugins
 
 @theme {
-  --color-custom-100: oklch(0.98 0.04 113.22); // Custom TailwindCSS class
+  --color-custom-100: oklch(0.98 0.04 113.22); // Custom class
   --color-custom-200: oklch(0.94 0.11 115.03);
   ...
 }
