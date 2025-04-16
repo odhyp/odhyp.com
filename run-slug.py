@@ -2,13 +2,23 @@ import re
 import sys
 
 
-def title_to_slug(title: str) -> str:
-    """Converts a title into an SEO-friendly slug."""
-    title = title.lower()  # Convert to lowercase
-    title = re.sub(r"\s+", "-", title)  # Replace spaces with hyphens
-    title = re.sub(r"[^a-z0-9-]", "", title)  # Remove special characters except hyphens
-    title = re.sub(r"-+", "-", title).strip("-")  # Remove multiple hyphens
-    return title
+def title_to_slug(input_text: str) -> str:
+    """
+    Converts a title into an SEO-friendly slug
+
+    Args:
+        title (str): A title string
+
+    Returns:
+        str: Slug-ified string
+    """
+    input_text = input_text.lower()
+    input_text = re.sub(r"\s+", "-", input_text)  # Replace spaces with hyphens
+    input_text = re.sub(
+        r"[^a-z0-9-]", "", input_text
+    )  # Remove special characters except hyphens
+    input_text = re.sub(r"-+", "-", input_text).strip("-")  # Remove multiple hyphens
+    return input_text
 
 
 if __name__ == "__main__":
