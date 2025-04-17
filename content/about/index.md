@@ -56,7 +56,6 @@ Reaching out? Feel free to drop me an email at [pradhana.odhy@gmail.com](mailto:
 {{< icon name="github" title="GitHub" url="https://github.com/odhyp/" >}}
 {{< icon name="linkedin" title="LinkedIn" url="https://www.linkedin.com/in/odhy/" >}}
 {{< icon name="instagram" title="Instagram" url="https://www.instagram.com/odhypradhana" >}}
-{{< icon name="threads" title="Threads" url="https://www.threads.net/@odhypradhana" >}}
 {{< icon name="x" title="X/Twitter" url="https://x.com/valgtreiz" >}}
 {{< /wrapper >}}
 
