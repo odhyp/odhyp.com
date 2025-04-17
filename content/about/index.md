@@ -48,6 +48,18 @@ Outside of work, you can find me playing guitar or piano, exploring beaches, and
 {{< icon name="githubactions" title="Github Actions" url="https://github.com/features/actions" >}}
 {{< /wrapper >}}
 
+## Contact
+
+Reaching out? Feel free to drop me an email at [pradhana.odhy@gmail.com](mailto:pradhana.odhy@gmail.com) or connect with me on these platforms:
+
+{{< wrapper class="flex flex-wrap gap-x-4 gap-y-1 items-center justify-start" >}}
+{{< icon name="github" title="GitHub" url="https://github.com/odhyp/" >}}
+{{< icon name="linkedin" title="LinkedIn" url="https://www.linkedin.com/in/odhy/" >}}
+{{< icon name="instagram" title="Instagram" url="https://www.instagram.com/odhypradhana" >}}
+{{< icon name="threads" title="Threads" url="https://www.threads.net/@odhypradhana" >}}
+{{< icon name="x" title="X/Twitter" url="https://x.com/valgtreiz" >}}
+{{< /wrapper >}}
+
 ## Questions or Feedback?
 
 Leave a comment below. I’m happy to help or hear your thoughts.
