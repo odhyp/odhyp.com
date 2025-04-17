@@ -9,7 +9,6 @@ enableGitInfo = true
 [params]
 author = { name = "Odhy Pradhana", email = "pradhana.odhy@gmail.com" }
 description = "Personal website about automation, data visualization, and web development."
-google_site_verification = "YOUR_VERIFICATION_CODE"
 
 # Custom taxonomies
 [taxonomies]
@@ -44,9 +43,3 @@ term = ["HTML", "RSS"]
 changefreq = "weekly"
 filename = "sitemap.xml"
 priority = 0.5
-
-
-# Enable Google Analytics
-[services]
-[services.googleAnalytics]
-id = "UA-XXXXXXXXX-X" # Replace with actual tracking ID
