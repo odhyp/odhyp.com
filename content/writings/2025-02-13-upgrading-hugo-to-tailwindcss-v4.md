@@ -95,9 +95,6 @@ You can now run the site locally using `hugo server` and check for the applied T
 
 ---
 
-If you’re interested in seeing how this site is structured, you can visit the [site repository].
-
 For those who are starting a new Hugo project with TailwindCSS v4, you can use the [Hugo TailwindCSS Starter Template] to quickly get up and running. This template is a clean starting point with TailwindCSS v4 already configured, so you can focus on building your content.
 
-[site repository]: https://github.com/odhyp/odhyp.com
 [Hugo TailwindCSS Starter Template]: https://github.com/odhyp/hugo-tailwindcss-starter
