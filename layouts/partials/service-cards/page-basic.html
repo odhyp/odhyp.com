@@ -1,0 +1,30 @@
+<a
+  href="{{ .RelPermalink }}"
+  class="group flex flex-col gap-y-4 rounded-lg border border-neutral-800 p-8 hover:bg-neutral-800/50"
+>
+  <!-- CARD ICON -->
+  <div class="size-14 rounded-full bg-neutral-800 p-4">
+    {{ $icon := .Params.icon }}
+    <iconify-icon
+      icon="material-symbols:{{ $icon }}"
+      width="24"
+      height="24"
+      class="size-6 text-emerald-400"
+    ></iconify-icon>
+  </div>
+
+  <!-- CARD CONTENT -->
+  <h3 class="text-xl font-semibold">{{ .Title }}</h3>
+  <p class="font-light text-white/75">{{ .Description }}</p>
+  <span
+    class="flex items-center gap-x-2 text-white/50 transition-colors ease-in-out group-hover:text-emerald-400"
+  >
+    <p class="text-sm font-bold">Learn more</p>
+    <iconify-icon
+      icon="material-symbols:arrow-right-alt-rounded"
+      width="16"
+      height="16"
+      class="size-4"
+    ></iconify-icon
+  ></span>
+</a>
