@@ -75,6 +75,40 @@
 </section>
 <!-- HERO END -->
 
+<!-- FEATURED SERVICE START -->
+<section class="mt-16">
+  <div class="relative w-full">
+    <div class="site-container">
+      <h2 class="text-3xl font-medium md:text-4xl md:leading-16 lg:text-5xl">
+        Services
+      </h2>
+      <h3 class="max-w-2xl text-xl text-white/75 md:text-2xl">
+        I design tools and automation that simplify work, improve clarity, and
+        help you move faster.
+      </h3>
+
+      <!-- SERVICES LIST START -->
+      <div
+        class="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-4 xl:gap-8"
+      >
+        {{ range where .Site.RegularPages ".Section" "services" | first 3 }}
+
+        <!-- SERVICES CARDS START -->
+        {{ partial "service-cards/base.html" . }}
+        <!-- SERVICES CARDS END -->
+
+        {{ end }}
+
+        <!-- MORE SERVICES -->
+        {{ partial "service-cards/view-more.html" . }}
+        <!-- MORE SERVICES -->
+      </div>
+      <!-- SERVICES LIST END -->
+    </div>
+  </div>
+</section>
+<!-- FEATURED SERVICE END -->
+
 <!-- FEATURED PROJECTS START -->
 <section class="mt-16">
   <div class="relative w-full">
