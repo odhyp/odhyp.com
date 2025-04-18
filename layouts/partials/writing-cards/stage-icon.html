@@ -32,6 +32,16 @@
 ></iconify-icon>
 {{- end -}} {{- end -}}
 
+<!-- SERVICES PAGE -->
+{{ if eq .Section "services" }}
+<iconify-icon
+  icon="material-symbols:work"
+  width="{{ $size }}"
+  height="{{ $size }}"
+  class="size-5 text-emerald-400"
+></iconify-icon>
+{{- end -}}
+
 <!-- PROJECTS PAGE -->
 {{ if eq .Section "projects" }}
 <iconify-icon
