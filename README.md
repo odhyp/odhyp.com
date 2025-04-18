@@ -40,3 +40,8 @@ Create a special Hugo template (layouts/_default/list.html) to log and check dup
 Save this file as layouts/_default/list.html.
 Run hugo server.
 Visit /duplicate-check/ in your browser to see any duplicate slugs in red.
+
+### Using fffuel assets
+
+fill 1: `hsl(161, 100%, 42%)`
+fill 2: `hsl(161, 10%, 40%)`
