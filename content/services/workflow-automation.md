@@ -1,6 +1,5 @@
 +++
 draft = false
-featured = true
 title = "Custom Workflow Automation"
 slug = "custom-workflow-automation"
 date = 2025-04-18

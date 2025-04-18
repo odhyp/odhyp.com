@@ -1,6 +1,5 @@
 +++
 draft = false
-featured = true
 title = "PDF Tools & Automation"
 slug = "pdf-automation"
 date = 2025-04-18

@@ -1,6 +1,5 @@
 +++
 draft = false
-featured = true
 title = "Data Collection and Scraping"
 slug = "data-collection-and-scraping"
 date = 2025-04-18
