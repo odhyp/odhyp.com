@@ -93,9 +93,9 @@
       >
         {{ range where .Site.RegularPages ".Section" "services" | first 3 }}
 
-        <!-- SERVICES CARDS START -->
-        {{ partial "service-cards/base.html" . }}
-        <!-- SERVICES CARDS END -->
+        <!-- FEATURED SERVICES CARDS START -->
+        {{ partial "service-cards/featured.html" . }}
+        <!-- FEATURED SERVICES CARDS END -->
 
         {{ end }}
 
