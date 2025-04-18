@@ -1,15 +1,15 @@
 <a
   href="{{ .RelPermalink }}"
-  class="group flex flex-col gap-y-4 rounded-lg border border-neutral-800 p-8 hover:bg-neutral-800/50"
+  class="group flex flex-col gap-y-4 rounded-lg border-2 border-neutral-800/50 bg-neutral-900/50 p-8 backdrop-blur-sm transition-all duration-300 ease-in-out hover:border-emerald-700/50 hover:shadow-xl"
 >
   <!-- CARD ICON -->
-  <div class="size-14 rounded-full bg-neutral-800 p-4">
+  <div class="size-14 rounded-full bg-neutral-800/50 p-4 backdrop-blur-sm">
     {{ $icon := .Params.icon }}
     <iconify-icon
       icon="material-symbols:{{ $icon }}"
       width="24"
       height="24"
-      class="size-6 text-emerald-400"
+      class="group-hover:animate-pop size-6 text-emerald-400 will-change-transform"
     ></iconify-icon>
   </div>
 
@@ -19,12 +19,12 @@
   <span
     class="flex items-center gap-x-2 text-white/50 transition-colors ease-in-out group-hover:text-emerald-400"
   >
-    <p class="text-sm font-bold">Learn more</p>
+    <p class="text-sm font-light">Learn more</p>
     <iconify-icon
       icon="material-symbols:arrow-right-alt-rounded"
       width="16"
       height="16"
-      class="size-4"
+      class="size-4 scale-100 transition-all ease-in-out group-hover:scale-100 sm:scale-0"
     ></iconify-icon
   ></span>
 </a>
