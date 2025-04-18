@@ -6,12 +6,12 @@ Built with Hugo, JavaScript, and TailwindCSS. Deployed in Vercel.
 
 ## Roadmap
 
-- [ ] Add Services section
-- [ ] Add CTA for work inquiry
-- [ ] Add testimonial section in landing page
-- [ ] Work on the taxonomy pages
-- [ ] Add search feature
+- [ ] update CTA for work inquiry and get in touch
+- [ ] Add testimonial section in Home and Service page
+- [ ] Work on the Taxonomy pages
+- [ ] Add search feature in Writings page
 - [ ] Add back-to-top button
+- [x] Add Services section
 
 ## Self-note
 
