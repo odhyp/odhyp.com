@@ -1,0 +1,29 @@
+{{ define "main" }}
+
+<section>
+  <div class="w-full">
+    <div class="site-container">
+      <article class="mx-0!">
+        <h1 class="my-0! mb-4!">{{ .Title }}</h1>
+        <h3 class="my-0! font-light! italic!">{{ .Description }}</h3>
+
+        <div>{{ .Content }}</div>
+      </article>
+
+      <!-- SERVICES LIST START -->
+      <div
+        class="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3 xl:gap-8"
+      >
+        {{ range where .Site.RegularPages ".Section" "services" }}
+
+        <!-- SERVICES CARDS START -->
+        {{ partial "service-cards/page-basic.html" . }}
+        <!-- SERVICES CARDS END -->
+
+        {{ end }}
+      </div>
+      <!-- SERVICES LIST END -->
+    </div>
+  </div>
+</section>
+{{ end }}
