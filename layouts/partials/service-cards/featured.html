@@ -1,0 +1,18 @@
+<div
+  class="group flex flex-col gap-y-4 rounded-lg border-2 border-neutral-800/50 bg-neutral-900/50 p-8 backdrop-blur-sm"
+>
+  <!-- CARD ICON -->
+  <div class="size-14 rounded-full bg-neutral-800/50 p-4 backdrop-blur-sm">
+    {{ $icon := .Params.icon }}
+    <iconify-icon
+      icon="material-symbols:{{ $icon }}"
+      width="24"
+      height="24"
+      class="group-hover:animate-pop size-6 text-emerald-400 will-change-transform"
+    ></iconify-icon>
+  </div>
+
+  <!-- CARD CONTENT -->
+  <h3 class="text-xl font-semibold">{{ .Title }}</h3>
+  <p class="grow font-light text-white/75">{{ .Description }}</p>
+</div>
