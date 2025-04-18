@@ -4,8 +4,18 @@
     <div class="site-container">
       <article>
         <div class="mb-4 flex items-center gap-x-2 text-sm sm:gap-x-4">
+          <!-- LEFT SIDE START -->
+          <!-- Icon and page name -->
+
+          <!-- Service page -->
+          {{ if eq .Type "services" }}
+          <div class="flex items-center gap-x-2">
+            {{- partial "writing-cards/stage-icon.html" . -}}
+            <span class="">{{ title .Type }}</span>
+          </div>
+
           <!-- Project page -->
-          {{ if eq .Type "projects" }}
+          {{ else if eq .Type "projects" }}
           <div class="flex items-center gap-x-2">
             {{- partial "writing-cards/stage-icon.html" . -}}
             <span class="">{{ title .Type }}</span>
@@ -18,11 +28,23 @@
             <span class="">{{ title .Params.stage }}</span>
           </div>
           {{ end }}
+          <!-- LEFT SIDE END -->
 
+          <!-- RIGHT SIDE START -->
+          <!-- Middot and last update/tended -->
+
+          <!-- Service page -->
+          {{ if eq .Type "services" }}
+          <!-- Nothing... -->
+
+          {{ else }}
           <span class="font-bold">&middot;</span>
 
           <p class="my-0!">
-            Last tended:&nbsp;
+            <!-- Projects page -->
+            {{ if eq .Type "projects" }}Last modified:&nbsp;
+            <!-- Writings page -->
+            {{ else }}Last tended:&nbsp; {{ end }}
             <span
               class="relative-time"
               data-time='{{ .GitInfo.CommitDate.Format "2006-01-02T15:04:05Z07:00" }}'
@@ -30,6 +52,8 @@
               {{ .GitInfo.CommitDate.Format "Jan 2, 2006" }}
             </span>
           </p>
+          {{ end }}
+          <!-- RIGHT SIDE END -->
         </div>
 
         <h1 class="my-0! mb-4! text-6xl leading-tight! font-semibold">
@@ -47,9 +71,16 @@
         <div class="mt-16!">{{ .Content }}</div>
       </article>
 
+      <!-- COMMENT START -->
+      {{ if eq .Type "services" }}
+      <!-- No comment section for services page -->
+
+      {{ else }}
       <div class="mx-auto w-full max-w-prose">
         {{- partial "giscus.html" . -}}
       </div>
+      {{ end }}
+      <!-- COMMENT END -->
     </div>
   </div>
 </section>
