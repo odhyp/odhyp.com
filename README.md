@@ -9,7 +9,8 @@ Built with Hugo, JavaScript, and TailwindCSS. Deployed in Vercel.
 - [ ] update CTA for work inquiry and get in touch
 - [ ] Add testimonial section in Home and Service page
 - [ ] Work on the Taxonomy pages
-- [ ] Add search feature in Writings page
+- [ ] Add search and sort feature in Writings page
+- [ ] Add Single page Table of Contents
 - [ ] Add back-to-top button
 - [x] Add Services section
 
