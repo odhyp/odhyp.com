@@ -155,6 +155,7 @@ function hamburgerMenu() {
   const hamburgerMenu = document.getElementById("hamburger-menu");
   const menuOpen = document.getElementById("menu-open");
   const menuClose = document.getElementById("menu-close");
+  const header = document.getElementById("header");
   const body = document.body;
 
   // Open Menu
@@ -162,9 +163,14 @@ function hamburgerMenu() {
     if (hamburgerMenu.classList.contains("hidden")) {
       // Show Menu
       hamburgerMenu.classList.remove("hidden");
+      header.classList.remove("bg-neutral-900/50");
+      header.classList.add("bg-neutral-900");
       setTimeout(() => {
         hamburgerMenu.classList.remove("translate-x-full");
       }, 50);
+      setTimeout(() => {
+        header.classList.remove("backdrop-blur-sm");
+      }, 500);
       body.style.overflow = "hidden";
 
       // Toggle Icons
@@ -174,6 +180,8 @@ function hamburgerMenu() {
       // Hide Menu
       hamburgerMenu.classList.add("translate-x-full");
       body.style.overflow = "";
+      header.classList.add("bg-neutral-900/50", "backdrop-blur-sm");
+      header.classList.remove("bg-neutral-900");
 
       setTimeout(() => {
         hamburgerMenu.classList.add("hidden");
