@@ -6,6 +6,7 @@
 // 03. DROPDOWN MENU - WRITINGS
 // 04. HAMBURGER MENU
 // 05. UPDATE RELATIVE DATES
+// 06. HEADER SCROLL EFFECT
 
 // 00. LOAD ALL FUNCTION ----------------------------------------------------------------
 document.addEventListener("DOMContentLoaded", () => {
@@ -14,6 +15,10 @@ document.addEventListener("DOMContentLoaded", () => {
   dropdownHeaderWritings();
   hamburgerMenu();
   updateRelativeDates();
+});
+
+document.addEventListener("scroll", () => {
+  headerScrollEffect();
 });
 
 // 01. CODE BLOCK COPY ------------------------------------------------------------------
@@ -257,4 +262,18 @@ function updateRelativeDates() {
   document.querySelectorAll(".relative-time").forEach((el) => {
     el.textContent = timeAgo(el.dataset.time);
   });
+}
+
+// 06. HEADER SCROLL EFFECT -------------------------------------------------------------
+function headerScrollEffect() {
+  const threshold = 150;
+  const pageHeader = document.getElementById("header");
+
+  if (window.scrollY > threshold) {
+    pageHeader.classList.remove("border-neutral-800/0");
+    pageHeader.classList.add("border-neutral-800/50", "shadow-md");
+  } else {
+    pageHeader.classList.remove("border-neutral-800/50", "shadow-md");
+    pageHeader.classList.add("border-neutral-800/0");
+  }
 }
