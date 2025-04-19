@@ -1,6 +1,6 @@
 <header
   id="header"
-  class="sticky top-0 z-40 border-b-2 border-neutral-800/0 bg-neutral-900/50 backdrop-blur-md"
+  class="sticky top-0 z-40 border-b-2 border-neutral-800/0 bg-neutral-900/50 backdrop-blur-sm transition-colors ease-in-out"
 >
   <div
     class="container mx-auto flex h-20 items-center justify-between px-8 py-6"
@@ -126,38 +126,121 @@
     <!-- HAMBURGER MENU START -->
     <div
       id="hamburger-menu"
-      class="fixed inset-0 top-20 z-50 hidden h-dvh translate-x-full bg-neutral-900 transition-transform duration-300 ease-in-out md:hidden"
+      class="fixed inset-0 top-20 z-50 hidden h-dvh translate-x-full bg-neutral-900 transition-transform ease-in-out md:hidden"
     >
       <ul class="flex flex-col py-8 text-xl font-medium">
+        <!-- SERVICES -->
         <li>
-          <a href="/services" class="block px-8 py-4">Services</a>
+          <a href="/services" class="flex items-center gap-x-4 px-8 py-4">
+            <iconify-icon
+              icon="material-symbols:work-outline"
+              width="24"
+              height="24"
+              class="size-6 -translate-y-0.5 text-emerald-400"
+            ></iconify-icon>
+            Services</a
+          >
         </li>
-        <li>
-          <a href="/projects" class="block px-8 py-4">Projects</a>
-        </li>
-        <li>
-          <a href="/writings" class="block px-8 py-4">Writings</a>
 
-          <ul class="pl-8 text-lg font-normal">
+        <!-- PROJECTS -->
+        <li>
+          <a href="/projects" class="flex items-center gap-x-4 px-8 py-4">
+            <iconify-icon
+              icon="material-symbols:construction-rounded"
+              width="24"
+              height="24"
+              class="size-6 -translate-y-0.5 text-emerald-400"
+            ></iconify-icon>
+            Projects</a
+          >
+        </li>
+
+        <!-- WRITINGS -->
+        <li>
+          <a href="/writings" class="flex items-center gap-x-4 px-8 py-4">
+            <iconify-icon
+              icon="material-symbols:potted-plant-outline-rounded"
+              width="24"
+              height="24"
+              class="size-6 -translate-y-0.5 text-emerald-400"
+            ></iconify-icon>
+            Writings</a
+          >
+
+          <!-- WRITINGS SUB-MENU START -->
+          <ul class="pl-10 text-lg font-normal">
             <li>
-              <a href="/articles" class="block px-8 py-4">Articles</a>
+              <a href="/articles" class="flex items-center gap-x-4 px-8 py-2">
+                <iconify-icon
+                  icon="material-symbols:article-outline-rounded"
+                  width="20"
+                  height="20"
+                  class="size-5 text-emerald-400"
+                ></iconify-icon>
+                Articles</a
+              >
             </li>
             <li>
-              <a href="/notes" class="block px-8 py-4">Notes</a>
+              <a href="/notes" class="flex items-center gap-x-4 px-8 py-2">
+                <iconify-icon
+                  icon="material-symbols:note-outline-rounded"
+                  width="20"
+                  height="20"
+                  class="size-5 text-emerald-400"
+                ></iconify-icon>
+                Notes</a
+              >
             </li>
             <li>
-              <a href="/ideas" class="block px-8 py-4">Ideas</a>
+              <a href="/ideas" class="flex items-center gap-x-4 px-8 py-2">
+                <iconify-icon
+                  icon="material-symbols:lightbulb-2-outline-rounded"
+                  width="20"
+                  height="20"
+                  class="size-5 text-emerald-400"
+                ></iconify-icon>
+                Ideas</a
+              >
             </li>
             <li>
-              <a href="/logs" class="block px-8 py-4">Logs</a>
+              <a href="/logs" class="flex items-center gap-x-4 px-8 py-2">
+                <iconify-icon
+                  icon="material-symbols:history-rounded"
+                  width="20"
+                  height="20"
+                  class="size-5 text-emerald-400"
+                ></iconify-icon>
+                Logs</a
+              >
             </li>
           </ul>
+          <!-- WRITINGS SUB-MENU END -->
         </li>
+
+        <!-- NOW -->
         <li>
-          <a href="/now" class="block px-8 py-4">Now</a>
+          <a href="/now" class="flex items-center gap-x-4 px-8 py-4">
+            <iconify-icon
+              icon="material-symbols:calendar-month-outline-rounded"
+              width="24"
+              height="24"
+              class="size-6 -translate-y-0.5 text-emerald-400"
+            ></iconify-icon>
+            Now</a
+          >
         </li>
+
+        <!-- ABOUT -->
         <li>
-          <a href="/about" class="block px-8 py-4">About</a>
+          <a href="/about" class="flex items-center gap-x-4 px-8 py-4">
+            <iconify-icon
+              icon="material-symbols:person-outline-rounded"
+              width="24"
+              height="24"
+              class="size-6 -translate-y-0.5 text-emerald-400"
+            ></iconify-icon>
+            About</a
+          >
         </li>
       </ul>
     </div>
