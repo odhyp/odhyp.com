@@ -170,7 +170,7 @@ function hamburgerMenu() {
       }, 50);
       setTimeout(() => {
         header.classList.remove("backdrop-blur-sm");
-      }, 500);
+      }, 100);
       body.style.overflow = "hidden";
 
       // Toggle Icons
