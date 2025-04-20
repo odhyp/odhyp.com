@@ -8,36 +8,32 @@
           <!-- Icon and page name -->
 
           <!-- Service page -->
-          {{ if eq .Type "services" }}
+          {{ if eq .Section "services" }}
           <div class="flex items-center gap-x-2">
             {{- partial "writing-cards/stage-icon.html" . -}}
             <span class="">{{ title .Type }}</span>
           </div>
 
           <!-- Project page -->
-          {{ else if eq .Type "projects" }}
+          {{ else if eq .Section "projects" }}
           <div class="flex items-center gap-x-2">
             {{- partial "writing-cards/stage-icon.html" . -}}
             <span class="">{{ title .Type }}</span>
           </div>
 
           <!-- Writings page -->
-          {{ else }}
+          {{ else if eq .Section "writings" }}
           <div class="flex items-center gap-x-2">
             {{- partial "writing-cards/stage-icon.html" . -}}
             <span class="">{{ title .Params.stage }}</span>
           </div>
-          {{ end }}
+
+          {{ else }} {{ end }}
           <!-- LEFT SIDE END -->
 
           <!-- RIGHT SIDE START -->
           <!-- Middot and last update/tended -->
-
-          <!-- Service page -->
-          {{ if eq .Type "services" }}
-          <!-- Nothing... -->
-
-          {{ else }}
+          {{ if or (eq .Section "projects") (eq .Section "writings") }}
           <span class="font-bold">&middot;</span>
 
           <p class="my-0!">
@@ -52,7 +48,7 @@
               {{ .GitInfo.CommitDate.Format "Jan 2, 2006" }}
             </span>
           </p>
-          {{ end }}
+          {{ else }} {{ end }}
           <!-- RIGHT SIDE END -->
         </div>
 
@@ -76,13 +72,13 @@
       </article>
 
       <!-- COMMENT START -->
-      {{ if eq .Type "services" }}
-      <!-- No comment section for services page -->
-
-      {{ else }}
+      {{ if or (eq .Section "projects") (eq .Section "writings") }}
       <div class="mx-auto w-full max-w-prose">
         {{- partial "giscus.html" . -}}
       </div>
+
+      {{ else }}
+      <!-- No comment section for other pages -->
       {{ end }}
       <!-- COMMENT END -->
     </div>
