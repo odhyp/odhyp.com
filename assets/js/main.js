@@ -279,9 +279,19 @@ function headerScrollEffect() {
 
   if (window.scrollY > threshold) {
     pageHeader.classList.remove("border-neutral-800/0");
-    pageHeader.classList.add("border-neutral-800/50", "shadow-md");
+    pageHeader.classList.add(
+      "border-neutral-800/50",
+      "shadow-md",
+      "bg-neutral-900/50",
+      "backdrop-blur-sm",
+    );
   } else {
-    pageHeader.classList.remove("border-neutral-800/50", "shadow-md");
+    pageHeader.classList.remove(
+      "border-neutral-800/50",
+      "shadow-md",
+      "bg-neutral-900/50",
+      "backdrop-blur-sm",
+    );
     pageHeader.classList.add("border-neutral-800/0");
   }
 }
