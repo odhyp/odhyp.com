@@ -5,7 +5,7 @@ slug = "interactive-data-dashboards"
 date = 2025-04-18
 topics = []
 description = "Visualize key metrics with interactive Streamlit dashboards built for clarity, speed, and real-time insights."
-icon = "leaderboard-rounded"
+icon = "insert-chart-outline-rounded"
 weight = 3
 +++
 
