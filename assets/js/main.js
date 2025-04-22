@@ -39,7 +39,7 @@ function copyCodeBlock() {
       let copyButton = document.createElement("button");
       copyButton.innerText = "Copy";
       copyButton.className =
-        "absolute top-4 right-4 bg-neutral-700 text-white-prose px-2.5 py-1.5 text-xs rounded-md hover:bg-neutral-600 transition-all ease-in-out copy-btn hover:cursor-pointer";
+        "absolute top-4 right-4 bg-neutral-800 text-white px-2.5 py-1.5 text-xs rounded-md hover:bg-neutral-700 transition-all ease-in-out copy-btn hover:cursor-pointer";
 
       // Append button inside wrapper instead of <pre>
       wrapper.appendChild(copyButton);
