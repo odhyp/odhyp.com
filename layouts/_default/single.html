@@ -56,15 +56,13 @@
           {{ .Title }}
         </h1>
 
-        <h3 class="my-0! font-light! italic!">{{ .Description }}</h3>
+        <h3 class="my-0! mb-4! font-light! italic!">{{ .Description }}</h3>
 
-        {{ if .Params.topics }}
-        <div
-          class="mt-4! flex gap-4 text-sm *:font-normal! *:text-white/50! *:no-underline! *:transition-colors *:ease-in-out *:hover:text-white!"
-        >
-          {{ partial "terms.html" . }}
-        </div>
-        {{ end }}
+        {{ if or (eq .Section "projects") (eq .Section "writings") }}
+        <!--  -->
+        {{ partial "terms.html" . }}
+        <!--  -->
+        {{ else }} {{ end }}
 
         <hr class="my-8!" />
 
