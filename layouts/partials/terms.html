@@ -1,10 +1,17 @@
-{{- $page := .page }}
-{{- $taxonomy := .taxonomy }}
-{{- with $page.GetTerms $taxonomy }}
-{{- $terms := . }}
-{{- $total := len $terms }}
-{{- $label := (index $terms 0).Parent.LinkTitle }}
-    {{- range $index, $term := $terms }}
-    <a href="{{ $term.RelPermalink }}" class="w-fit">{{ $term.LinkTitle }}</a>
-    {{- end }}
-{{- end }}
+<!-- TOPICS PARAMETER -->
+{{ $taxonomy := "topics" }}
+
+<!--  -->
+{{ with .Param $taxonomy }}
+<ul class="m-0! flex list-none! gap-x-4 p-0!">
+  {{ range $index, $tag := . }} {{ with $.Site.GetPage (printf "/%s/%s"
+  $taxonomy $tag) }}
+  <li class="m-0! p-0!">
+    <a href="{{ .RelPermalink }}" class="no-underline! hover:text-emerald-400!">
+      {{ .LinkTitle }}
+      <span class="text-white/50">({{ .RegularPages.Len }})</span>
+    </a>
+  </li>
+  {{ end }} {{ end }}
+</ul>
+{{ end }}
