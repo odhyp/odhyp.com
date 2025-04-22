@@ -1,0 +1,14 @@
+<!-- TOPICS PARAMETER -->
+{{ $taxonomy := "tech-stacks" }}
+
+<!--  -->
+{{ with .Param $taxonomy }}
+<div class="m-0! flex list-none! flex-wrap gap-2 p-0!">
+  {{ range $index, $tag := . }} {{ with $.Site.GetPage (printf "/%s/%s"
+  $taxonomy $tag) }}
+  <span class="rounded-md bg-neutral-800 px-2.5 py-1.5 text-xs no-underline!">
+    {{ .LinkTitle }}
+  </span>
+  {{ end }} {{ end }}
+</div>
+{{ end }}
