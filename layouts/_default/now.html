@@ -1,9 +1,22 @@
 {{ define "main" }}
-<section>
+
+<section class="mt-16">
+  <!-- CHAOS PATTERN START -->
+  <div class="opacity-25">{{ partial "components/chaos-pattern.html" . }}</div>
+  <!-- CHAOS PATTERN END -->
+
   <div class="w-full">
     <div class="site-container">
       <article>
-        <h1 class="my-0! mb-4!">{{ .Title }}</h1>
+        <div class="flex items-center gap-x-4">
+          <h1 class="my-0! mb-4!">{{ .Title }}</h1>
+          <iconify-icon
+            icon="material-symbols:calendar-month-outline-rounded"
+            width="32"
+            height="32"
+            class="size-8 -translate-y-1 text-emerald-400"
+          ></iconify-icon>
+        </div>
         <h3 class="my-0! font-light! italic!">{{ .Description }}</h3>
 
         <div class="mt-16!">{{ .Content }}</div>
@@ -11,4 +24,5 @@
     </div>
   </div>
 </section>
+
 {{ end }}
