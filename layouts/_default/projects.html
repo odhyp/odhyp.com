@@ -1,59 +1,42 @@
 {{ define "main" }}
-<section class="site-container mb-16 flex flex-col gap-y-6">
-  {{ $featuredProjects := where (where (where .Site.Pages ".Section" "project")
-  "Kind" "page") "Params.featured" true }}
 
-  <!-- Featured Project Count -->
-  {{ $projectCount := len $featuredProjects }}
+<section class="mt-16">
+  <!-- CHAOS PATTERN START -->
+  {{ partial "components/chaos-pattern.html" . }}
+  <!-- CHAOS PATTERN END -->
 
-  <article>
-    <h1 class="flex items-baseline gap-x-2">
-      Projects
-      <span class="hidden text-2xl opacity-50">({{ $projectCount }})</span>
-    </h1>
+  <div class="w-full">
+    <div class="site-container">
+      <article class="mx-0!">
+        <div class="flex items-center gap-x-4">
+          <h1 class="my-0! mb-4!">{{ .Title }}</h1>
+          <iconify-icon
+            icon="material-symbols:construction-rounded"
+            width="32"
+            height="32"
+            class="size-8 -translate-y-1 text-emerald-400"
+          ></iconify-icon>
+        </div>
+        <h3 class="my-0! font-light! italic!">{{ .Description }}</h3>
 
-    {{ .Content }}
-  </article>
+        <div>{{ .Content }}</div>
+      </article>
 
-  <div class="flex flex-col gap-y-6 divide-y divide-neutral-800">
-    {{ range sort $featuredProjects "Date" "desc" }}
+      <!-- PROJECT LIST START -->
+      <div
+        class="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3 xl:gap-8"
+      >
+        {{ range where .Site.RegularPages ".Section" "projects" }}
 
-    <!-- BLOG LIST START -->
-    {{- partial "component/project-list.html" . -}}
-    <!-- BLOG LIST END -->
+        <!-- PROJECT CARDS START -->
+        {{ partial "project-cards/base.html" . }}
+        <!-- PROJECT CARDS END -->
 
-    {{ end }}
+        {{ end }}
+      </div>
+      <!-- PROJECT LIST END -->
+    </div>
   </div>
 </section>
 
-<section class="site-container mb-16 flex flex-col gap-y-6">
-  {{ $otherProjects := where (where (where .Site.Pages ".Section" "project")
-  "Kind" "page") "Params.featured" false }}
-
-  <!-- Other Project Count -->
-  {{ $projectCount := len $otherProjects }}
-
-  <article>
-    <h2 class="flex items-baseline gap-x-2">
-      Other Projects
-      <span class="text-xl opacity-50">({{ $projectCount }})</span>
-    </h2>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt maiores
-      beatae, officia eaque blanditiis, pariatur dolor, fugit rem omnis atque
-      repellat inventore? Voluptatibus quidem voluptas ut nulla quam molestias
-      nostrum?
-    </p>
-  </article>
-
-  <div class="flex flex-col gap-y-6">
-    {{ range sort $otherProjects "Date" "desc" }}
-
-    <!-- BLOG LIST START -->
-    {{- partial "component/project-list.html" . -}}
-    <!-- BLOG LIST END -->
-
-    {{ end }}
-  </div>
-</section>
 {{ end }}
