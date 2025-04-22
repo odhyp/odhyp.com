@@ -1,7 +1,11 @@
 <!-- TOPICS PARAMETER -->
-{{ $taxonomy := "topics" }}
+{{ $taxonomy := "" }}
+{{ if eq .Section "writings" }}
+  {{ $taxonomy = "topics" }}
+{{ else if eq .Section "projects" }}
+  {{ $taxonomy = "tech-stacks" }}
+{{ end }}
 
-<!--  -->
 {{ with .Param $taxonomy }}
 <ul class="m-0! flex list-none! gap-x-4 p-0!">
   {{ range $index, $tag := . }} {{ with $.Site.GetPage (printf "/%s/%s"
