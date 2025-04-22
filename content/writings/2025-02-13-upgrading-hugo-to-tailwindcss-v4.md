@@ -12,11 +12,7 @@ description = "A step-by-step guide to upgrading your Hugo site from Tailwind CS
 topics = ["hugo", "tailwindcss"]
 +++
 
-As part of [this release], I upgraded my site to use TailwindCSS v4. In this post, I'll guide you through the upgrade process—just as I did for my own website, step by step… hopefully.
-
-[this release]: https://github.com/odhyp/odhyp.com/releases/tag/v2.0.0
-
-{{< toc >}}
+I recently upgraded my site to use TailwindCSS v4. In this post, I'll guide you through the upgrade process—just as I did for my own website, step by step… hopefully.
 
 ## What's Changed
 
