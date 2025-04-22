@@ -26,7 +26,47 @@
       <div
         class="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3 xl:gap-8"
       >
-        {{ range where .Site.RegularPages ".Section" "projects" }}
+        {{ range where (where .Site.RegularPages "Section" "projects")
+        "Params.featured" true }}
+
+        <!-- PROJECT CARDS START -->
+        {{ partial "project-cards/base.html" . }}
+        <!-- PROJECT CARDS END -->
+
+        {{ end }}
+      </div>
+      <!-- PROJECT LIST END -->
+    </div>
+  </div>
+</section>
+
+<section class="mt-8">
+  <div class="w-full">
+    <div class="site-container">
+      <article class="mx-0!">
+        <div class="flex items-center gap-x-4">
+          <h1 class="my-0! mb-4!">Other Projects</h1>
+          <iconify-icon
+            icon="material-symbols:laptop-chromebook-outline-rounded"
+            width="32"
+            height="32"
+            class="size-8 -translate-y-1 text-emerald-400"
+          ></iconify-icon>
+        </div>
+
+        <p class="mt-2!">
+          A collection of smaller tools, experiments, and side projects. Some
+          are quick solutions to everyday problems, while others are early ideas
+          still taking shape. Each one shows a part of my process and curiosity.
+        </p>
+      </article>
+
+      <!-- PROJECT LIST START -->
+      <div
+        class="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3 xl:gap-8"
+      >
+        {{ range where (where .Site.RegularPages "Section" "projects")
+        "Params.featured" false }}
 
         <!-- PROJECT CARDS START -->
         {{ partial "project-cards/base.html" . }}

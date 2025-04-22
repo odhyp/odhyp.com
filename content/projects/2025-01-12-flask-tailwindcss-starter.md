@@ -1,6 +1,6 @@
 +++
 draft = false
-featured = true
+featured = false
 title = "Flask TailwindCSS Starter"
 slug = "flask-tailwindcss-starter"
 date = 2025-01-12

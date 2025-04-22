@@ -1,6 +1,6 @@
 +++
 draft = false
-featured = true
+featured = false
 title = "Hugo TailwindCSS Starter"
 slug = "hugo-tailwindcss-starter"
 date = 2024-09-22
