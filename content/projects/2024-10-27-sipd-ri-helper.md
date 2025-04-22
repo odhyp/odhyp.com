@@ -4,7 +4,7 @@ featured = true
 title = "SIPD-RI Helper"
 slug = "sipd-ri-helper"
 date = 2024-10-27
-tech-stacks = ["python", "web-automation"]
+tech-stacks = ["python", "playwright", "pandas", "openpyxl"]
 description = "Simple command-line Python application to help with SIPD-RI and office tasks."
 icon = "python"
 +++
