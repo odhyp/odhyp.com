@@ -1,5 +1,10 @@
 <figure class="flex flex-col items-center gap-y-4">
-  <img class="m-0!" src='{{ .Get "src" }}' alt='{{ .Get "alt" }}' />
+  <img
+    src='{{ .Get "src" }}'
+    alt='{{ .Get "alt" }}'
+    loading="lazy"
+    class="m-0!"
+  />
   <figcaption class="text-white-prose m-0! text-sm opacity-50">
     {{ .Get "caption" | markdownify }}
   </figcaption>
