@@ -23,7 +23,7 @@
       <div class="my-16 flex flex-col gap-y-32">
         {{ range where .Site.RegularPages "Params.type" "idea" }}
         <!--  -->
-        {{ partial "writing-cards/page-ideas.html" . }}
+        {{ partial "writing-cards/base-idea.html" . }}
         <!--  -->
         {{ end }}
       </div>
