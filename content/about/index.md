@@ -42,7 +42,7 @@ Outside of work, you can find me playing guitar or piano, exploring beaches, and
 {{< icon name="hostinger" title="Hostinger" url="https://www.hostinger.co.id/" >}}
 {{< icon name="cloudflare" title="Cloudflare" url="https://www.cloudflare.com/" >}}
 {{< icon name="git" title="Git" url="https://git-scm.com/" >}}
-{{< icon name="visualstudiocode" title="VS Code" url="" >}}
+{{< icon name="visualstudiocode" title="VS Code" url="https://code.visualstudio.com/" >}}
 {{< icon name="notion" title="Notion" url="https://www.notion.com/" >}}
 {{< icon name="figma" title="Figma" url="https://www.figma.com/" >}}
 {{< icon name="githubactions" title="Github Actions" url="https://github.com/features/actions" >}}
