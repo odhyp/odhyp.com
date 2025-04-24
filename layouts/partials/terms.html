@@ -11,7 +11,7 @@
   {{ range $index, $tag := . }} {{ with $.Site.GetPage (printf "/%s/%s"
   $taxonomy $tag) }}
   <li class="m-0! p-0!">
-    <a href="{{ .RelPermalink }}" class="no-underline! hover:text-emerald-400!">
+    <a href="{{ .RelPermalink }}" class="no-underline! text-white/50! hover:text-white!">
       {{ .LinkTitle }}
       <span class="text-white/50">({{ .RegularPages.Len }})</span>
     </a>
