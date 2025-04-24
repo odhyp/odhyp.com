@@ -1,12 +1,14 @@
 +++
 draft = false
 featured = false
-title = "Hugo TailwindCSS Starter"
-slug = "hugo-tailwindcss-starter"
 date = 2024-09-22
-tech-stacks = ["hugo", "tailwindcss", "vercel"]
-description = "Starter project for Hugo and TailwindCSS v4, ready to deploy in Vercel."
+slug = "hugo-tailwindcss-starter"
+aliases = ["/hugo-tailwindcss-starter"]
+cover = ""
 icon = "hugo"
+title = "Hugo TailwindCSS Starter"
+description = "Starter project for Hugo and TailwindCSS v4, ready to deploy in Vercel."
+tech-stacks = ["hugo", "tailwindcss", "vercel"]
 +++
 
 A starter project that integrates Hugo with TailwindCSS v4 and is ready for deployment on Vercel.

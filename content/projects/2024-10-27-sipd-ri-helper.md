@@ -1,12 +1,14 @@
 +++
 draft = false
 featured = true
-title = "SIPD-RI Helper"
-slug = "sipd-ri-helper"
 date = 2024-10-27
-tech-stacks = ["python", "playwright", "pandas", "openpyxl"]
-description = "Simple command-line Python application to help with SIPD-RI and office tasks."
+slug = "sipd-ri-helper"
+aliases = ["/sipd-ri-helper"]
+cover = ""
 icon = "python"
+title = "SIPD-RI Helper"
+description = "Simple command-line Python application to help with SIPD-RI and office tasks."
+tech-stacks = ["python", "playwright", "pandas", "openpyxl"]
 +++
 
 SIPD-RI Helper is a simple command-line Python application to help with SIPD-RI and office tasks.
