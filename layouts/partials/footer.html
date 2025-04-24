@@ -4,44 +4,61 @@
   <div
     class="container mx-auto flex flex-col-reverse gap-y-16 px-6 py-16 md:flex-row md:justify-between xl:px-32"
   >
-    <div class="flex flex-col justify-center gap-y-4">
-      <span class="text-2xl font-medium lg:text-3xl">Follow and Support?</span>
+    <div class="flex flex-col gap-y-8">
+      <!-- FOOTER CTA -->
+      <div class="flex grow flex-col gap-y-4">
+        <span class="text-2xl font-medium lg:text-3xl xl:text-4xl"
+          >Follow and Support?</span
+        >
 
-      <div
-        class="flex w-full flex-col gap-2 sm:flex-row md:flex-col lg:flex-row"
-      >
-        <a
-          href="/index.xml"
-          class="flex w-fit items-center gap-x-2 rounded-md border-2 border-neutral-800 bg-neutral-800 px-8 py-2 text-sm text-white/75 transition-all ease-in-out hover:border-neutral-600 hover:text-white"
+        <div
+          class="flex w-full flex-col gap-2 sm:flex-row md:flex-col lg:flex-row"
         >
-          <iconify-icon
-            icon="material-symbols:rss-feed-rounded"
-            width="16"
-            height="16"
-            class="size-4"
-          ></iconify-icon>
-          <span class="whitespace-nowrap">RSS Feed</span>
-        </a>
-        <a
-          href="https://buymeacoffee.com/odhyp"
-          target="_blank"
-          class="flex w-fit items-center gap-x-2 rounded-md border-2 border-neutral-800 bg-neutral-800 px-8 py-2 text-sm text-white/75 transition-all ease-in-out hover:border-neutral-600 hover:text-white"
-        >
-          <iconify-icon
-            icon="simple-icons:buymeacoffee"
-            width="16"
-            height="16"
-            class="size-4"
-          ></iconify-icon>
-          <span class="whitespace-nowrap">Buy Me a Coffee</span>
-        </a>
+          <a
+            href="/index.xml"
+            class="flex w-fit items-center gap-x-2 rounded-md border-2 border-neutral-800 bg-neutral-800 px-8 py-2 text-sm text-white/75 transition-all ease-in-out hover:border-neutral-600 hover:text-white"
+          >
+            <iconify-icon
+              icon="material-symbols:rss-feed-rounded"
+              width="16"
+              height="16"
+              class="size-4"
+            ></iconify-icon>
+            <span class="whitespace-nowrap">RSS Feed</span>
+          </a>
+          <a
+            href="https://buymeacoffee.com/odhyp"
+            target="_blank"
+            class="flex w-fit items-center gap-x-2 rounded-md border-2 border-neutral-800 bg-neutral-800 px-8 py-2 text-sm text-white/75 transition-all ease-in-out hover:border-neutral-600 hover:text-white"
+          >
+            <iconify-icon
+              icon="simple-icons:buymeacoffee"
+              width="16"
+              height="16"
+              class="size-4"
+            ></iconify-icon>
+            <span class="whitespace-nowrap">Buy Me a Coffee</span>
+          </a>
+        </div>
       </div>
 
-      <span class="mt-4 text-sm text-white/50"
-        >&copy; {{ now.Year }} Odhy Pradhana.&nbsp;
-        <br class="hidden md:inline lg:hidden" />
-        All Rights Reserved.</span
-      >
+      <!-- COPYRIGHT -->
+      <div class="flex flex-col text-sm">
+        <div class="inline space-x-4 text-white/75">
+          <a href="" class="transition-colors ease-in-out hover:text-white"
+            >Privacy Policy</a
+          >
+          <a href="" class="transition-colors ease-in-out hover:text-white"
+            >Terms of Service</a
+          >
+        </div>
+
+        <span class="mt-4 text-white/50"
+          >&copy; {{ now.Year }} Odhy Pradhana.&nbsp;
+          <br class="hidden md:inline lg:hidden" />
+          All Rights Reserved.</span
+        >
+      </div>
     </div>
 
     <div
