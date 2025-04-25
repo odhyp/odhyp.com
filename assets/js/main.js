@@ -274,7 +274,7 @@ function updateRelativeDates() {
 
 // 06. HEADER SCROLL EFFECT -------------------------------------------------------------
 function headerScrollEffect() {
-  const threshold = 150;
+  const threshold = 60;
   const pageHeader = document.getElementById("header");
 
   if (window.scrollY > threshold) {
