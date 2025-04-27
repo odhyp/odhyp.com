@@ -23,10 +23,13 @@
 
           <!-- Writings page -->
           {{ else if eq .Section "writings" }}
-          <div class="flex items-center gap-x-2">
+          <a
+            href="/colophon/#growth-stages"
+            class="text-white-prose! flex cursor-help items-center gap-x-2 font-normal! no-underline!"
+          >
             {{- partial "writing-cards/stage-icon.html" . -}}
-            <span class="">{{ title .Params.stage }}</span>
-          </div>
+            <span>{{ title .Params.stage }}</span>
+          </a>
 
           {{ else }} {{ end }}
           <!-- LEFT SIDE END -->
