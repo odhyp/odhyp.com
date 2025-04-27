@@ -11,14 +11,14 @@
           {{ if eq .Section "services" }}
           <div class="flex items-center gap-x-2">
             {{- partial "writing-cards/stage-icon.html" . -}}
-            <span class="">{{ title .Type }}</span>
+            <span>{{ title .Type }}</span>
           </div>
 
           <!-- Project page -->
           {{ else if eq .Section "projects" }}
           <div class="flex items-center gap-x-2">
             {{- partial "writing-cards/stage-icon.html" . -}}
-            <span class="">{{ title .Type }}</span>
+            <span>{{ title .Type }}</span>
           </div>
 
           <!-- Writings page -->
