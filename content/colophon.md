@@ -30,7 +30,7 @@ Headers and body are set in [Inter] from [Google Fonts]. I love the simplicity, 
 
 ## Background Pattern
 
-I use [ccchaos] SVGs from [fffuel] with a color palette of `hsl(161, 100%, 42%)` and `hsl(161, 10%, 40%)`. I randomize the pattern for each page after a site build, not on reload.
+I use [ccchaos] SVGs from [fffuel] with a color palette of `hsl(173.4, 100%, 42%)` and `hsl(173.4, 10%, 42%)`. I randomize the pattern for each page after a site build, not on reload.
 
 [ccchaos]: https://www.fffuel.co/ccchaos/
 [fffuel]: https://www.fffuel.co/
