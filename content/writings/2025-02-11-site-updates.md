@@ -5,49 +5,62 @@ date = 2025-02-11
 slug = "site-updates"
 aliases = ["/site-updates", "/a-new-look", "/blog/a-new-look"]
 type = "log" # Type of the page (article, note, idea, log)
-stage = "thriving" # Progress of the idea (sprout, thriving, evergreen)
-cover = "/img/2025-02-11-02.webp"
+stage = "evergreen" # Progress of the idea (sprout, thriving, evergreen)
+cover = "/img/2025-02-11/04-orion-extended.webp"
 title = "Site Updates"
 description = "A simple record of the ongoing tweaks and changes I’m making to this site."
 topics = ["update", "theme"]
 +++
 
 {{< now date="April 2025" >}}
+I call this site, **Orion Extended**. Yes, you read that right. Another new look for my website, just two months after the last one. I'm moving away from the traditional blog-making workflow and trying something different: working with the garage door open, through this Digital Garden.
 
-I call this site, **Orion Extended**. Yes, you read that right—another new look for my website, just two months after the last one. I'm moving away from the traditional blog-making workflow and trying something different: working with the garage door open, through this Digital Garden.
+![Orion Extended](/img/2025-02-11/04-orion-extended.webp)
 
-![Orion Extended Homepage](/img/2025-02-11-02.webp)
+It's heavily inspired by [maggieappleton.com]. I don’t really use the whole bi-directional linking thing, I just like the idea of letting pages grow and evolve over time.
 
-I don’t really use the whole bi-directional linking thing, I just like the idea of letting pages grow and evolve over time.
-
+[maggieappleton.com]: https://maggieappleton.com/
 {{< /now >}}
 
 {{< now date="February 2025" >}}
-After a long battle with indecisiveness—and after my old site's Vercel deployments broke down because I couldn't upgrade it to use TailwindCSS v4—I finally present to you a new look for my website!
+After a long battle with indecisiveness and after my old site's Vercel deployments broke down because I couldn't upgrade it to use TailwindCSS v4. I finally present to you a new look for my website!
 
-![Orion Homepage](/img/2025-02-11-01.webp)
+![Orion](/img/2025-02-11/04-orion.webp)
 
-I call this one **Orion**, as it resembles a night sky with stars—_or at least, I think it does?_
+I call this one **Orion**. This cool look is inspired by Vercel's template, **[Portfolio Starter Kit]**, which I used as a starting point. From there, I worked on it, added more features, and made it my own. I love its clean and minimal aesthetic, dark background, and lack of distractions. The narrower width (under 700px) is intentional, because I never know what to do with all that extra space on wider layouts.
 
-This cool look comes from Vercel's template, **[Portfolio Starter Kit]**, which I used as a starting point. From there, I worked on it, added more features, and made it my own. I love its clean and minimal aesthetic, dark background, and lack of distractions. The narrower width (under 700px) is intentional—honestly, I never know what to do with all that extra space on wider layouts.
-
-That's it! If you happen to find a typo or a bug on the site and want to help improve it, feel free to reach out. You can **[create a new issue]**, drop a comment on the site, or email me. I'd really appreciate it. 😎
+If you happen to find a typo or a bug on the site and want to help improve it, feel free to reach out. You can drop a comment on the site or [email me][email me]. I'd really appreciate it. 😎
 
 [Portfolio Starter Kit]: https://vercel.com/templates/next.js/portfolio-starter-kit
-[create a new issue]: https://github.com/odhyp/odhyp.com/issues/new?template=Blank+issue
+[email me]: mailto:pradhana.odhy@gmail.com
 {{< /now >}}
 
-{{< now date="August 2024" >}}
+{{< now date="September 2024" >}}
+**Astella** is by far, my favorite project to work on. I'm working towards a minimalist website and combines a few elements from other websites. The red-and-white color scheme was inspired by [lisacharlottemuth.com], and the grainy background is from [victoreke.com].
 
-Before moving into Hugo, I was using [Jekyll] with [Chirpy theme] by [Cotes Chung] for blogging. All thanks to Techno Tim's video "[Meet Jekyll - The Static Site Generator]".
+![Astella](/img/2025-02-11/03-astella.webp)
 
-![Chirpy Homepage](/img/2025-02-11-03.webp)
+I implemented the light-and-dark-mode toggle and search bar in this one. Which I completely scrapped in the next iteration.
 
-I didn't know anything about creating a good website back then, since I just started learning HTML and CSS. Discovering Chirpy is definitely a love-at-first-sight moment for me. The minimalist but comprehensive approach, 3-column layout, neutral color, everything just clicked for me.
+[lisacharlottemuth.com]: https://lisacharlottemuth.com/
+[victoreke.com]: https://victoreke.com/
+{{< /now >}}
 
-[Jekyll]: https://jekyllrb.com/
+{{< now date="May 2024" >}}
+This is the first website I've created using Hugo and TailwindCSS. Not really the first one, because I had a website using only HTML and CSS, and even Bootstrap before learning TailwindCSS, but definitely the first one that I'm confident enough to deploy online.
+
+![Base](/img/2025-02-11/02-base.webp)
+
+There's nothing fancy here, except for the blog page with all of its components.
+{{< /now >}}
+
+{{< now date="August 2023" >}}
+Before moving into Hugo, I was using Jekyll with [Chirpy theme] for blogging. All thanks to Techno Tim's video "[Meet Jekyll - The Static Site Generator]".
+
+![Chirpy](/img/2025-02-11/01-chirpy.webp)
+
+I didn't know anything about creating a good website back then, since I just started learning HTML and CSS. Discovering Chirpy was definitely a love-at-first-sight moment for me. The minimalist but comprehensive approach, 3-column layout, neutral color, everything just clicked for me.
+
 [Chirpy theme]: https://github.com/cotes2020/jekyll-theme-chirpy
-[Cotes Chung]: https://github.com/cotes2020
 [Meet Jekyll - The Static Site Generator]: https://www.youtube.com/watch?v=F8iOU1ci19Q
-
 {{< /now >}}
