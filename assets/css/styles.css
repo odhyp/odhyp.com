@@ -67,7 +67,7 @@ code::after {
 
 /* Table Of Contents */
 #TableOfContents a {
-  @apply text-white-prose text-lg leading-normal font-normal no-underline;
+  @apply text-lg leading-normal font-normal text-white/50 no-underline transition-colors ease-in-out hover:text-white;
 }
 
 #TableOfContents ol,
