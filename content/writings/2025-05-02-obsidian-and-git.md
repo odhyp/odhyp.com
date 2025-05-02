@@ -7,12 +7,12 @@ aliases = ["/obsidian-and-git"]
 type = "idea" # Type of the page (article, note, idea, log)
 stage = "sprout" # Progress of the idea (sprout, thriving, evergreen)
 cover = ""
-title = "Obsidian and Git"
+title = "Obsidian Note Syncing using Git"
 description = "Setting up an Obsidian notes with Git for auto-sync"
-topics = ["obsidian", "git", "life hack"]
+topics = ["life hack", "obsidian", "git"]
 +++
 
-I think this is the easiest method to have a free version of Obsidian Sync, utilizing Git with a GitHub Repository to push-and-pull (sync) your Obsidian note.
+I think this is the easiest method to have a free version of Obsidian Sync, utilizing Git with a GitHub Repository to push-and-pull to sync your Obsidian note.
 
 {{< youtube ImrLbomFYA0 >}}
 
