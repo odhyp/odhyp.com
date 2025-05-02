@@ -67,7 +67,7 @@ code::after {
 
 /* Table Of Contents */
 #TableOfContents a {
-  @apply text-white-prose font-normal no-underline;
+  @apply text-white-prose text-lg leading-normal font-normal no-underline;
 }
 
 #TableOfContents ol,
@@ -81,7 +81,7 @@ code::after {
 
 /* TOC Heading 3 anchor tags */
 #TableOfContents li li > a {
-  @apply ml-4 inline-block font-light;
+  @apply ml-4 inline-block text-base font-light;
 }
 
 #TableOfContents ol li ol li {
