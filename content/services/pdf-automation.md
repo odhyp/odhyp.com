@@ -9,7 +9,7 @@ icon = "picture-as-pdf-outline-rounded"
 weight = 5
 +++
 
-I build tools that extract, generate, or manage PDFs — perfect for invoices, reports, and scanned files.
+I build tools that extract, generate, or manage PDFs. Perfect for invoices, reports, and scanned files.
 
 ## What You Get
 

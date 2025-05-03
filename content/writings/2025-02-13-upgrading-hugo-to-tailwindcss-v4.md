@@ -12,7 +12,7 @@ description = "A step-by-step guide to upgrading your Hugo site from Tailwind CS
 topics = ["hugo", "tailwindcss"]
 +++
 
-I recently upgraded my site to use TailwindCSS v4. In this post, I'll guide you through the upgrade process—just as I did for my own website, step by step… hopefully.
+I recently upgraded my site to use TailwindCSS v4. In this post, I'll guide you through the upgrade process, just as I did for my own website, step by step… hopefully.
 
 ## What's Changed
 

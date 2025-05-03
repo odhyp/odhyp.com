@@ -43,7 +43,7 @@ Pricing depends on the complexity, integrations, and scope. For larger automatio
 ## Frequently Asked Question?
 
 Q: Will I be able to reuse the script later?
-Yes — I write clean, reusable code with comments so you can tweak or rerun it easily.
+Yes. I write clean, reusable code with comments so you can tweak or rerun it easily.
 
 Q: Do I need to install anything?
 I’ll provide clear instructions. Most scripts only need Python installed.
