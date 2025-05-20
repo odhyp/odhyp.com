@@ -45,8 +45,24 @@ I'm using icons from [Iconify], which contains a ton of popular icon sets like [
 
 ## Growth Stages
 
-Every page under [Writings] section has a **growth stage** that indicates how comprehensive it is. They start as sprout, grow into thriving, and end up as evergreen.
+Every page under [Writings] section has a **growth stage** that indicates how comprehensive it is. They start as sapling, grow into growing, and end up as evergreen.
 
 [Writings]: /writings/
 
-{{< colophon/growth-stage >}}
+{{< wrapper >}}
+<h3 class="flex items-center gap-x-2">Sapling<i class="iconoir-soil-alt !text-2xl"></i></h3>
+{{< /wrapper >}}
+
+Early-stage note with raw ideas or outlines. Not yet structured or complete. (0% - 49%)
+
+{{< wrapper >}}
+<h3 class="flex items-center gap-x-2">Growing<i class="iconoir-leaf !text-2xl"></i></h3>
+{{< /wrapper >}}
+
+Substantial content with a clear structure. Still improving or missing polish. (50% - 89%)
+
+{{< wrapper >}}
+<h3 class="flex items-center gap-x-2">Evergreen<i class="iconoir-tree !text-2xl"></i></h3>
+{{< /wrapper >}}
+
+Complete, clear, and useful. Minimal edits needed going forward. (90% - 100%)
