@@ -1,0 +1,226 @@
+<aside
+  id="sidebar"
+  role="dialog"
+  aria-modal="true"
+  aria-hidden="true"
+  aria-label="Sidebar Navigation"
+  tabindex="-1"
+  class="fixed top-0 left-0 z-50 h-dvh w-full max-w-64 -translate-x-full border-r border-neutral-200 bg-neutral-50 opacity-0 transition-all duration-300 ease-in-out sm:h-screen"
+  data-turbo-permanent
+>
+  <div class="flex h-full flex-col">
+    <!-- Sidebar Header -->
+    <div
+      class="flex h-16 shrink-0 items-center justify-between border-b border-neutral-200 p-4"
+    >
+      <img
+        src="/android-chrome-512x512.png"
+        alt="Logo"
+        loading="lazy"
+        class="size-8 rounded-md"
+      />
+
+      <button
+        id="closeSidebar"
+        title="Close Menu"
+        class="group flex size-8 cursor-pointer items-center justify-center rounded-md border border-neutral-300/0 transition-colors ease-in-out hover:border-neutral-200"
+      >
+        <i
+          class="iconoir-xmark text-2xl transition-transform duration-200 ease-in-out group-hover:rotate-90"
+        ></i>
+      </button>
+    </div>
+
+    <!-- Sidebar Menu -->
+    <div
+      class="scrollbar-thumb-neutral-200 scrollbar-thin scrollbar-track-neutral-50 grow overflow-y-scroll px-2 py-4"
+    >
+      <nav class="flex flex-col gap-y-1">
+        <!-- Home -->
+        <a
+          class="flex items-center gap-x-4 rounded-md p-2 hover:bg-neutral-200/50"
+          href="/"
+        >
+          <i class="iconoir-home-alt-slim-horiz text-lg"></i>Home
+        </a>
+
+        <!-- Services -->
+        <a
+          class="flex items-center gap-x-4 rounded-md p-2 hover:bg-neutral-200/50"
+          href="/services"
+        >
+          <i class="iconoir-suitcase text-lg"></i>Services
+        </a>
+
+        <!-- Projects -->
+        <a
+          class="flex items-center gap-x-4 rounded-md p-2 hover:bg-neutral-200/50"
+          href="/projects"
+        >
+          <i class="iconoir-tools text-lg"></i>Projects
+        </a>
+
+        <!-- Writings -->
+        <div class="flex items-center rounded-md hover:bg-neutral-200/50">
+          <a
+            class="flex w-full items-center gap-x-4 rounded-md p-2"
+            href="/writings"
+          >
+            <i class="iconoir-edit-pencil text-lg"></i>
+            Writings
+          </a>
+
+          <button
+            id="dropdownBtnWritings"
+            class="mr-2 flex cursor-pointer items-center justify-center rounded-md border border-neutral-300/0 p-1 transition-colors ease-in-out hover:border-neutral-300"
+            aria-expanded="false"
+            aria-controls="dropdownMenu"
+          >
+            <i
+              id="dropdownIconWritings"
+              class="iconoir-nav-arrow-down text-lg transition-transform duration-200 ease-in-out"
+            ></i>
+          </button>
+        </div>
+
+        <!-- Writings Sub-menu -->
+        <div
+          id="dropdownMenuWritings"
+          class="ml-4 hidden border-l-2 border-neutral-300"
+        >
+          <div class="ml-2 flex flex-col gap-y-1">
+            <a
+              class="mr-8 rounded-md py-1 pr-2 pl-4 hover:bg-neutral-200/50"
+              href="/articles"
+              >Articles
+            </a>
+            <a
+              class="mr-8 rounded-md py-1 pr-2 pl-4 hover:bg-neutral-200/50"
+              href="/notes"
+              >Notes
+            </a>
+            <a
+              class="mr-8 rounded-md py-1 pr-2 pl-4 hover:bg-neutral-200/50"
+              href="/ideas"
+              >Ideas
+            </a>
+            <a
+              class="mr-8 rounded-md py-1 pr-2 pl-4 hover:bg-neutral-200/50"
+              href="/logs"
+              >Logs
+            </a>
+          </div>
+        </div>
+
+        <!-- Guestbook -->
+        <a
+          class="flex items-center gap-x-4 rounded-md p-2 hover:bg-neutral-200/50"
+          href="/guestbook"
+        >
+          <i class="iconoir-bookmark-book text-lg"></i>Guestbook
+        </a>
+
+        <!-- Now -->
+        <a
+          class="flex items-center gap-x-4 rounded-md p-2 hover:bg-neutral-200/50"
+          href="/now"
+        >
+          <i class="iconoir-calendar text-lg"></i>Now
+        </a>
+
+        <!-- About -->
+        <a
+          class="flex items-center gap-x-4 rounded-md p-2 hover:bg-neutral-200/50"
+          href="/about"
+        >
+          <i class="iconoir-user text-lg"></i>About
+        </a>
+      </nav>
+    </div>
+
+    <!-- Sidebar Social -->
+    <div
+      class="flex h-16 shrink-0 items-center justify-between border-t border-neutral-200 p-4"
+    >
+      <!-- Github -->
+      <a
+        title="GitHub"
+        href="https://github.com/odhyp/"
+        target="_blank"
+        class="group flex size-8 cursor-pointer items-center justify-center rounded-md border border-neutral-300/0 transition-colors ease-in-out hover:border-neutral-300"
+      >
+        <i
+          class="iconoir-github text-2xl text-neutral-900/75 transition-all duration-300 ease-in-out group-hover:scale-90 group-hover:text-neutral-900"
+        ></i>
+      </a>
+
+      <!-- LinkedIn -->
+      <a
+        title="LinkedIn"
+        href="https://www.linkedin.com/in/odhy/"
+        target="_blank"
+        class="group flex size-8 cursor-pointer items-center justify-center rounded-md border border-neutral-300/0 transition-colors ease-in-out hover:border-neutral-300"
+      >
+        <i
+          class="iconoir-linkedin text-2xl text-neutral-900/75 transition-all duration-300 ease-in-out group-hover:scale-90 group-hover:text-neutral-900"
+        ></i>
+      </a>
+
+      <!-- Instagram -->
+      <a
+        title="Instagram"
+        href="https://www.instagram.com/odhypradhana"
+        target="_blank"
+        class="group flex size-8 cursor-pointer items-center justify-center rounded-md border border-neutral-300/0 transition-colors ease-in-out hover:border-neutral-300"
+      >
+        <i
+          class="iconoir-instagram text-2xl text-neutral-900/75 transition-all duration-300 ease-in-out group-hover:scale-90 group-hover:text-neutral-900"
+        ></i>
+      </a>
+
+      <!-- Buymeacoffee -->
+      <a
+        title="Sponsor"
+        href="https://buymeacoffee.com/odhyp"
+        target="_blank"
+        class="group flex size-8 cursor-pointer items-center justify-center rounded-md border border-neutral-300/0 transition-colors ease-in-out hover:border-neutral-300"
+      >
+        <i
+          class="iconoir-coffee-cup text-2xl text-neutral-900/75 transition-all duration-300 ease-in-out group-hover:scale-90 group-hover:text-neutral-900"
+        ></i>
+      </a>
+
+      <!-- RSS Feed -->
+      <a
+        title="RSS Feed"
+        href="/index.xml"
+        class="group flex size-8 cursor-pointer items-center justify-center rounded-md border border-neutral-300/0 transition-colors ease-in-out hover:border-neutral-300"
+      >
+        <i
+          class="iconoir-rss-feed text-2xl text-neutral-900/75 transition-all duration-300 ease-in-out group-hover:scale-90 group-hover:text-neutral-900"
+        ></i>
+      </a>
+    </div>
+
+    <!-- Sidebar Footer -->
+    <div
+      class="flex h-16 shrink-0 items-center justify-between border-t border-neutral-200"
+    >
+      <a
+        target="_blank"
+        href="mailto:pradhana.odhy@gmail.com"
+        class="flex h-full w-full items-center gap-x-3 px-4 hover:bg-neutral-100"
+      >
+        <img
+          src="https://avatars.githubusercontent.com/u/78688788?v=4"
+          alt="Profile Image"
+          class="size-10 shrink-0 rounded-full"
+        />
+        <div class="flex flex-col gap-y-0.5">
+          <span class="block text-sm font-medium">Odhy Pradhana</span>
+          <span class="block text-xs font-light">pradhana.odhy@gmail.com</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</aside>
