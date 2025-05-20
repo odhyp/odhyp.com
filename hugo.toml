@@ -13,7 +13,6 @@ description = "Personal website about automation, data visualization, and web de
 # Custom taxonomies
 [taxonomies]
 topic = "topics"
-tech-stack = "tech-stacks"
 
 [permalinks]
 projects = "/projects/:slug/"
