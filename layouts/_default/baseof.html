@@ -13,18 +13,47 @@
   <!-- DEV TOOLS END -->
 
   <body
-    class="font-inter relative flex min-h-dvh flex-col bg-neutral-900 text-white sm:min-h-screen"
+    class="font-geist relative flex min-h-dvh w-full bg-neutral-50 text-neutral-900 sm:min-h-screen"
   >
-    <!-- HEADER START -->
-    {{- partial "header.html" . -}}
-    <!-- HEADER END -->
+    <!-- LEFT SIDEBAR START -->
+    {{- partial "left-sidebar.html" . -}}
+    <!-- LEFT SIDEBAR END -->
 
     <!-- MAIN START -->
-    <main class="grow py-8">{{- block "main" . }}{{- end }}</main>
+    <main class="flex min-h-dvh w-full flex-col items-center sm:min-h-screen">
+      <!-- HEADER START -->
+      {{- partial "header.html" . -}}
+      <!-- HEADER END -->
+
+      <!-- CONTENT START -->
+      <turbo-frame
+        id="main-content"
+        class="animate-fade-in-up w-full grow py-32"
+      >
+        {{- block "main" . }}{{- end }}
+      </turbo-frame>
+      <!-- CONTENT END -->
+
+      <!-- FOOTER START -->
+      {{ partial "footer/footer.html" . }}
+      <!-- FOOTER END -->
+    </main>
     <!-- MAIN END -->
 
-    <!-- FOOTER START -->
-    {{- partial "footer.html" . -}}
-    <!-- FOOTER END -->
+    <!-- RIGHT SIDEBAR START -->
+    {{- partial "right-sidebar.html" . -}}
+    <!-- RIGHT SIDEBAR END -->
+
+    <!-- BACKGROUND PATTERN START -->
+    <div
+      class="absolute inset-0 -z-50 h-full w-full bg-neutral-50 bg-[radial-gradient(#cccccc_1px,transparent_1px)] [background-size:32px_32px]"
+    ></div>
+    <!-- BACKGROUND PATTERN END -->
   </body>
+
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </html>
