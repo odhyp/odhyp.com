@@ -1,10 +1,6 @@
 {{ define "main" }}
 
 <section class="mt-16">
-  <!-- CHAOS PATTERN START -->
-  {{ partial "components/chaos-pattern.html" . }}
-  <!-- CHAOS PATTERN END -->
-
   <div class="w-full">
     <div class="site-container">
       <article class="mx-0!">
@@ -42,7 +38,7 @@
         {{ range where .Site.RegularPages ".Section" "services" }}
 
         <!-- SERVICES CARDS START -->
-        {{ partial "service-cards/base.html" . }}
+        here
         <!-- SERVICES CARDS END -->
 
         {{ end }}

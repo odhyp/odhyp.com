@@ -1,9 +1,5 @@
 {{ define "main" }}
 <section>
-  <!-- CHAOS PATTERN START -->
-  {{ partial "components/chaos-pattern.html" . }}
-  <!-- CHAOS PATTERN END -->
-
   <div class="w-full">
     <div class="site-container">
       <div class="flex flex-col gap-8 xl:flex-row xl:justify-center">
@@ -12,7 +8,7 @@
           <article>
             <div class="mb-4 flex items-center gap-x-2 text-sm sm:gap-x-4">
               <div class="flex items-center gap-x-2">
-                {{- partial "writing-cards/stage-icon.html" . -}}
+                stage icon here
                 <span>{{ .Title }}</span>
               </div>
             </div>
@@ -38,9 +34,7 @@
         </div>
 
         <!-- SIDE CONTENT START -->
-        <div class="hidden xl:block">
-          {{- partial "about/side-content.html" . -}}
-        </div>
+        <div class="hidden xl:block">side content here</div>
         <!-- SIDE CONTENT END -->
       </div>
     </div>

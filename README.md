@@ -1,18 +1,13 @@
-# Odhy's Digital Garden 🪴
+# odhyp.com
 
-Welcome to my digital garden—where I plant ideas, debug thoughts, and occasionally scream at my code.
-
-Built with Hugo, JavaScript, and TailwindCSS. Deployed in Vercel.
+Sup m8.
 
 ## Roadmap
 
 - [ ] Add testimonial section in Home and Service page
 - [ ] Work on the Taxonomy pages
 - [ ] Add search and sort feature in Writings page
-- [ ] Add Single page Table of Contents
 - [ ] Add back-to-top button
-- [x] update CTA for work inquiry and get in touch
-- [x] Add Services section
 
 ## Self-note
 
@@ -42,7 +37,16 @@ Save this file as layouts/_default/list.html.
 Run hugo server.
 Visit /duplicate-check/ in your browser to see any duplicate slugs in red.
 
-### Using fffuel assets
+## Create new writings
 
-fill 1: `hsl(161, 100%, 42%)`
-fill 2: `hsl(161, 10%, 40%)`
+```bash
+hugo new --kind writing writings/2025-05-18-sample-idea.md
+```
+
+## Using Shortcodes
+
+1. Image shortcodes
+
+```bash
+{{< img src="" alt="" caption="" >}}
+```

@@ -21,9 +21,9 @@
       </article>
 
       <div class="my-16 flex flex-col gap-y-32">
-        {{ range where .Site.RegularPages "Params.type" "idea" }}
+        {{ range .RegularPages }}
         <!--  -->
-        {{ partial "writing-cards/base-idea.html" . }}
+        here
         <!--  -->
         {{ end }}
       </div>

@@ -9,10 +9,11 @@
 
       <!-- WRITINGS LIST START -->
       <div class="mt-16 columns-1 gap-4 md:columns-2 xl:columns-3">
-        {{ range where .Site.RegularPages ".Section" "writings" }}
+        {{ range .RegularPages }}
         <!-- WRITING CARDS START -->
-        {{ partial "writing-cards/base.html" . }} {{ end }}
+        here
         <!-- WRITING CARDS END -->
+        {{ end }}
       </div>
       <!-- WRITINGS LIST END -->
     </div>

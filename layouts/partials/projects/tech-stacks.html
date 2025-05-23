@@ -1,0 +1,13 @@
+{{ with .Params.techStacks }}
+<ul class="m-0 flex list-none flex-wrap gap-x-2 gap-y-2 p-0">
+  {{ range . }}
+  <li class="m-0 p-0">
+    <span
+      class="rounded-full bg-neutral-200 px-3 py-1 text-sm font-medium text-black"
+    >
+      {{ . }}
+    </span>
+  </li>
+  {{ end }}
+</ul>
+{{ end }}
