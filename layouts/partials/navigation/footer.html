@@ -1,67 +1,111 @@
 <footer
   data-turbo-permanent
-  class="relative w-full border-t border-neutral-200 bg-neutral-50"
+  class="z-40 min-h-dvh w-full bg-neutral-900 text-neutral-50 sm:min-h-screen"
 >
-  <!-- Footer Menu -->
-  <div
-    class="mx-auto grid w-full max-w-lg grid-cols-2 gap-x-2 gap-y-8 px-4 py-16 lg:max-w-4xl lg:grid-cols-6 xl:max-w-5xl [&_a]:hover:underline [&_a]:hover:underline-offset-2"
-  >
+  <!-- Footer Container -->
+  <div class="mx-auto flex h-full w-full max-w-6xl flex-col gap-y-4 px-4 pt-16">
     <!-- Footer Logo -->
-    <div class="group relative col-span-2">
-      <h5 class="text-4xl font-bold uppercase">Pradhana.</h5>
+    <div class="flex w-full shrink-0 flex-col gap-y-4 py-8">
+      <h5 class="text-4xl font-bold tracking-wider uppercase">Pradhana.</h5>
+
+      <span class="font-light text-neutral-50/50">
+        {{ partial "navigation/footer-quotes.html" . }}
+      </span>
+
+      <!-- Socials -->
+      <div class="mt-4 flex gap-x-8">
+        <!-- Github -->
+        <a title="GitHub" href="https://github.com/odhyp/" target="_blank">
+          <i data-lucide="github" class="size-6"></i>
+        </a>
+
+        <!-- LinkedIn -->
+        <a
+          title="LinkedIn"
+          href="https://www.linkedin.com/in/odhy/"
+          target="_blank"
+        >
+          <i data-lucide="linkedin" class="size-6"></i>
+        </a>
+
+        <!-- Instagram -->
+        <a
+          title="Instagram"
+          href="https://www.instagram.com/odhypradhana"
+          target="_blank"
+        >
+          <i data-lucide="instagram" class="size-6"></i>
+        </a>
+
+        <!-- Buymeacoffee -->
+        <a
+          title="Buymeacoffee"
+          href="https://buymeacoffee.com/odhyp"
+          target="_blank"
+        >
+          <i data-lucide="coffee" class="size-6"></i>
+        </a>
+
+        <!-- RSS Feed -->
+        <a title="RSS Feed" href="/index.xml" target="_blank">
+          <i data-lucide="rss" class="size-6"></i>
+        </a>
+      </div>
     </div>
 
-    <!-- Sitemap -->
-    <div class="flex flex-col gap-y-2 font-light">
-      <h5 class="font-semibold text-neutral-900">Sitemap</h5>
-      <a href="/services">Services</a>
-      <a href="/projects">Projects</a>
-      <a href="/writings">Writings</a>
-      <a href="/guestbook">Guestbook</a>
-      <a href="/now">Now</a>
-      <a href="/about">About</a>
+    <!-- Footer Menu -->
+    <div
+      class="grid w-full grow grid-cols-2 gap-y-12 pt-8 pb-16 md:grid-cols-4"
+    >
+      <!-- Explore -->
+      <div class="flex flex-col gap-y-4">
+        <h5 class="mb-4 font-semibold">Explore</h5>
+        <a href="/services">Services</a>
+        <a href="/projects">Projects</a>
+        <a href="/now">Now</a>
+        <a href="/about">About</a>
+      </div>
+
+      <!-- Writings -->
+      <div class="flex flex-col gap-y-4 font-light">
+        <h5 class="mb-4 font-semibold">Writings</h5>
+        <a href="/articles">Articles</a>
+        <a href="/notes">Notes</a>
+        <a href="/ideas">Ideas</a>
+        <a href="/logs">Logs</a>
+        <a href="/topics">Topics</a>
+      </div>
+
+      <!-- Community -->
+      <div class="flex flex-col gap-y-4 font-light">
+        <h5 class="mb-4 font-semibold">Community</h5>
+        <a href="/support">Support</a>
+        <a href="/guestbook">Guestbook</a>
+        <a href="/changelog">Changelog</a>
+        <a href="/colophon">Colophon</a>
+      </div>
+
+      <!-- Legal -->
+      <div class="flex flex-col gap-y-4 font-light">
+        <h5 class="mb-4 font-semibold">Legal</h5>
+        <a href="/privacy-policy">Privacy Policy</a>
+        <a href="/terms-of-service">Terms of Service</a>
+        <a href="/disclaimer">Disclaimer</a>
+      </div>
     </div>
 
-    <!-- Writings -->
-    <div class="flex flex-col gap-y-2 font-light">
-      <h5 class="font-semibold text-neutral-900">Writings</h5>
-      <a href="/articles">Articles</a>
-      <a href="/notes">Notes</a>
-      <a href="/ideas">Ideas</a>
-      <a href="/logs">Logs</a>
-      <a href="/topics">Topics</a>
+    <!-- Footer Copyright -->
+    <div
+      class="flex w-full shrink-0 flex-col items-center gap-y-2 border-t border-neutral-700 py-8 text-neutral-50/50 md:flex-row md:justify-between"
+    >
+      <a
+        target="_blank"
+        href="mailto:{{ .Site.Params.author.email }}"
+        class="flex items-center gap-x-2 hover:underline hover:underline-offset-4"
+        ><i data-lucide="mail" class="size-5"></i
+        >{{ .Site.Params.author.email }}
+      </a>
+      <span>&copy; {{ now.Year }} {{ .Site.Params.author.name }}</span>
     </div>
-
-    <!-- Social -->
-    <div class="flex flex-col gap-y-2 font-light">
-      <h5 class="font-semibold text-neutral-900">Social</h5>
-      <a target="_blank" href="mailto:pradhana.odhy@gmail.com">Email</a>
-      <a target="_blank" href="https://github.com/odhyp">GitHub</a>
-      <a target="_blank" href="https://www.kaggle.com/odhypradhana">Kaggle</a>
-      <a target="_blank" href="https://www.linkedin.com/in/odhy/">LinkedIn</a>
-      <a target="_blank" href="https://www.instagram.com/odhypradhana"
-        >Instagram</a
-      >
-      <a target="_blank" href="https://bsky.app/profile/odhyp.com">Bluesky</a>
-    </div>
-
-    <!-- Legal -->
-    <div class="flex flex-col gap-y-2 font-light">
-      <h5 class="font-semibold text-neutral-900">Legal & Other</h5>
-      <a href="/privacy-policy">Privacy Policy</a>
-      <a href="/terms-of-service">Terms of Service</a>
-      <a href="/disclaimer">Disclaimer</a>
-      <a href="/changelog">Changelog</a>
-      <a href="/colophon">Colophon</a>
-      <a href="/support">Support</a>
-    </div>
-  </div>
-
-  <!-- Footer Copyright -->
-  <div
-    class="mx-auto flex w-full max-w-lg flex-col items-start gap-y-4 px-4 pt-4 pb-16 text-neutral-900/50 lg:max-w-4xl lg:flex-row lg:justify-between xl:max-w-5xl"
-  >
-    {{- partial "navigation/footer-quotes.html" . -}}
-    <span>&copy; {{ now.Year }} Odhy Pradhana</span>
   </div>
 </footer>
