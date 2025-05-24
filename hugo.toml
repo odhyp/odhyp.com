@@ -4,7 +4,6 @@ languageCode = 'en-us'
 defaultContentLanguage = "en"
 enableRobotsTXT = true
 enableGitInfo = true
-disableKinds = ['taxonomy', 'term'] # TODO: dev only, remove this
 
 # SEO Optimization
 [params]
