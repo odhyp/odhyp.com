@@ -16,7 +16,7 @@
     <!-- LEFT SIDEBAR END -->
 
     <!-- MAIN START -->
-    <main class="flex min-h-dvh w-full flex-col items-center sm:min-h-screen">
+    <main class="flex w-full flex-col items-center">
       <!-- HEADER START -->
       {{- partial "navigation/header.html" . -}}
       <!-- HEADER END -->
@@ -24,7 +24,7 @@
       <!-- CONTENT START -->
       <turbo-frame
         id="main-content"
-        class="animate-fade-in-up w-full grow py-32"
+        class="animate-fade-in-up min-h-dvh w-full grow py-32 sm:min-h-screen"
       >
         {{- block "main" . }}{{- end }}
       </turbo-frame>
@@ -49,10 +49,10 @@
 
   <!-- SCRIPTS START -->
   <!-- LUCIDE ICON -->
-  {{ partial "scripts/lucide-icon.html" . }}
+  {{ partialCached "scripts/lucide-icon.html" . }}
 
 
   <!-- GOOGLE ANALYTICS TAG -->
-  {{ partial "scripts/google-analytics-tag.html" . }}
+  {{ partialCached "scripts/google-analytics-tag.html" . }}
   <!-- SCRIPTS END -->
 </html>
