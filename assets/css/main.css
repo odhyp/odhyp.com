@@ -8,8 +8,9 @@
 }
 
 @layer components {
-  @import "./buttons.css";
   @import "./page.css";
+  @import "./navigation.css";
+  @import "./buttons.css";
 }
 
 @theme {
@@ -27,4 +28,14 @@
       transform: translateY(0);
     }
   }
+}
+
+/* Dev-only */
+/* TODO: remove before prod */
+.dev-parent {
+  @apply border-2 border-dashed border-orange-400;
+}
+
+.dev-child {
+  @apply [&>*]:border-2 [&>*]:border-dashed [&>*]:border-emerald-400;
 }
