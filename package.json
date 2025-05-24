@@ -1,0 +1,37 @@
+{
+  "name": "odhyp.com",
+  "description": "My Personal Website",
+  "version": "2.1.0",
+  "license": "MIT",
+  "author": "Odhy Pradhana",
+  "keywords": [
+    "hugo",
+    "tailwindcss",
+    "tailwindcss v4",
+    "cloudflare",
+    "cloudflare pages"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/odhyp/odhyp.com.git"
+  },
+  "bugs": {
+    "url": "https://github.com/odhyp/odhyp.com/issues"
+  },
+  "homepage": "https://github.com/odhyp/odhyp.com#readme",
+  "scripts": {
+    "dev": "hugo server",
+    "preview": "hugo server --disableFastRender --navigateToChanged --templateMetrics --templateMetricsHints --watch --forceSyncStatic -e production --minify",
+    "prebuild": "bash scripts/generate-changelog.sh",
+    "build": "hugo --gc --minify --templateMetrics --templateMetricsHints --forceSyncStatic",
+    "format": "npx prettier . --write"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.7",
+    "@tailwindcss/typography": "^0.5.16",
+    "prettier": "^3.5.3",
+    "prettier-plugin-go-template": "^0.0.15",
+    "prettier-plugin-tailwindcss": "^0.6.11",
+    "tailwindcss": "^4.1.7"
+  }
+}
