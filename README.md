@@ -11,3 +11,17 @@ Built with Hugo, JavaScript, and TailwindCSS. Deployed in Vercel.
 - [ ] Add search and sort feature in Writings page
 - [ ] Add Single page Table of Contents
 - [ ] Add back-to-top button
+
+## Self-note
+
+### Running on local connection
+
+```bash
+hugo server --bind 0.0.0.0 --baseURL http://<YOUR_IP> --port 1313
+```
+
+### New content/page
+
+```bash
+hugo new --kind writing writings/2024-10-27-sample-post.md
+```
