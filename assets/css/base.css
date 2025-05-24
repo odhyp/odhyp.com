@@ -1,0 +1,7 @@
+html {
+  @apply scroll-mt-16 scroll-smooth;
+}
+
+body {
+  @apply selection:bg-red-200 selection:text-red-950;
+}
