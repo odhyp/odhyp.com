@@ -1,0 +1,67 @@
+<footer
+  data-turbo-permanent
+  class="relative w-full border-t border-neutral-200 bg-neutral-50"
+>
+  <!-- Footer Menu -->
+  <div
+    class="mx-auto grid w-full max-w-lg grid-cols-2 gap-x-2 gap-y-8 px-4 py-16 lg:max-w-4xl lg:grid-cols-6 xl:max-w-5xl [&_a]:hover:underline [&_a]:hover:underline-offset-2"
+  >
+    <!-- Footer Logo -->
+    <div class="group relative col-span-2">
+      <h5 class="text-4xl font-bold uppercase">Pradhana.</h5>
+    </div>
+
+    <!-- Sitemap -->
+    <div class="flex flex-col gap-y-2 font-light">
+      <h5 class="font-semibold text-neutral-900">Sitemap</h5>
+      <a href="/services">Services</a>
+      <a href="/projects">Projects</a>
+      <a href="/writings">Writings</a>
+      <a href="/guestbook">Guestbook</a>
+      <a href="/now">Now</a>
+      <a href="/about">About</a>
+    </div>
+
+    <!-- Writings -->
+    <div class="flex flex-col gap-y-2 font-light">
+      <h5 class="font-semibold text-neutral-900">Writings</h5>
+      <a href="/articles">Articles</a>
+      <a href="/notes">Notes</a>
+      <a href="/ideas">Ideas</a>
+      <a href="/logs">Logs</a>
+      <a href="/topics">Topics</a>
+    </div>
+
+    <!-- Social -->
+    <div class="flex flex-col gap-y-2 font-light">
+      <h5 class="font-semibold text-neutral-900">Social</h5>
+      <a target="_blank" href="mailto:pradhana.odhy@gmail.com">Email</a>
+      <a target="_blank" href="https://github.com/odhyp">GitHub</a>
+      <a target="_blank" href="https://www.kaggle.com/odhypradhana">Kaggle</a>
+      <a target="_blank" href="https://www.linkedin.com/in/odhy/">LinkedIn</a>
+      <a target="_blank" href="https://www.instagram.com/odhypradhana"
+        >Instagram</a
+      >
+      <a target="_blank" href="https://bsky.app/profile/odhyp.com">Bluesky</a>
+    </div>
+
+    <!-- Legal -->
+    <div class="flex flex-col gap-y-2 font-light">
+      <h5 class="font-semibold text-neutral-900">Legal & Other</h5>
+      <a href="/privacy-policy">Privacy Policy</a>
+      <a href="/terms-of-service">Terms of Service</a>
+      <a href="/disclaimer">Disclaimer</a>
+      <a href="/changelog">Changelog</a>
+      <a href="/colophon">Colophon</a>
+      <a href="/support">Support</a>
+    </div>
+  </div>
+
+  <!-- Footer Copyright -->
+  <div
+    class="mx-auto flex w-full max-w-lg flex-col items-start gap-y-4 px-4 pt-4 pb-16 text-neutral-900/50 lg:max-w-4xl lg:flex-row lg:justify-between xl:max-w-5xl"
+  >
+    {{- partial "navigation/footer-quotes.html" . -}}
+    <span>&copy; {{ now.Year }} Odhy Pradhana</span>
+  </div>
+</footer>

@@ -1,0 +1,11 @@
+{{ $quotes := shuffle (slice
+  "Mostly harmless since 1999."
+  "Causing minimal chaos since 1999."
+  "Operating with minimal harm since 2017."
+  "Officially surviving 2020."
+  "Powered by curiosity and static files."
+  )
+}}
+
+
+<span>{{ index $quotes 0 }}</span>
