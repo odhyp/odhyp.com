@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
+@plugin 'tailwind-scrollbar';
 @source "hugo_stats.json";
 
 @layer base {
@@ -8,4 +9,5 @@
 
 @layer components {
   @import "./buttons.css";
+  @import "./page.css";
 }
