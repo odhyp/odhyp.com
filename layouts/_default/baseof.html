@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="{{ .Site.LanguageCode }}">
+  <!-- HEAD START -->
+  {{ partial "head/base.html" . }}
+  <!-- HEAD END -->
+
+  <!-- DEV TOOLS START -->
+  {{- partial "dev/dev-tools.html" . -}}
+  <!-- DEV TOOLS END -->
+
+  <body
+    class="font-geist relative flex min-h-dvh w-full bg-neutral-50 text-neutral-900 sm:min-h-screen"
+  >
+    <!-- LEFT SIDEBAR START -->
+    {{- partial "navigation/sidebar-left.html" . -}}
+    <!-- LEFT SIDEBAR END -->
+
+    <!-- MAIN START -->
+    <main class="flex min-h-dvh w-full flex-col items-center sm:min-h-screen">
+      <!-- HEADER START -->
+      {{- partial "navigation/header.html" . -}}
+      <!-- HEADER END -->
+
+      <!-- CONTENT START -->
+      <turbo-frame
+        id="main-content"
+        class="animate-fade-in-up w-full grow py-32"
+      >
+        {{- block "main" . }}{{- end }}
+      </turbo-frame>
+      <!-- CONTENT END -->
+
+      <!-- FOOTER START -->
+      {{ partial "navigation/footer.html" . }}
+      <!-- FOOTER END -->
+    </main>
+    <!-- MAIN END -->
+
+    <!-- RIGHT SIDEBAR START -->
+    {{- partial "navigation/sidebar-right.html" . -}}
+    <!-- RIGHT SIDEBAR END -->
+
+    <!-- BACKGROUND PATTERN START -->
+    <div
+      class="absolute inset-0 -z-50 h-full w-full bg-neutral-50 bg-[radial-gradient(#cccccc_1px,transparent_1px)] [background-size:32px_32px]"
+    ></div>
+    <!-- BACKGROUND PATTERN END -->
+  </body>
+
+  <!-- SCRIPTS START -->
+  <!-- LUCIDE ICON -->
+  {{ partial "scripts/lucide-icon.html" . }}
+
+
+  <!-- GOOGLE ANALYTICS TAG -->
+  {{ partial "scripts/google-analytics-tag.html" . }}
+  <!-- SCRIPTS END -->
+</html>
