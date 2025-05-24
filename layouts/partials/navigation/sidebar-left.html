@@ -8,6 +8,7 @@
   class="fixed top-0 left-0 z-50 h-dvh w-full max-w-64 -translate-x-full border-r border-neutral-200 bg-neutral-50 opacity-0 transition-all duration-300 ease-in-out sm:h-screen"
   data-turbo-permanent
 >
+  <!-- Left Sidebar Container -->
   <div class="flex h-full flex-col">
     <!-- Sidebar Header -->
     <div
@@ -26,7 +27,8 @@
         class="group flex size-8 cursor-pointer items-center justify-center rounded-md border border-neutral-300/0 transition-colors ease-in-out hover:border-neutral-200"
       >
         <i
-          class="iconoir-xmark text-2xl transition-transform duration-200 ease-in-out group-hover:rotate-90"
+          data-lucide="x"
+          class="size-6 text-neutral-900/75 transition-transform ease-in-out group-hover:scale-90"
         ></i>
       </button>
     </div>
@@ -41,7 +43,8 @@
           class="flex items-center gap-x-4 rounded-md p-2 hover:bg-neutral-200/50"
           href="/"
         >
-          <i class="iconoir-home-alt-slim-horiz text-lg"></i>Home
+          <i data-lucide="home" class="size-6 p-0.5 text-neutral-900/60"></i>
+          Home
         </a>
 
         <!-- Services -->
@@ -49,7 +52,11 @@
           class="flex items-center gap-x-4 rounded-md p-2 hover:bg-neutral-200/50"
           href="/services"
         >
-          <i class="iconoir-suitcase text-lg"></i>Services
+          <i
+            data-lucide="briefcase-business"
+            class="size-6 p-0.5 text-neutral-900/60"
+          ></i>
+          Services
         </a>
 
         <!-- Projects -->
@@ -57,7 +64,11 @@
           class="flex items-center gap-x-4 rounded-md p-2 hover:bg-neutral-200/50"
           href="/projects"
         >
-          <i class="iconoir-tools text-lg"></i>Projects
+          <i
+            data-lucide="square-terminal"
+            class="size-6 p-0.5 text-neutral-900/60"
+          ></i>
+          Projects
         </a>
 
         <!-- Writings -->
@@ -66,7 +77,10 @@
             class="flex w-full items-center gap-x-4 rounded-md p-2"
             href="/writings"
           >
-            <i class="iconoir-edit-pencil text-lg"></i>
+            <i
+              data-lucide="notebook-pen"
+              class="size-6 p-0.5 text-neutral-900/60"
+            ></i>
             Writings
           </a>
 
@@ -78,7 +92,8 @@
           >
             <i
               id="dropdownIconWritings"
-              class="iconoir-nav-arrow-down text-lg transition-transform duration-200 ease-in-out"
+              data-lucide="chevron-down"
+              class="size-4 text-neutral-900/75 transition-transform ease-in-out"
             ></i>
           </button>
         </div>
@@ -86,26 +101,26 @@
         <!-- Writings Sub-menu -->
         <div
           id="dropdownMenuWritings"
-          class="ml-4 hidden border-l-2 border-neutral-300"
+          class="ml-5 hidden border-l-2 border-neutral-300"
         >
-          <div class="ml-2 flex flex-col gap-y-1">
+          <div class="ml-4 flex flex-col gap-y-1">
             <a
-              class="mr-8 rounded-md py-1 pr-2 pl-4 hover:bg-neutral-200/50"
+              class="mr-8 rounded-md py-1 pr-2 pl-3 hover:bg-neutral-200/50"
               href="/articles"
               >Articles
             </a>
             <a
-              class="mr-8 rounded-md py-1 pr-2 pl-4 hover:bg-neutral-200/50"
+              class="mr-8 rounded-md py-1 pr-2 pl-3 hover:bg-neutral-200/50"
               href="/notes"
               >Notes
             </a>
             <a
-              class="mr-8 rounded-md py-1 pr-2 pl-4 hover:bg-neutral-200/50"
+              class="mr-8 rounded-md py-1 pr-2 pl-3 hover:bg-neutral-200/50"
               href="/ideas"
               >Ideas
             </a>
             <a
-              class="mr-8 rounded-md py-1 pr-2 pl-4 hover:bg-neutral-200/50"
+              class="mr-8 rounded-md py-1 pr-2 pl-3 hover:bg-neutral-200/50"
               href="/logs"
               >Logs
             </a>
@@ -117,7 +132,11 @@
           class="flex items-center gap-x-4 rounded-md p-2 hover:bg-neutral-200/50"
           href="/guestbook"
         >
-          <i class="iconoir-bookmark-book text-lg"></i>Guestbook
+          <i
+            data-lucide="book-user"
+            class="size-6 p-0.5 text-neutral-900/60"
+          ></i>
+          Guestbook
         </a>
 
         <!-- Now -->
@@ -125,7 +144,11 @@
           class="flex items-center gap-x-4 rounded-md p-2 hover:bg-neutral-200/50"
           href="/now"
         >
-          <i class="iconoir-calendar text-lg"></i>Now
+          <i
+            data-lucide="calendar-days"
+            class="size-6 p-0.5 text-neutral-900/60"
+          ></i>
+          Now
         </a>
 
         <!-- About -->
@@ -133,73 +156,10 @@
           class="flex items-center gap-x-4 rounded-md p-2 hover:bg-neutral-200/50"
           href="/about"
         >
-          <i class="iconoir-user text-lg"></i>About
+          <i data-lucide="user" class="size-6 p-0.5 text-neutral-900/60"></i>
+          About
         </a>
       </nav>
-    </div>
-
-    <!-- Sidebar Social -->
-    <div
-      class="flex h-16 shrink-0 items-center justify-between border-t border-neutral-200 p-4"
-    >
-      <!-- Github -->
-      <a
-        title="GitHub"
-        href="https://github.com/odhyp/"
-        target="_blank"
-        class="group flex size-8 cursor-pointer items-center justify-center rounded-md border border-neutral-300/0 transition-colors ease-in-out hover:border-neutral-300"
-      >
-        <i
-          class="iconoir-github text-2xl text-neutral-900/75 transition-all duration-300 ease-in-out group-hover:scale-90 group-hover:text-neutral-900"
-        ></i>
-      </a>
-
-      <!-- LinkedIn -->
-      <a
-        title="LinkedIn"
-        href="https://www.linkedin.com/in/odhy/"
-        target="_blank"
-        class="group flex size-8 cursor-pointer items-center justify-center rounded-md border border-neutral-300/0 transition-colors ease-in-out hover:border-neutral-300"
-      >
-        <i
-          class="iconoir-linkedin text-2xl text-neutral-900/75 transition-all duration-300 ease-in-out group-hover:scale-90 group-hover:text-neutral-900"
-        ></i>
-      </a>
-
-      <!-- Instagram -->
-      <a
-        title="Instagram"
-        href="https://www.instagram.com/odhypradhana"
-        target="_blank"
-        class="group flex size-8 cursor-pointer items-center justify-center rounded-md border border-neutral-300/0 transition-colors ease-in-out hover:border-neutral-300"
-      >
-        <i
-          class="iconoir-instagram text-2xl text-neutral-900/75 transition-all duration-300 ease-in-out group-hover:scale-90 group-hover:text-neutral-900"
-        ></i>
-      </a>
-
-      <!-- Buymeacoffee -->
-      <a
-        title="Sponsor"
-        href="https://buymeacoffee.com/odhyp"
-        target="_blank"
-        class="group flex size-8 cursor-pointer items-center justify-center rounded-md border border-neutral-300/0 transition-colors ease-in-out hover:border-neutral-300"
-      >
-        <i
-          class="iconoir-coffee-cup text-2xl text-neutral-900/75 transition-all duration-300 ease-in-out group-hover:scale-90 group-hover:text-neutral-900"
-        ></i>
-      </a>
-
-      <!-- RSS Feed -->
-      <a
-        title="RSS Feed"
-        href="/index.xml"
-        class="group flex size-8 cursor-pointer items-center justify-center rounded-md border border-neutral-300/0 transition-colors ease-in-out hover:border-neutral-300"
-      >
-        <i
-          class="iconoir-rss-feed text-2xl text-neutral-900/75 transition-all duration-300 ease-in-out group-hover:scale-90 group-hover:text-neutral-900"
-        ></i>
-      </a>
     </div>
 
     <!-- Sidebar Footer -->
@@ -207,18 +167,20 @@
       class="flex h-16 shrink-0 items-center justify-between border-t border-neutral-200"
     >
       <a
+        title="Send an email!"
         target="_blank"
-        href="mailto:pradhana.odhy@gmail.com"
-        class="flex h-full w-full items-center gap-x-3 px-4 hover:bg-neutral-100"
+        href="mailto:{{ .Site.Params.author.email }}"
+        class="flex h-full w-full items-center gap-x-3 px-4 transition-colors ease-in-out hover:bg-neutral-200/80"
       >
         <img
           src="https://avatars.githubusercontent.com/u/78688788?v=4"
           alt="Profile Image"
+          loading="lazy"
           class="size-10 shrink-0 rounded-full"
         />
-        <div class="flex flex-col gap-y-0.5">
-          <span class="block text-sm font-medium">Odhy Pradhana</span>
-          <span class="block text-xs font-light">pradhana.odhy@gmail.com</span>
+        <div class="flex flex-col gap-y-0 text-sm">
+          <span class="block font-medium">{{ .Site.Params.author.name }}</span>
+          <span class="block font-light">{{ .Site.Params.author.email }}</span>
         </div>
       </a>
     </div>
