@@ -1,0 +1,15 @@
+<figure
+  class="md:not-prose md:-mx-8 md:my-8 md:w-[calc(100%+4rem)] md:max-w-none lg:-mx-16 lg:w-[calc(100%+8rem)] xl:-mx-32 xl:w-[calc(100%+16rem)]"
+>
+  <img
+    src="{{ .Get "src" }}"
+    alt="{{ .Get "alt" }}"
+    class="block h-auto w-full max-w-full rounded-lg shadow-sm"
+    loading="lazy"
+  />
+  {{ with .Get "caption" }}
+    <figcaption class="mt-2 text-center text-sm text-neutral-900/50">
+      {{ . }}
+    </figcaption>
+  {{ end }}
+</figure>
