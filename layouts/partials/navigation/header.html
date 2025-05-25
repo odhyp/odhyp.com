@@ -25,9 +25,24 @@
 
     <!-- Right Button -->
     <div class="flex shrink-0 items-center gap-x-2">
-      <!-- Search -->
+      <!-- Table of Contents -->
+      <!-- Only shown for single/leaf page in Writings section -->
+      <!-- {{- if and (eq .Section "writings") (.IsPage) -}}{{- end -}} -->
       <button
+        title="Table of Contents"
+        class="group flex size-8 cursor-pointer items-center justify-center rounded-md border border-neutral-300/0 transition-colors ease-in-out hover:border-neutral-300"
+      >
+        <i
+          data-lucide="table-of-contents"
+          class="size-6 text-neutral-900/75 transition-transform ease-in-out group-hover:scale-90"
+        ></i>
+      </button>
+
+      <!-- Sidebar Right - Search Button -->
+      <button
+        id="openSidebarRight"
         title="Search"
+        aria-label="Open search"
         class="group flex size-8 cursor-pointer items-center justify-center rounded-md border border-neutral-300/0 transition-colors ease-in-out hover:border-neutral-300"
       >
         <i
@@ -35,20 +50,6 @@
           class="size-6 text-neutral-900/75 transition-transform ease-in-out group-hover:scale-90"
         ></i>
       </button>
-
-      <!-- Table of Contents -->
-      <!-- Only shown for single/leaf page in Writings section -->
-      {{- if and (eq .Section "writings") (.IsPage) -}}
-        <button
-          title="Table of Contents"
-          class="group flex size-8 cursor-pointer items-center justify-center rounded-md border border-neutral-300/0 transition-colors ease-in-out hover:border-neutral-300"
-        >
-          <i
-            data-lucide="table-of-contents"
-            class="size-6 text-neutral-900/75 transition-transform ease-in-out group-hover:scale-90"
-          ></i>
-        </button>
-      {{- end -}}
     </div>
   </div>
 </header>
