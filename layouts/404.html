@@ -1,0 +1,33 @@
+{{ define "main" }}
+  {{ $quotes := shuffle (slice
+    "No alarms and no surprises, just a missing page"
+    "Everything in its right place, except this page"
+    "A fake plastic page. Not the real one"
+    "This page is a creep, a weirdo. What the hell is it doing here?"
+    "Karma Police arrest this page"
+    "This page knows how to disappear completely"
+    "Just... this page isn't here"
+    "There, there... this page is gone"
+    )
+  }}
+
+
+  <section class="flex items-center justify-center">
+    <div class="flex flex-col items-center gap-y-4 py-16 md:py-32">
+      <h2 class="text-3xl font-bold md:text-4xl md:leading-16 lg:text-5xl">
+        404
+      </h2>
+
+      <h3
+        class="max-w-[40ch] text-center text-xl text-neutral-900/80 md:text-2xl"
+      >
+        {{ index $quotes 0 }}
+      </h3>
+
+      <a href="/" class="btn-text mt-8">
+        <i data-lucide="arrow-left"></i>
+        Back to Home
+      </a>
+    </div>
+  </section>
+{{ end }}
