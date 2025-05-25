@@ -4,11 +4,11 @@
   <img
     src="{{ .Get "src" }}"
     alt="{{ .Get "alt" }}"
-    class="block h-auto w-full max-w-full rounded-lg shadow-sm"
+    class="block h-auto w-full max-w-full rounded-lg shadow-md"
     loading="lazy"
   />
   {{ with .Get "caption" }}
-    <figcaption class="mt-2 text-center text-sm text-neutral-900/50">
+    <figcaption class="mt-4 text-center text-neutral-900/60">
       {{ . }}
     </figcaption>
   {{ end }}
