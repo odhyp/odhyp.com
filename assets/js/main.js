@@ -51,9 +51,9 @@ function setupTurboTransitions() {
 
 // 02. SIDEBAR LEFT ---------------------------------------------------------------------
 function setupSidebarLeft() {
-  const sidebar = document.getElementById("sidebar");
-  const openBtn = document.getElementById("openSidebar");
-  const closeBtn = document.getElementById("closeSidebar");
+  const sidebar = document.getElementById("sidebarLeft");
+  const openBtn = document.getElementById("openSidebarLeft");
+  const closeBtn = document.getElementById("closeSidebarLeft");
 
   if (!sidebar || !openBtn || !closeBtn) return;
 
