@@ -5,3 +5,11 @@ html {
 body {
   @apply selection:bg-red-200 selection:text-red-950;
 }
+
+section {
+  @apply px-4 py-16;
+}
+
+article {
+  @apply prose prose-neutral lg:prose-lg font-inter mx-auto w-full max-w-prose;
+}
