@@ -24,6 +24,7 @@
     "preview": "hugo server --disableFastRender --navigateToChanged --templateMetrics --templateMetricsHints --watch --forceSyncStatic -e production --minify",
     "prebuild": "bash scripts/generate-changelog.sh",
     "build": "hugo --gc --minify --templateMetrics --templateMetricsHints --forceSyncStatic",
+    "postbuild": "npx pagefind --site public",
     "format": "npx prettier . --write"
   },
   "devDependencies": {
