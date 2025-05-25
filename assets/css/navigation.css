@@ -1,3 +1,57 @@
 footer a {
   @apply w-fit text-neutral-50/50 transition-colors duration-200 ease-in-out hover:text-neutral-50;
 }
+
+/* Pagefind Search */
+.pagefind-ui {
+  @apply p-4;
+}
+
+.pagefind-ui__form {
+  @apply relative flex w-full flex-col gap-y-4 text-sm;
+}
+
+.pagefind-ui__search-input {
+  @apply w-full rounded-md border border-neutral-200 px-4 py-2 focus:outline focus:outline-neutral-400;
+}
+
+.pagefind-ui__search-clear {
+  @apply absolute top-0.5 right-2 cursor-pointer p-2 text-xs text-neutral-900/50 hover:text-neutral-900;
+}
+
+.pagefind-ui__drawer {
+}
+
+.pagefind-ui__result-area {
+}
+
+.pagefind-ui__message {
+  @apply w-full px-4 py-2 font-bold text-neutral-900/60;
+}
+
+.pagefind-ui__results {
+  @apply scrollbar-thin my-4 h-[calc(100vh-14rem)] divide-y divide-neutral-200 overflow-auto;
+}
+
+.pagefind-ui__result {
+  @apply py-4 hover:bg-neutral-200/50;
+}
+
+.pagefind-ui__result-inner {
+}
+
+.pagefind-ui__result-title {
+  @apply mb-2 px-4 font-semibold;
+}
+
+.pagefind-ui__result-excerpt {
+  @apply px-4;
+}
+
+.pagefind-ui__result-excerpt mark {
+  @apply bg-red-200;
+}
+
+.pagefind-ui__button {
+  @apply hidden w-full cursor-pointer rounded-md bg-neutral-200/50 p-4 font-bold text-neutral-900/60 transition-colors ease-in-out hover:bg-neutral-200;
+}
