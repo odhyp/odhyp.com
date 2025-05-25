@@ -16,7 +16,7 @@
     <!-- LEFT SIDEBAR END -->
 
     <!-- MAIN START -->
-    <main class="flex w-full flex-col items-center">
+    <main class="flex min-h-dvh w-full flex-col items-center sm:min-h-screen">
       <!-- HEADER START -->
       {{- partial "navigation/header.html" . -}}
       <!-- HEADER END -->
@@ -24,7 +24,7 @@
       <!-- CONTENT START -->
       <turbo-frame
         id="main-content"
-        class="animate-fade-in-up min-h-dvh w-full grow py-32 sm:min-h-screen"
+        class="animate-fade-in-up w-full grow py-32"
       >
         {{- block "main" . }}{{- end }}
       </turbo-frame>
