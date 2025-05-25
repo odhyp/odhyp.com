@@ -33,5 +33,3 @@ You can request to view, update, or delete your data at any time by contacting m
 ### 6. Contact
 
 For questions about this Privacy Policy, email: `hello@odhyp.com`
-
-_Last updated: May 25, 2025_

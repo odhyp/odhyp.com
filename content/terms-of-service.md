@@ -30,5 +30,3 @@ I’m not liable for any losses or damages resulting from the use of this site o
 ### 5. Contact
 
 For questions about this Terms of Service, email: `hello@odhyp.com`
-
-_Last updated: May 25, 2025_
