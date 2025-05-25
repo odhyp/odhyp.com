@@ -2,16 +2,12 @@
 
 // 00. LOAD ALL FUNCTIONS
 // 01. TURBO FRAME TRANSITIONS
-// 02. SIDEBAR
-// 03. DROPDOWN SETUP
-// 04. UPDATE RELATIVE DATES
-// 05. OPEN EXTERNAL LINKS IN NEW TAB
-// 06. CODE BLOCK COPY
+// 02. SIDEBAR LEFT
 
 // 00. LOAD ALL FUNCTION ----------------------------------------------------------------
 document.addEventListener("DOMContentLoaded", () => {
   setupTurboTransitions();
-  setupSidebar();
+  setupSidebarLeft();
   setupDropdown({
     buttonId: "dropdownBtnWritings",
     iconId: "dropdownIconWritings",
@@ -53,8 +49,8 @@ function setupTurboTransitions() {
   });
 }
 
-// 02. SIDEBAR --------------------------------------------------------------------------
-function setupSidebar() {
+// 02. SIDEBAR LEFT ---------------------------------------------------------------------
+function setupSidebarLeft() {
   const sidebar = document.getElementById("sidebar");
   const openBtn = document.getElementById("openSidebar");
   const closeBtn = document.getElementById("closeSidebar");
