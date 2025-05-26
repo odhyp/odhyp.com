@@ -1,5 +1,5 @@
 {{ define "main" }}
-  <section>
+  <section data-pagefind-ignore>
     <article class="font-geist">
       <h1 class="!my-0 !mb-4 font-semibold">{{ .Title }}</h1>
 
@@ -13,7 +13,7 @@
         </button>
       </p>
 
-      <div data-pagefind-ignore id="changelog-entries">
+      <div id="changelog-entries">
         {{ $lines := split (readFile "data/changelog.log") "\n" }}
         {{ range $i, $line := $lines }}
           {{ $parts := split $line " | " }}
