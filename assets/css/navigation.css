@@ -41,7 +41,7 @@ footer a {
 }
 
 .pagefind-ui__result-title {
-  @apply mb-2 px-4 font-semibold;
+  @apply mb-2 px-4 font-semibold underline underline-offset-2;
 }
 
 .pagefind-ui__result-excerpt {
