@@ -8,7 +8,6 @@ Built with Hugo, JavaScript, and TailwindCSS. Deployed in Vercel.
 
 - [ ] Add testimonial section in Home and Service page
 - [ ] Work on the Taxonomy pages
-- [ ] Add search and sort feature in Writings page
 - [ ] Add Single page Table of Contents
 - [ ] Add back-to-top button
 
@@ -17,7 +16,7 @@ Built with Hugo, JavaScript, and TailwindCSS. Deployed in Vercel.
 ### Running on local connection
 
 ```bash
-hugo server --bind 0.0.0.0 --baseURL http://<YOUR_IP> --port 1313
+hugo server --bind 0.0.0.0 --baseURL http://<YOUR_IP> --port 1313 --disableFastRender
 ```
 
 ### New content/page
