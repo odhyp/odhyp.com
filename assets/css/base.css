@@ -1,5 +1,5 @@
 html {
-  @apply scroll-mt-16 scroll-smooth;
+  @apply scroll-smooth;
 }
 
 body {
@@ -12,4 +12,8 @@ section {
 
 article {
   @apply prose prose-neutral lg:prose-lg font-inter mx-auto w-full max-w-prose;
+}
+
+h1 {
+  @apply font-geist font-light;
 }

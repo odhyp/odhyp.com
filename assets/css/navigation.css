@@ -1,5 +1,9 @@
+header a {
+  @apply text-neutral-900/60 transition-colors ease-in-out hover:text-neutral-900 hover:underline hover:underline-offset-2;
+}
+
 footer a {
-  @apply w-fit text-neutral-50/50 transition-colors duration-200 ease-in-out hover:text-neutral-50;
+  @apply text-neutral-50/60 transition-colors ease-in-out hover:text-neutral-50 hover:underline hover:underline-offset-2;
 }
 
 /* Pagefind Search */
