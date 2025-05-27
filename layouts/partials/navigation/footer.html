@@ -1,102 +1,30 @@
 <footer
   data-turbo-permanent
-  class="z-40 min-h-dvh w-full bg-neutral-900 text-neutral-50 sm:min-h-screen"
+  class="@container w-full shrink-0 bg-neutral-900 text-neutral-50"
 >
-  <!-- Footer Container -->
-  <div class="mx-auto flex h-full w-full max-w-6xl flex-col gap-y-4 px-4 pt-16">
-    <!-- Footer Logo -->
-    <div class="flex w-full shrink-0 flex-col gap-y-4 py-8">
-      <h5 class="text-4xl font-bold tracking-wider uppercase">Pradhana.</h5>
-
-      <span class="font-light text-neutral-50/50">
-        {{ partial "navigation/footer-quotes.html" . }}
-      </span>
-
-      <!-- Socials -->
-      <div class="mt-4 flex gap-x-8">
-        <!-- Github -->
-        <a title="GitHub" href="https://github.com/odhyp/" target="_blank">
-          <i data-lucide="github" class="size-6"></i>
-        </a>
-
-        <!-- LinkedIn -->
-        <a
-          title="LinkedIn"
-          href="https://www.linkedin.com/in/odhy/"
-          target="_blank"
-        >
-          <i data-lucide="linkedin" class="size-6"></i>
-        </a>
-
-        <!-- Instagram -->
-        <a
-          title="Instagram"
-          href="https://www.instagram.com/odhypradhana"
-          target="_blank"
-        >
-          <i data-lucide="instagram" class="size-6"></i>
-        </a>
-
-        <!-- Buymeacoffee -->
-        <a
-          title="Buymeacoffee"
-          href="https://buymeacoffee.com/odhyp"
-          target="_blank"
-        >
-          <i data-lucide="coffee" class="size-6"></i>
-        </a>
-
-        <!-- RSS Feed -->
-        <a title="RSS Feed" href="/index.xml" target="_blank">
-          <i data-lucide="rss" class="size-6"></i>
-        </a>
-      </div>
-    </div>
-
-    <!-- Footer Menu -->
-    <div
-      class="grid w-full grow grid-cols-2 gap-y-12 pt-8 pb-16 md:grid-cols-4"
+  <div class="dev-parent dev-child flex flex-col items-center justify-center">
+    <!-- Footer Nav -->
+    <nav
+      class="flex w-full flex-col justify-center gap-y-4 p-8 @md:grid @md:max-w-md @md:grid-cols-2 @md:gap-4 @xl:max-w-xl @xl:grid-cols-3"
     >
-      <!-- Explore -->
-      <div class="flex flex-col gap-y-4">
-        <h5 class="mb-4 font-semibold">Explore</h5>
-        <a href="/services">Services</a>
-        <a href="/projects">Projects</a>
-        <a href="/now">Now</a>
-        <a href="/about">About</a>
+      <div class="flex flex-col py-4 @md:col-span-2 @xl:col-span-3">
+        <span class="text-3xl font-light">Pradhana.</span>
+        <span class="text-neutral-50/60">
+          {{ partial "navigation/footer-quotes.html" . }}
+        </span>
       </div>
-
-      <!-- Writings -->
-      <div class="flex flex-col gap-y-4 font-light">
-        <h5 class="mb-4 font-semibold">Writings</h5>
-        <a href="/articles">Articles</a>
-        <a href="/notes">Notes</a>
-        <a href="/ideas">Ideas</a>
-        <a href="/logs">Logs</a>
-        <a href="/topics">Topics</a>
-      </div>
-
-      <!-- Community -->
-      <div class="flex flex-col gap-y-4 font-light">
-        <h5 class="mb-4 font-semibold">Community</h5>
-        <a href="/support">Support</a>
-        <a href="/guestbook">Guestbook</a>
-        <a href="/changelog">Changelog</a>
-        <a href="/colophon">Colophon</a>
-      </div>
-
-      <!-- Legal -->
-      <div class="flex flex-col gap-y-4 font-light">
-        <h5 class="mb-4 font-semibold">Legal</h5>
-        <a href="/privacy-policy">Privacy Policy</a>
-        <a href="/terms-of-service">Terms of Service</a>
-        <a href="/disclaimer">Disclaimer</a>
-      </div>
-    </div>
+      <a href="/support">Support</a>
+      <a href="/guestbook">Guestbook</a>
+      <a href="/changelog">Changelog</a>
+      <a href="/colophon">Colophon</a>
+      <a href="/privacy-policy">Privacy Policy</a>
+      <a href="/terms-of-service">Terms of Service</a>
+      <a href="/disclaimer">Disclaimer</a>
+    </nav>
 
     <!-- Footer Copyright -->
     <div
-      class="flex w-full shrink-0 flex-col items-center gap-y-2 border-t border-neutral-700 py-8 text-neutral-50/50 md:flex-row md:justify-between"
+      class="flex w-full flex-col justify-center gap-y-4 border-t border-neutral-700 p-8 @md:max-w-md @xl:max-w-xl @xl:flex-row @xl:justify-between"
     >
       <a
         target="_blank"
@@ -105,7 +33,9 @@
         ><i data-lucide="mail" class="size-5"></i
         >{{ .Site.Params.author.email }}
       </a>
-      <span>&copy; {{ now.Year }} {{ .Site.Params.author.name }}</span>
+      <span class="text-neutral-50/60"
+        >&copy; {{ now.Year }} {{ .Site.Params.author.name }}</span
+      >
     </div>
   </div>
 </footer>

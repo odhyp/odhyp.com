@@ -1,55 +1,15 @@
 <header
   data-turbo-permanent
-  class="fixed top-0 z-40 h-16 w-full border-b border-neutral-200 bg-neutral-50"
+  class="@container w-full shrink-0 text-neutral-900/60"
 >
-  <!-- Header Container -->
-  <div class="flex h-16 items-center justify-between gap-x-8 p-4">
-    <!-- Left Button -->
-    <div class="shrink-0">
-      <button
-        id="openSidebarLeft"
-        title="Open Menu"
-        class="group flex size-8 cursor-pointer items-center justify-center rounded-md border border-neutral-300/0 transition-colors ease-in-out hover:border-neutral-300"
-      >
-        <i
-          data-lucide="menu"
-          class="size-6 text-neutral-900/75 transition-transform ease-in-out group-hover:scale-90"
-        ></i>
-      </button>
-    </div>
-
-    <!-- Breadcrumbs -->
-    <div class="w-full max-w-[50%] shrink">
-      {{- partial "components/breadcrumbs.html" . -}}
-    </div>
-
-    <!-- Right Button -->
-    <div class="flex shrink-0 items-center gap-x-2">
-      <!-- Table of Contents -->
-      <!-- Only shown for single/leaf page in Writings section -->
-      <!-- {{- if and (eq .Section "writings") (.IsPage) -}}{{- end -}} -->
-      <button
-        title="Table of Contents"
-        class="group flex size-8 cursor-pointer items-center justify-center rounded-md border border-neutral-300/0 transition-colors ease-in-out hover:border-neutral-300"
-      >
-        <i
-          data-lucide="table-of-contents"
-          class="size-6 text-neutral-900/75 transition-transform ease-in-out group-hover:scale-90"
-        ></i>
-      </button>
-
-      <!-- Sidebar Right - Search Button -->
-      <button
-        id="openSidebarRight"
-        title="Search"
-        aria-label="Open search"
-        class="group flex size-8 cursor-pointer items-center justify-center rounded-md border border-neutral-300/0 transition-colors ease-in-out hover:border-neutral-300"
-      >
-        <i
-          data-lucide="search"
-          class="size-6 text-neutral-900/75 transition-transform ease-in-out group-hover:scale-90"
-        ></i>
-      </button>
-    </div>
+  <div class="flex items-center justify-center">
+    <nav
+      class="flex w-full flex-wrap items-center justify-between gap-4 p-8 @md:w-md"
+    >
+      <a href="/" class="">home</a>
+      <a href="/projects" class="">projects</a>
+      <a href="/writings" class="">writings</a>
+      <a href="/now" class="">now</a>
+    </nav>
   </div>
 </header>
