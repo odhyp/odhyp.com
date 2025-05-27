@@ -21,12 +21,12 @@
             <div
               class="changelog-entry {{ if gt $i 9 }}
                 hidden
-              {{ end }} mb-1 flex gap-4"
+              {{ end }} mb-3 flex flex-col sm:flex-row sm:gap-4"
             >
-              <span class="shrink-0 text-neutral-900/50"
+              <span class="text-neutral-900/50 sm:shrink-0"
                 >{{ index $parts 0 }}</span
               >
-              <span class="shrink-0 text-red-800">{{ index $parts 1 }}</span>
+              <span class="text-red-800 sm:shrink-0">{{ index $parts 1 }}</span>
               <span class="text-neutral-900">{{ index $parts 2 }}</span>
             </div>
           {{ end }}
