@@ -1,17 +1,15 @@
-# Welcome to the Garden 🪴
+**[odhyp.com](https://odhyp.com)**
 
-Welcome to my digital garden—where I plant ideas, debug thoughts, and occasionally scream at my code.
+my personal website and digital garden
 
-Built with Hugo, JavaScript, and TailwindCSS. Deployed in Vercel.
+<br>
 
-## Roadmap
+<samp>code is licensed under <a href='./LICENSE'>MIT</a>,<br> words and images are licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC BY-NC-SA 4.0</a></samp>.
 
-- [ ] Add testimonial section in Home and Service page
-- [ ] Work on the Taxonomy pages
-- [ ] Add Single page Table of Contents
-- [ ] Add back-to-top button
+<br>
 
-## Self-note
+<details>
+<summary>&nbsp;<code>Self-note</code></summary>
 
 ### Running on local connection
 
@@ -24,3 +22,5 @@ hugo server --bind 0.0.0.0 --baseURL http://<YOUR_IP> --port 1313 --disableFastR
 ```bash
 hugo new --kind writing writings/2024-10-27-sample-post.md
 ```
+
+</details>
