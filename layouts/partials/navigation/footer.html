@@ -5,21 +5,26 @@
   <div class="flex flex-col items-center justify-center py-4">
     <!-- Footer Nav -->
     <nav
-      class="flex w-full flex-col justify-center gap-y-4 p-8 @md:grid @md:max-w-md @md:grid-cols-2 @md:gap-4 @xl:max-w-xl @xl:grid-cols-3"
+      class="mb-8 flex w-full flex-col justify-center gap-y-4 p-8 @md:grid @md:max-w-md @md:grid-cols-2 @md:gap-4 @xl:max-w-xl"
     >
-      <div class="flex flex-col py-4 @md:col-span-2 @xl:col-span-3">
+      <div class="flex flex-col py-4 @md:col-span-2">
         <span class="mb-2 text-4xl font-light">Pradhana.</span>
         <span class="text-neutral-50/60">
           {{ partial "navigation/footer-quotes.html" . }}
         </span>
       </div>
+
+      <span class="mt-8 @md:col-span-2">Community</span>
       <a href="/support">Support</a>
       <a href="/guestbook">Guestbook</a>
       <a href="/changelog">Changelog</a>
       <a href="/colophon">Colophon</a>
+
+      <span class="mt-8 @md:col-span-2">Legal</span>
       <a href="/privacy-policy">Privacy Policy</a>
       <a href="/terms-of-service">Terms of Service</a>
       <a href="/disclaimer">Disclaimer</a>
+      <a href="/license">License</a>
     </nav>
 
     <!-- Footer Copyright -->
