@@ -13,11 +13,7 @@ description = "Personal website about automation, data visualization, and web de
 # Custom taxonomies
 [taxonomies]
 topic = "topics"
-
-# Permalinks
-[permalinks]
-projects = "/projects/:slug/"
-writings = "/writings/:slug/"
+tech = "techs"
 
 # Markup highlighting & ToC configuration
 [markup]
