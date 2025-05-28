@@ -1,6 +1,9 @@
 +++
 title = "Terms of Service"
 description = "Usage terms and service agreement for visitors and clients"
+url = "/terms-of-service"
+type = "miscellaneous"
+layout = "basic"
 +++
 
 By using this website ([odhyp.com]) or working with me on freelance projects, you agree to the following terms:

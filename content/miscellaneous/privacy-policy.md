@@ -1,6 +1,9 @@
 +++
 title = "Privacy Policy"
 description = "How I collect, use, and protect your data"
+url = "/privacy-policy"
+type = "miscellaneous"
+layout = "basic"
 +++
 
 This website ([odhyp.com]) respects your privacy. Here’s how I handle your information:

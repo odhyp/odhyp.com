@@ -1,6 +1,9 @@
 +++
 title = "Colophon"
 description = "How this site was made or behind-the-scenes of this site"
+url = "/colophon"
+type = "miscellaneous"
+layout = "basic"
 +++
 
 Welcome to the "**How this site was made**" page where I explain each component used in this personal website, digital garden, service platform, digital space, or whatever this site currently is.

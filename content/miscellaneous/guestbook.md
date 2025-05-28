@@ -1,6 +1,7 @@
 +++
 title = "Guestbook"
-type = "page"
+url = "/guestbook"
+type = "miscellaneous"
 layout = "guestbook"
 +++
 
