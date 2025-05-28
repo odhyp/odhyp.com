@@ -1,0 +1,15 @@
+{{ define "main" }}
+  <!-- 
+  A basic page for all miscellaneous pages. 
+  This layout is identic to the default single page,
+  with slight modification.
+  -->
+
+  <section>
+    <article class="slide-enter-content">
+      <h1>{{ .Title }}</h1>
+      <h2 class="not-prose text-neutral-900/60 italic">{{ .Description }}</h2>
+      {{ .Content }}
+    </article>
+  </section>
+{{ end }}
