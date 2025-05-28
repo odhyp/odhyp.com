@@ -1,0 +1,63 @@
+<!-- BADGES PARAMETER -->
+<!-- 
+I think it's a good idea to separate these items.
+But you need to make a different default single page 
+layout for both Writings and Projects page.
+-->
+
+{{ $taxonomy := "" }}
+
+
+<!-- TOPICS BADGE (WRITINGS) -->
+{{ if eq .Section "writings" }}
+  {{ $taxonomy = "topics" }}
+
+  {{ with .Param $taxonomy }}
+    <ul
+      class="not-prose mt-4 flex list-none flex-wrap gap-x-4 text-base text-neutral-900/60 lowercase"
+    >
+      {{ range $index, $tag := . }}
+        {{ with $.Site.GetPage (printf "/%s/%s"
+          $taxonomy $tag)
+        }}
+          <li>
+            <a
+              href="{{ .RelPermalink }}"
+              class="text-nowrap transition-all ease-in-out hover:text-neutral-900 hover:underline hover:underline-offset-2"
+            >
+              #{{ .LinkTitle }}
+              <span>({{ .RegularPages.Len }})</span>
+            </a>
+          </li>
+        {{ end }}
+      {{ end }}
+    </ul>
+  {{ end }}
+
+
+  <!-- TECH-STACKS BADGE (PROJECTS) -->
+{{ else if eq .Section "projects" }}
+  {{ $taxonomy = "tech-stacks" }}
+
+  {{ with .Param $taxonomy }}
+    <ul
+      class="not-prose mt-4 flex list-none flex-wrap gap-x-4 text-base text-neutral-900/60 lowercase"
+    >
+      {{ range $index, $tag := . }}
+        {{ with $.Site.GetPage (printf "/%s/%s"
+          $taxonomy $tag)
+        }}
+          <li>
+            <a
+              href="{{ .RelPermalink }}"
+              class="text-nowrap transition-all ease-in-out hover:text-neutral-900 hover:underline hover:underline-offset-2"
+            >
+              pill-{{ .LinkTitle }}
+              <span>({{ .RegularPages.Len }})</span>
+            </a>
+          </li>
+        {{ end }}
+      {{ end }}
+    </ul>
+  {{ end }}
+{{ end }}
