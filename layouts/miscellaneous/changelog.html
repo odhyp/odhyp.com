@@ -1,7 +1,7 @@
 {{ define "main" }}
   <section>
     <article class="font-geist">
-      <h1 class="!my-0 !mb-4 font-semibold">{{ .Title }}</h1>
+      <h1>{{ .Title }}</h1>
 
       <p class="mb-4 text-neutral-600 italic">
         Showing <span id="commit-toggle-state">latest 10</span> commits —
@@ -23,10 +23,11 @@
                 hidden
               {{ end }} mb-3 flex flex-col sm:flex-row sm:gap-4"
             >
-              <span class="text-neutral-900/50 sm:shrink-0"
-                >{{ index $parts 0 }}</span
-              >
-              <span class="text-red-800 sm:shrink-0">{{ index $parts 1 }}</span>
+              <div class="flex shrink-0 gap-4">
+                <span class="text-neutral-900/50">{{ index $parts 0 }}</span>
+                <span class="text-red-800">{{ index $parts 1 }}</span>
+              </div>
+
               <span class="text-neutral-900">{{ index $parts 2 }}</span>
             </div>
           {{ end }}
