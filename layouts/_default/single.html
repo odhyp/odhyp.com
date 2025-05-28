@@ -1,13 +1,15 @@
 {{ define "main" }}
   <section>
-    <span>This is the default single page layout</span>
-
-    <hr />
-
-    <h1 data-pagefind-body>{{ .Title }}</h1>
-
-    <article data-pagefind-body>
+    <article data-pagefind-body class="slide-enter-content">
+      <h1 data-pagefind-body>{{ .Title }}</h1>
+      <i class="text-neutral-900/60">{{ .Description }}</i>
+      {{ partial "components/badge-topic.html" . }}
+      <hr />
       {{ .Content }}
     </article>
+
+    {{ if or (eq .Section "projects") (eq .Section "writings") }}
+      {{ partial "components/giscus.html" . }}
+    {{ end }}
   </section>
 {{ end }}
