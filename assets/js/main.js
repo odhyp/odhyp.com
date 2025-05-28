@@ -268,6 +268,7 @@ function codeBlockCopyButton() {
       copyButton.innerText = "Copy";
       copyButton.className =
         "absolute top-4 right-4 bg-neutral-800 text-white px-2.5 py-1.5 text-xs rounded-md hover:bg-neutral-700 transition-all ease-in-out copy-btn hover:cursor-pointer";
+      copyButton.setAttribute("aria-label", "Copy code to clipboard");
 
       // Append button inside wrapper instead of <pre>
       wrapper.appendChild(copyButton);
