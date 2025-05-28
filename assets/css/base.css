@@ -7,11 +7,11 @@ body {
 }
 
 section {
-  @apply w-full px-4 py-16 md:py-24;
+  @apply w-full px-6 py-16 md:px-0 md:py-24;
 }
 
 article {
-  @apply prose prose-neutral lg:prose-lg font-inter prose-headings:font-geist mx-auto w-full max-w-prose;
+  @apply prose prose-neutral lg:prose-lg font-inter prose-headings:font-geist prose-a:text-red-700 prose-img:mx-auto prose-img:rounded-lg mx-auto w-full max-w-prose marker:text-red-700;
 }
 
 h1 {
