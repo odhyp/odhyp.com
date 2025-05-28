@@ -9,7 +9,16 @@ my personal website and digital garden
 <br>
 
 <details>
-<summary>&nbsp;<code>Self-note</code></summary>
+<summary>&nbsp;<code>self-note</code></summary>
+
+### Future additions?
+
+- [ ] Shortcodes
+  - [ ] Callouts (success, warning, danger, important, info)
+  - [ ] Image side-by-side comparison
+  - [ ] Image gallery/slider
+- [ ] Table Of Contents for Writings and Projects page
+- [ ] Search function using Pagefind (honestly idk where to put the search bar)
 
 ### Running on local connection
 
