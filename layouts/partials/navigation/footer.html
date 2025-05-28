@@ -2,45 +2,103 @@
   data-turbo-permanent
   class="@container w-full shrink-0 bg-neutral-900 text-neutral-50"
 >
-  <div class="flex flex-col items-center justify-center py-4">
-    <!-- Footer Nav -->
-    <nav
-      class="mb-8 flex w-full flex-col justify-center gap-y-4 p-8 @md:grid @md:max-w-md @md:grid-cols-2 @md:gap-4 @xl:max-w-xl"
+  <div class="flex flex-col items-center justify-center">
+    <!-- Footer Heading & Nav -->
+    <div
+      class="my-8 grid w-full grid-cols-1 gap-8 p-8 @sm:grid-cols-2 @md:max-w-md @lg:max-w-lg @4xl:max-w-4xl @4xl:grid-cols-4"
     >
-      <div class="flex flex-col py-4 @md:col-span-2">
-        <span class="mb-2 text-4xl font-light">Pradhana.</span>
+      <!-- Nav Heading and Socials -->
+      <div class="flex flex-col gap-y-2 @sm:col-span-2">
+        <span class="text-4xl font-light">Pradhana.</span>
         <span class="text-neutral-50/60">
           {{ partial "navigation/footer-quotes.html" . }}
         </span>
+
+        <!-- Socials -->
+        <div class="my-4 flex flex-wrap items-center gap-x-4">
+          <!-- Github -->
+          <a
+            title="GitHub"
+            target="_blank"
+            href="https://github.com/odhyp/"
+            class="flex items-center gap-x-2 hover:underline hover:underline-offset-4"
+            ><i data-lucide="github" class="size-6"></i>
+          </a>
+
+          <!-- LinkedIn -->
+          <a
+            title="LinkedIn"
+            target="_blank"
+            href="https://www.linkedin.com/in/odhy/"
+            class="flex items-center gap-x-2 hover:underline hover:underline-offset-4"
+            ><i data-lucide="linkedin" class="size-6"></i>
+          </a>
+
+          <!-- Instagram -->
+          <a
+            title="Instagram"
+            target="_blank"
+            href="https://www.instagram.com/odhypradhana"
+            class="flex items-center gap-x-2 hover:underline hover:underline-offset-4"
+            ><i data-lucide="instagram" class="size-6"></i>
+          </a>
+
+          <!-- Buymeacoffee -->
+          <a
+            title="Sponsor"
+            target="_blank"
+            href="https://buymeacoffee.com/odhyp"
+            class="flex items-center gap-x-2 hover:underline hover:underline-offset-4"
+            ><i data-lucide="coffee" class="size-6"></i>
+          </a>
+
+          <!-- RSS Feed -->
+          <a
+            title="RSS Feed"
+            href="/index.xml"
+            class="flex items-center gap-x-2 hover:underline hover:underline-offset-4"
+            ><i data-lucide="rss" class="size-6"></i>
+          </a>
+        </div>
       </div>
 
-      <span class="mt-8 @md:col-span-2">Community</span>
-      <a href="/support">Support</a>
-      <a href="/guestbook">Guestbook</a>
-      <a href="/changelog">Changelog</a>
-      <a href="/colophon">Colophon</a>
+      <!-- Nav - Community -->
+      <div class="flex flex-col gap-2">
+        <span class="mb-2">Community</span>
+        <a href="/support">Support</a>
+        <a href="/guestbook">Guestbook</a>
+        <a href="/changelog">Changelog</a>
+        <a href="/colophon">Colophon</a>
+      </div>
 
-      <span class="mt-8 @md:col-span-2">Legal</span>
-      <a href="/privacy-policy">Privacy Policy</a>
-      <a href="/terms-of-service">Terms of Service</a>
-      <a href="/disclaimer">Disclaimer</a>
-      <a href="/license">License</a>
-    </nav>
+      <!-- Nav - Legal -->
+      <div class="flex flex-col gap-2">
+        <span class="mb-2">Legal</span>
+        <a href="/privacy-policy">Privacy Policy</a>
+        <a href="/terms-of-service">Terms of Service</a>
+        <a href="/disclaimer">Disclaimer</a>
+        <a href="/license">License</a>
+      </div>
+    </div>
 
-    <!-- Footer Copyright -->
+    <!-- Footer Email & Copyright -->
     <div
-      class="flex w-full flex-col justify-center gap-y-4 border-t border-neutral-700 p-8 @md:max-w-md @xl:max-w-xl @xl:flex-row @xl:justify-between"
+      class="flex w-full flex-col gap-y-4 border-t border-neutral-700 p-8 @md:max-w-md @lg:max-w-lg @lg:flex-row @lg:items-center @lg:justify-between @4xl:max-w-4xl"
     >
       <a
+        title="Email"
         target="_blank"
         href="mailto:{{ .Site.Params.author.email }}"
         class="flex items-center gap-x-2 hover:underline hover:underline-offset-4"
         ><i data-lucide="mail" class="size-5"></i
         >{{ .Site.Params.author.email }}
       </a>
+
       <span class="text-neutral-50/60"
-        >&copy; {{ now.Year }} {{ .Site.Params.author.name }}</span
-      >
+        >&copy;
+        {{ now.Year }}
+        {{ .Site.Params.author.name }}
+      </span>
     </div>
   </div>
 </footer>
