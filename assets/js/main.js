@@ -1,189 +1,18 @@
 // TABLE OF CONTENTS
 
 // 00. LOAD ALL FUNCTIONS
-// 01. TURBO FRAME TRANSITIONS
-// 02. SIDEBAR LEFT
-// 03. SIDEBAR RIGHT
-// 04. DROPDOWN SETUP
-// 05. UPDATE RELATIVE DATES
-// 06. OPEN EXTERNAL LINKS IN NEW TAB
-// 07. CODE BLOCK COPY
-// 08. SEARCH BAR
+// 01. UPDATE RELATIVE DATES
+// 02. OPEN EXTERNAL LINKS IN NEW TAB
+// 03. CODE BLOCK COPY
 
 // 00. LOAD ALL FUNCTION ----------------------------------------------------------------
 document.addEventListener("DOMContentLoaded", () => {
-  setupTurboTransitions();
-  setupSidebarLeft();
-  setupSidebarRight();
-  setupDropdown({
-    buttonId: "dropdownBtnWritings",
-    iconId: "dropdownIconWritings",
-    menuId: "dropdownMenuWritings",
-  });
-
   updateRelativeDates();
   openExternalLinksInNewTab();
   codeBlockCopyButton();
 });
 
-// 01. TURBO FRAME TRANSITIONS ----------------------------------------------------------
-function setupTurboTransitions() {
-  const wrapperSelector = "#main-transition-wrapper";
-
-  document.addEventListener("turbo:before-fetch-request", (event) => {
-    const wrapper = document.querySelector(wrapperSelector);
-    if (wrapper && event.target.tagName === "TURBO-FRAME") {
-      wrapper.classList.remove("opacity-100");
-      wrapper.classList.add("opacity-0");
-    }
-  });
-
-  document.addEventListener("turbo:frame-render", (event) => {
-    if (event.target.id === "main-content") {
-      const wrapper = event.target.querySelector(wrapperSelector);
-      if (wrapper) {
-        wrapper.classList.add(
-          "transition-opacity",
-          "duration-300",
-          "opacity-0",
-        );
-        requestAnimationFrame(() => {
-          wrapper.classList.remove("opacity-0");
-          wrapper.classList.add("opacity-100");
-        });
-      }
-    }
-  });
-}
-
-// 02. SIDEBAR LEFT ---------------------------------------------------------------------
-function setupSidebarLeft() {
-  const sidebar = document.getElementById("sidebarLeft");
-  const openBtn = document.getElementById("openSidebarLeft");
-  const closeBtn = document.getElementById("closeSidebarLeft");
-
-  if (!sidebar || !openBtn || !closeBtn) return;
-
-  let lastFocusedElement = null;
-
-  // Open sidebar
-  function openSidebar() {
-    sidebar.classList.remove("-translate-x-full", "opacity-0");
-    sidebar.classList.add("opacity-100");
-    sidebar.setAttribute("aria-hidden", "false");
-
-    lastFocusedElement = document.activeElement;
-  }
-
-  // Close sidebar
-  function closeSidebar() {
-    sidebar.classList.remove("opacity-100");
-    sidebar.classList.add("-translate-x-full", "opacity-0");
-    sidebar.setAttribute("aria-hidden", "true");
-
-    if (lastFocusedElement) lastFocusedElement.focus();
-  }
-
-  // Handle outside clicks
-  function handleOutsideClick(e) {
-    if (!sidebar.contains(e.target) && !openBtn.contains(e.target)) {
-      closeSidebar();
-    }
-  }
-
-  // Handle ESC key
-  function handleEscapeKey(e) {
-    if (e.key === "Escape") {
-      closeSidebar();
-    }
-  }
-
-  // Event Listeners
-  openBtn.addEventListener("click", openSidebar);
-  closeBtn.addEventListener("click", closeSidebar);
-  document.addEventListener("click", handleOutsideClick);
-  document.addEventListener("keydown", handleEscapeKey);
-
-  // Close sidebar on Turbo page nav
-  document.addEventListener("turbo:click", closeSidebar);
-}
-
-// 03. SIDEBAR RIGHT --------------------------------------------------------------------
-function setupSidebarRight() {
-  const sidebar = document.getElementById("sidebarRight");
-  const openBtn = document.getElementById("openSidebarRight");
-  const closeBtn = document.getElementById("closeSidebarRight");
-
-  if (!sidebar || !openBtn || !closeBtn) return;
-
-  let lastFocusedElement = null;
-
-  // Open sidebar
-  function openSidebar() {
-    document.body.classList.add("overflow-hidden");
-    sidebar.classList.remove("translate-x-full", "opacity-0");
-    sidebar.classList.add("opacity-100");
-    sidebar.setAttribute("aria-hidden", "false");
-    lastFocusedElement = document.activeElement;
-
-    const searchInput = document.querySelector(".pagefind-ui__search-input");
-
-    if (searchInput) {
-      console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>HERE");
-      searchInput.focus();
-    }
-  }
-
-  // Close sidebar
-  function closeSidebar() {
-    document.body.classList.remove("overflow-hidden");
-    sidebar.classList.remove("opacity-100");
-    sidebar.classList.add("translate-x-full", "opacity-0");
-    sidebar.setAttribute("aria-hidden", "true");
-    if (lastFocusedElement) lastFocusedElement.focus();
-  }
-
-  // Handle outside clicks
-  function handleOutsideClick(e) {
-    if (!sidebar.contains(e.target) && !openBtn.contains(e.target)) {
-      closeSidebar();
-    }
-  }
-
-  // Handle ESC key
-  function handleEscapeKey(e) {
-    if (e.key === "Escape") {
-      closeSidebar();
-    }
-  }
-
-  // Event Listeners
-  openBtn.addEventListener("click", openSidebar);
-  closeBtn.addEventListener("click", closeSidebar);
-  document.addEventListener("click", handleOutsideClick);
-  document.addEventListener("keydown", handleEscapeKey);
-
-  // Close sidebar on Turbo page nav
-  document.addEventListener("turbo:click", closeSidebar);
-}
-
-// 04. DROPDOWN SETUP -------------------------------------------------------------------
-function setupDropdown({ buttonId, iconId, menuId }) {
-  const btn = document.getElementById(buttonId);
-  const icon = document.getElementById(iconId);
-  const menu = document.getElementById(menuId);
-
-  if (!btn || !icon || !menu) return;
-
-  btn.addEventListener("click", () => {
-    menu.classList.toggle("hidden");
-    icon.classList.toggle("rotate-180");
-    const expanded = btn.getAttribute("aria-expanded") === "true";
-    btn.setAttribute("aria-expanded", !expanded);
-  });
-}
-
-// 05. UPDATE RELATIVE DATES ------------------------------------------------------------
+// 01. UPDATE RELATIVE DATES ------------------------------------------------------------
 function updateRelativeDates() {
   function timeAgo(date) {
     const now = new Date();
@@ -241,7 +70,7 @@ function updateRelativeDates() {
   });
 }
 
-// 06. OPEN EXTERNAL LINKS IN NEW TAB ---------------------------------------------------
+// 02. OPEN EXTERNAL LINKS IN NEW TAB ---------------------------------------------------
 function openExternalLinksInNewTab() {
   document.querySelectorAll('article a[href^="http"]').forEach((link) => {
     link.setAttribute("target", "_blank");
@@ -249,7 +78,7 @@ function openExternalLinksInNewTab() {
   });
 }
 
-// 07. CODE BLOCK COPY BUTTON -----------------------------------------------------------
+// 03. CODE BLOCK COPY BUTTON -----------------------------------------------------------
 function codeBlockCopyButton() {
   let codeBlocks = document.querySelectorAll("pre > code");
 
