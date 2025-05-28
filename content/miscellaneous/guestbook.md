@@ -5,4 +5,4 @@ type = "miscellaneous"
 layout = "guestbook"
 +++
 
-Welcome to the guestbook! Think of it like scribbling on a café chalkboard, but slightly more digital. Say hi, drop a fun comment, share a random thought, or let me know you were here. Friendly messages, quirky notes, or even dad jokes are all welcome. Go ahead, make my day.
+This is the digital equivalent of scribbling your name on a cozy café wall. Drop a message, say hi, share a thought. I'd love to hear from you.

@@ -6,33 +6,33 @@ type = "miscellaneous"
 layout = "basic"
 +++
 
-This website ([odhyp.com]) respects your privacy. Here’s how I handle your information:
+This site collects minimal data. Just enough to understand what’s working and to improve your experience.
 
-[odhyp.com]: https://odhyp.com/
+### Analytics
 
-### 1. Information I Collect
+- I use **Google Analytics** and **Cloudflare Analytics** to gather anonymous data like page views, device type, and general location.
+- This helps me understand which pages are useful and how the site is being accessed. It does not identify who you are.
+- No personally identifiable information is collected or stored.
 
-- **Analytics**: I use Google Analytics to understand how visitors use the site (e.g., pages visited, time on site). This data is anonymized and doesn’t personally identify you.
-- **Contact Form** (Coming Soon): When available, if you submit a form, I may collect your name, email address, and message for the sole purpose of communication.
+Analytics services may use cookies or similar technologies to function properly. These are used only for analytics purposes.
 
-### 2. How I Use This Information
+### Contact Form
 
-- To understand and improve the website’s performance and content.
-- To respond to inquiries if you contact me.
+A contact form will be added soon. When it's available:
 
-### 3. Cookies
+- Your name, email, and message will be used only to respond to your inquiry.
+- I won’t share your message or email with anyone.
+- You won’t be added to any mailing list. I don’t even have one.
 
-Google Analytics may use cookies to collect information. You can disable cookies in your browser settings if you prefer.
+### No Ads or Trackers
 
-### 4. Third-Party Services
+This site does not:
 
-- **Google Analytics**: For website analytics.
-- No advertising or data-selling occurs here.
+- Show ads
+- Use tracking pixels
+- Sell or share your data
+- Collect unnecessary personal information
 
-### 5. Your Rights
+### Your Privacy, Your Control
 
-You can request to view, update, or delete your data at any time by contacting me via email.
-
-### 6. Contact
-
-For questions about this Privacy Policy, email: `hello@odhyp.com`
+You can browse the site without logging in, signing up, or sharing personal details.

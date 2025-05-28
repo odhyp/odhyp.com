@@ -1,35 +1,34 @@
 +++
 title = "Terms of Service"
-description = "Usage terms and service agreement for visitors and clients"
+description = "Guidelines for using this site and its content"
 url = "/terms-of-service"
 type = "miscellaneous"
 layout = "basic"
 +++
 
-By using this website ([odhyp.com]) or working with me on freelance projects, you agree to the following terms:
+Welcome to my little corner of the web. By browsing or using this site, you agree to these simple terms.
 
-[odhyp.com]: https://odhyp.com/
+### Purpose
 
-### 1. Website Use
+This site is a personal digital garden. It contains notes, writings, experiments, and ideas I’ve chosen to share publicly. Everything is provided as-is, with no guarantees of accuracy or completeness.
 
-- All content on this site (e.g., writings, projects) is for informational purposes only.
-- Do not copy or redistribute content without permission unless otherwise stated (e.g., MIT license on GitHub projects).
+### Your Responsibilities
 
-### 2. Freelance Services
+- Be respectful when interacting with the site or others.
+- Don’t use this site or its content in any harmful, abusive, or illegal way.
 
-- I offer freelance services in Python development (e.g., automation, dashboard building).
-- Before starting a project, we’ll agree on scope, timeline, and pricing via email or contract.
-- All work is original and tailored to client needs.
+### Sharing and Usage
 
-### 3. Payment & Refunds
+You’re welcome to share my writings as long as you follow the terms of the **[Creative Commons BY-NC-SA 4.0 License](https://creativecommons.org/licenses/by-nc-sa/4.0/)**:
 
-- Payment terms will be discussed before project start.
-- No refunds are issued for completed and delivered work unless otherwise agreed.
+- **Attribution**: Always give proper credit.
+- **NonCommercial**: Don’t use it for commercial purposes.
+- **ShareAlike**: If you remix or adapt the content, you must use the same license.
 
-### 4. Limitation of Liability
+The source code (if any is shared here) is licensed separately under the [MIT License](https://opensource.org/licenses/MIT).
 
-I’m not liable for any losses or damages resulting from the use of this site or freelance work, including missed deadlines or unexpected errors, unless explicitly covered in a written agreement.
+### No Warranty
 
-### 5. Contact
+Everything here is provided for informational and inspirational purposes. Use at your own risk. I’m not liable for any damages, errors, or misunderstandings that may arise from using the content.
 
-For questions about this Terms of Service, email: `hello@odhyp.com`
+Thanks for visiting and playing nice.
