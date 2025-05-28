@@ -17,8 +17,10 @@ my personal website and digital garden
   - [ ] Callouts (success, warning, danger, important, info)
   - [ ] Image side-by-side comparison
   - [ ] Image gallery/slider
-- [ ] Table Of Contents for Writings and Projects page
-- [ ] Search function using Pagefind (honestly idk where to put the search bar)
+- [ ] Design a good logo
+- [ ] Table Of Contents for Writings and Projects page (sticks to the left side of the screen, large screen only)
+- [ ] Search function using Pagefind (put in on top-right corner)
+- [ ] Dark mode?
 
 ### Running on local connection
 
