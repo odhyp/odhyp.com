@@ -7,13 +7,13 @@ body {
 }
 
 section {
-  @apply w-full px-4 py-16 md:py-32;
+  @apply w-full px-4 py-16 md:py-24;
 }
 
 article {
-  @apply prose prose-neutral lg:prose-lg font-inter mx-auto w-full max-w-prose;
+  @apply prose prose-neutral lg:prose-lg font-inter prose-headings:font-geist mx-auto w-full max-w-prose;
 }
 
 h1 {
-  @apply font-geist font-light;
+  @apply mb-4 leading-tight font-light;
 }
