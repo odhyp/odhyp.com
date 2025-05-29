@@ -1,5 +1,5 @@
 html {
-  @apply scroll-smooth;
+  @apply scroll-pt-12 scroll-smooth md:scroll-pt-16;
 }
 
 body {
