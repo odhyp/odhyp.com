@@ -18,9 +18,10 @@ my personal website and digital garden
   - [ ] Image side-by-side comparison
   - [ ] Image gallery/slider
 - [ ] Design a good logo
-- [ ] Table Of Contents for Writings and Projects page (sticks to the left side of the screen, large screen only)
+- [ ] Enlarge images when clicked (image modal)
 - [ ] Search function using Pagefind (put in on top-right corner)
 - [ ] Dark mode?
+- [x] Table Of Contents for Writings and Projects page (sticks to the left side of the screen, large screen only)
 
 ### Running on local connection
 
@@ -32,6 +33,22 @@ hugo server --bind 0.0.0.0 --baseURL http://<YOUR_IP> --port 1313 --disableFastR
 
 ```bash
 hugo new --kind writing writings/2024-10-27-sample-post.md
+```
+
+```html
+    <h2>Sections Range</h2>
+    {{ range .Sections }}
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      <p>{{ .Description }}</p>
+    {{ end }}
+
+
+    <hr />
+    <h2>Pages Range</h2>
+    {{ range .RegularPagesRecursive }}
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      <p>{{ .Description }}</p>
+    {{ end }}
 ```
 
 </details>
