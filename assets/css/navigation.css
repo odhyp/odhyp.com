@@ -6,6 +6,23 @@ footer a {
   @apply text-neutral-50/60 transition-colors ease-in-out hover:text-neutral-50 hover:underline hover:underline-offset-2;
 }
 
+/* Table of Contents */
+#toc li {
+  @apply my-2;
+}
+
+#toc a {
+  @apply block text-base text-neutral-900/50 transition-colors duration-200 hover:text-neutral-900;
+}
+
+#toc a.active {
+  @apply font-medium text-red-700;
+}
+
+#toc ol ol a {
+  @apply pl-4;
+}
+
 /* Pagefind Search */
 .pagefind-ui {
   @apply p-4;
