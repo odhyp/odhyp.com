@@ -19,13 +19,15 @@ This site is a personal digital garden. It contains notes, writings, experiments
 
 ### Sharing and Usage
 
-You’re welcome to share my writings as long as you follow the terms of the **[Creative Commons BY-NC-SA 4.0 License](https://creativecommons.org/licenses/by-nc-sa/4.0/)**:
+My writings are available under the **[Creative Commons BY-NC-SA 4.0 License](https://creativecommons.org/licenses/by-nc-sa/4.0/)**, you're welcome to share them under these terms:
 
 - **Attribution**: Always give proper credit.
 - **NonCommercial**: Don’t use it for commercial purposes.
 - **ShareAlike**: If you remix or adapt the content, you must use the same license.
 
-The source code (if any is shared here) is licensed separately under the [MIT License](https://opensource.org/licenses/MIT).
+Any source code (if shared) is covered by a different license, usually [MIT](https://opensource.org/licenses/MIT).
+
+> For full licensing details, see the [License page](/license).
 
 ### No Warranty
 
