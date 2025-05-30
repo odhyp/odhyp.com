@@ -34,6 +34,18 @@ I use **Inter** for my articles or page contents and **Geist Mono** for everythi
 - [Giscus](https://giscus.app/) enables comments through GitHub Discussions
 - Google Analytics tracks basic site metrics
 
+## Growth Stages
+
+Every post on this site has a growth stage indicating how complete and comprehensive it is.
+
+| Name      | Completeness | Description                                                        |
+|-----------|--------------|--------------------------------------------------------------------|
+| Sapling   | 🌱 0–40%      | A fresh seed of thought. Unpolished and possibly incomplete.       |
+| Growing   | 🌿 40–90%     | Developing with more structure and clarity. Still evolving.        |
+| Evergreen | 🌳 90–100%    | Mature and stable. Well-formed, regularly reviewed and maintained. |
+
+> In a perfect world, every post would become Evergreen. But some ideas linger as Saplings... half-grown, half-forgotten, and waiting for rain.
+
 ## Notes
 
 This site is always evolving. It's part personal lab, part public notebook. If you're curious about what's changed over time, check the [Changelog](/changelog) page.
