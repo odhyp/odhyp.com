@@ -20,7 +20,7 @@ footer a {
 }
 
 #toc ol ol a {
-  @apply pl-4;
+  @apply pl-4 text-sm;
 }
 
 /* Pagefind Search */
