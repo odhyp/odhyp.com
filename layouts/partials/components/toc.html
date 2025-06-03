@@ -1,32 +1,20 @@
-<nav id="toc" class="not-prose font-inter sticky top-8">
-  <span class="font-semibold text-neutral-900/60">Table Of Contents</span>
-  {{ .TableOfContents }}
-</nav>
+<div class="not-prose font-inter sticky top-8">
+  <button
+    id="toc-toggle"
+    class="flex cursor-pointer items-center gap-x-2 font-semibold text-neutral-900/60 transition-colors ease-in-out hover:text-neutral-900"
+  >
+    Table Of Contents
+    <i
+      data-lucide="chevron-down"
+      class="size-5 transition-transform duration-300"
+      id="toc-icon"
+    ></i>
+  </button>
 
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const tocLinks = document.querySelectorAll("#toc a");
-    const headingLinks = Array.from(tocLinks).map((link) =>
-      document.querySelector(decodeURIComponent(link.getAttribute("href"))),
-    );
-
-    const setActive = () => {
-      let index = headingLinks.findIndex((el, i) => {
-        if (!el) return false;
-        const next = headingLinks[i + 1];
-        return (
-          window.scrollY >= el.offsetTop - 120 &&
-          (!next || window.scrollY < next.offsetTop - 120)
-        );
-      });
-
-      tocLinks.forEach((link) => link.classList.remove("active"));
-      if (index >= 0 && tocLinks[index]) {
-        tocLinks[index].classList.add("active");
-      }
-    };
-
-    window.addEventListener("scroll", setActive);
-    setActive();
-  });
-</script>
+  <nav
+    id="toc"
+    class="scrollbar-thin mt-2 max-h-0 overflow-hidden opacity-0 transition-all duration-500 ease-in-out"
+  >
+    {{ .TableOfContents }}
+  </nav>
+</div>
