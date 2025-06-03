@@ -4,12 +4,16 @@
 // 01. UPDATE RELATIVE DATES
 // 02. OPEN EXTERNAL LINKS IN NEW TAB
 // 03. CODE BLOCK COPY
+// 04. TABLE OF CONTENTS DROPDOWN
+// 05. TABLE OF CONTENTS HIGHLIGHT
 
 // 00. LOAD ALL FUNCTION ----------------------------------------------------------------
 document.addEventListener("DOMContentLoaded", () => {
   updateRelativeDates();
   openExternalLinksInNewTab();
   codeBlockCopyButton();
+  tocToggle();
+  tocHighlight();
 });
 
 // 01. UPDATE RELATIVE DATES ------------------------------------------------------------
@@ -144,4 +148,53 @@ function codeBlockCopyButton() {
       }
     });
   }
+}
+
+// 04. TABLE OF CONTENTS DROPDOWN -------------------------------------------------------
+function tocToggle() {
+  const toggleBtn = document.getElementById("toc-toggle");
+  const icon = document.getElementById("toc-icon");
+  const content = document.getElementById("toc");
+  let isOpen = false;
+
+  toggleBtn.addEventListener("click", () => {
+    isOpen = !isOpen;
+
+    if (isOpen) {
+      content.classList.remove("max-h-0", "opacity-0");
+      content.classList.add("max-h-[calc(100vh-8rem)]", "opacity-100");
+      icon.classList.add("rotate-180");
+    } else {
+      content.classList.remove("max-h-[calc(100vh-8rem)]", "opacity-100");
+      content.classList.add("max-h-0", "opacity-0");
+      icon.classList.remove("rotate-180");
+    }
+  });
+}
+
+// 05. TABLE OF CONTENTS HIGHLIGHT ------------------------------------------------------
+function tocHighlight() {
+  const tocLinks = document.querySelectorAll("#toc a");
+  const headingLinks = Array.from(tocLinks).map((link) =>
+    document.querySelector(decodeURIComponent(link.getAttribute("href"))),
+  );
+
+  const setActive = () => {
+    let index = headingLinks.findIndex((el, i) => {
+      if (!el) return false;
+      const next = headingLinks[i + 1];
+      return (
+        window.scrollY >= el.offsetTop - 120 &&
+        (!next || window.scrollY < next.offsetTop - 120)
+      );
+    });
+
+    tocLinks.forEach((link) => link.classList.remove("active"));
+    if (index >= 0 && tocLinks[index]) {
+      tocLinks[index].classList.add("active");
+    }
+  };
+
+  window.addEventListener("scroll", setActive);
+  setActive();
 }
