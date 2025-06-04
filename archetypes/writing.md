@@ -15,7 +15,7 @@ cover = "https://placehold.co/1200x400"
 
 # Taxonomies & Routing
 topics = []
-aliases = []
+aliases = ["/{{ .File.BaseFileName | strings.TrimPrefix (substr .File.BaseFileName 0 11) }}"]
 +++
 
 > A brief summary of what this writing is about.
