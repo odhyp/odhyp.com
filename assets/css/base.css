@@ -11,7 +11,7 @@ section {
 }
 
 article {
-  @apply prose prose-neutral lg:prose-lg font-inter prose-headings:font-geist prose-a:text-red-700 prose-img:mx-auto prose-img:rounded-lg prose-img:shadow-md mx-auto w-full max-w-prose marker:text-red-700;
+  @apply prose prose-neutral lg:prose-lg font-inter prose-headings:font-geist prose-a:text-red-700 prose-img:mx-auto prose-img:rounded-lg prose-img:shadow-md mx-auto mb-16 w-full max-w-prose marker:text-red-700 lg:mb-24;
 }
 
 h1 {
