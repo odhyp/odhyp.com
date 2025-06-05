@@ -1,0 +1,36 @@
+{{ define "main" }}
+  <section data-pagefind-body>
+    <!-- Page Heading -->
+    <article
+      class="mb-16 lg:max-w-3xl lg:text-center xl:max-w-4xl 2xl:max-w-5xl"
+    >
+      <h1>{{ .Title }}</h1>
+      <h2 class="not-prose text-neutral-900/60 italic">{{ .Description }}</h2>
+    </article>
+
+    <!-- Page Content -->
+    <div
+      class="@container w-full 2xl:grid 2xl:grid-cols-[1fr_auto_1fr] 2xl:gap-x-12"
+    >
+      <!-- Page Content - ToC -->
+      <div class="hidden px-8 py-2 2xl:block">
+        {{ partial "components/toc.html" . }}
+      </div>
+
+      <!-- Page Content - Main Content -->
+      <article>
+        {{ .Content }}
+      </article>
+
+      <!-- Page Content - Share -->
+      <div
+        class="hidden space-y-8 px-8 py-2 text-right text-sm text-neutral-900/50 2xl:block"
+      >
+        <div class="flex flex-col gap-y-2">
+          <span class="font-bold">Last tended</span>
+          <span>{{ .GitInfo.CommitDate.Format "Jan 2, 2006" }}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+{{ end }}
