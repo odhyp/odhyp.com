@@ -3,7 +3,7 @@ header a {
 }
 
 footer a {
-  @apply text-neutral-50/60 transition-colors ease-in-out hover:text-neutral-50 hover:underline hover:underline-offset-2;
+  @apply w-fit text-neutral-50/60 transition-colors ease-in-out hover:text-neutral-50 hover:underline hover:underline-offset-2;
 }
 
 /* Table of Contents */
