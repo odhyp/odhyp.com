@@ -1,7 +1,8 @@
 {{ define "main" }}
   <section>
-    <h1>This is the index page layout</h1>
-    <hr />
-    {{ .Content }}
+    <article>
+      <h1>{{ .Site.Params.author.name }}</h1>
+      {{ .Content }}
+    </article>
   </section>
 {{ end }}
