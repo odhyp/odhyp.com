@@ -9,6 +9,7 @@ draft = false
 # Page setting
 type = "page"
 layout = "writing"
+section_type = "idea" # article, note, log, idea
 stage = "sapling" # sapling, growing, evergreen
 toc = false
 cover = ""

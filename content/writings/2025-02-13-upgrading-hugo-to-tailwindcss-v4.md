@@ -9,6 +9,7 @@ draft = false
 # Page setting
 type = "page"
 layout = "writing"
+section_type = "article" # article, note, log, idea
 stage = "evergreen" # sapling, growing, evergreen
 toc = true
 cover = "https://tailwindcss.com/_next/static/media/card.d69e3d8c.jpg"

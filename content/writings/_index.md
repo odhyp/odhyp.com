@@ -5,4 +5,5 @@ type = "pages"
 layout = "writings"
 +++
 
-This is a collection of notes, ideas, articles, and logs. Some are polished, some are still in progress. I write to explore what I'm learning, document what I'm building, and keep track of things worth remembering.
+A collection of articles, notes, logs, and ideas that I’m always tending.  
+Learn more about how I organize things [here](/now).
