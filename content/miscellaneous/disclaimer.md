@@ -13,4 +13,4 @@ Nothing here is legal, financial, or professional advice. If you end up rewritin
 
 Sometimes I link to other websites. I only link to things I think are worth sharing, but I don’t have control over what’s on those sites.
 
-If something looks off, broken, or weird, let me know! 🤓
+If something looks off, broken, or weird, let me know!
