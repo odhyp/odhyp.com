@@ -15,7 +15,7 @@ toc = false
 cover = ""
 
 # Taxonomies & Routing
-topics = ["life hack", "obsidian", "git"]
+topics = ["obsidian", "git"]
 aliases = ["/obsidian-and-git"]
 +++
 
