@@ -12,7 +12,7 @@ layout = "writing"
 section_type = "log" # article, note, log, idea
 stage = "growing" # sapling, growing, evergreen
 toc = true
-cover = "/img/2025-02-11/04-orion-extended.webp"
+cover = ""
 
 # Taxonomies & Routing
 topics = ["update", "theme"]
