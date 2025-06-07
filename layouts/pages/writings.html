@@ -1,0 +1,36 @@
+{{ define "main" }}
+  <section id="writings">
+    <!-- Pages Heading -->
+    <article class="lg:max-w-3xl lg:text-center xl:max-w-4xl 2xl:max-w-5xl">
+      <h1>{{ .Title }}</h1>
+      <div class="mx-auto w-full max-w-prose text-neutral-900/60 italic">
+        {{ .Content }}
+      </div>
+    </article>
+
+    <!-- Writing Cards -->
+    <div id="writingsList" class="@container w-full columns-4 p-8">
+      {{- with site.GetPage "section" "writings" }}
+        {{- range .RegularPagesRecursive }}
+          {{ partial "components/cards/writing.html" . }}
+        {{- end }}
+      {{- end }}
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const filter = document.getElementById("topicFilter");
+      const cards = document.querySelectorAll(".writing-card");
+
+      filter.addEventListener("change", () => {
+        const selected = filter.value.toLowerCase();
+        cards.forEach((card) => {
+          const topics = card.dataset.topics.toLowerCase().split(",");
+          const match = selected === "" || topics.includes(selected);
+          card.style.display = match ? "block" : "none";
+        });
+      });
+    });
+  </script>
+{{ end }}
