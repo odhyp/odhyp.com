@@ -9,6 +9,7 @@ draft = true
 # Page setting
 type = "page"
 layout = "writing"
+section_type = "idea" # article, note, log, idea
 stage = "sapling" # sapling, growing, evergreen
 toc = true
 cover = "https://placehold.co/1200x400"
