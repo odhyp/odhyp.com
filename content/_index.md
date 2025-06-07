@@ -18,9 +18,10 @@ You can connect with me on
 {{< icon href="https://github.com/odhyp" icon="github" title="GitHub" >}},
 {{< icon href="https://www.linkedin.com/in/odhy" icon="linkedin" title="LinkedIn" >}},
 {{< icon href="https://www.instagram.com/odhypradhana" icon="instagram" title="Instagram" >}},
-or just say hello at [hello@odhyp.com].
+or just say hello at [hello@odhyp.com]. Feel like leaving a note? Visit the [Guestbook] and drop a message!
 
 [hello@odhyp.com]: mailto:hello@odhyp.com
+[Guestbook]: /guestbook
 
 If you’d like to support what I do, feel free to [buy me a coffee] or share my projects with others. It really means a lot.
 
