@@ -8,6 +8,32 @@
       </div>
     </article>
 
+    <!-- Page Content - Filters -->
+    <!-- TODO: make a better filter -->
+    {{/*
+    <div class="hidden p-8 2xl:block">
+      <div class="sticky top-8">
+        <label for="topicFilter" class="mb-1 block text-sm font-medium"
+          >Filter by Topic</label
+        >
+        <select id="topicFilter" class="w-64 rounded border p-2">
+          <option value="">All Topics</option>
+          {{- $allTopics := slice -}}
+          {{- range .Site.RegularPages -}}
+            {{- with .Params.topics -}}
+              {{- range . }}
+                {{- $allTopics = $allTopics | append . }}
+              {{- end }}
+            {{- end }}
+          {{- end }}
+          {{- range ($allTopics | uniq | sort) }}
+            <option value="{{ . }}">{{ . }}</option>
+          {{- end }}
+        </select>
+      </div>
+    </div>
+    */}}
+
     <!-- Writing Cards -->
     <div id="writingsList" class="@container w-full columns-4 p-8">
       {{- with site.GetPage "section" "writings" }}
