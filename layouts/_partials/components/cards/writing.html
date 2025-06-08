@@ -1,7 +1,7 @@
 <a
   data-topics="{{ delimit .Params.topics "," }}"
   href="{{ .RelPermalink }}"
-  class="not-prose writing-card group mb-8 flex break-inside-avoid flex-col rounded-md border border-neutral-300 bg-neutral-50/50 transition-all ease-in-out hover:shadow-md"
+  class="not-prose writing-card group @container/card mb-8 flex break-inside-avoid flex-col rounded-md border border-neutral-300 bg-neutral-50/50 transition-all ease-in-out hover:shadow-md"
 >
   {{ with .Params.cover }}
     <img
@@ -18,7 +18,7 @@
     </h2>
     <p class="grow text-sm text-neutral-900/60">{{ .Description }}</p>
     <div
-      class="mt-2 flex shrink-0 items-center gap-x-4 text-sm text-neutral-900/60"
+      class="mt-2 flex shrink-0 items-center gap-x-2 text-sm text-neutral-900/60 @sm/card:gap-x-4"
     >
       <p class="flex items-center gap-x-2">
         {{ partial "components/section-icon.html" . }}{{ .Params.section_type | title }}
