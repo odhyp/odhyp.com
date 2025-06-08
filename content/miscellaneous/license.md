@@ -1,8 +1,6 @@
 +++
 title = "License"
 url = "/license"
-type = "miscellaneous"
-layout = "basic"
 +++
 
 This site includes both original writings and code. The content and the code are shared under different licenses.

@@ -1,8 +1,6 @@
 +++
 title = "Support"
 url = "/support"
-type = "miscellaneous"
-layout = "basic"
 +++
 
 If you've found my writings, tools, or projects useful, consider supporting my work:

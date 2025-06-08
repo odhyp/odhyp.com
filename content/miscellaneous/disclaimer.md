@@ -1,8 +1,6 @@
 +++
 title = "Disclaimer"
 url = "/disclaimer"
-type = "miscellaneous"
-layout = "basic"
 +++
 
 Everything you read on this site is shared with good intentions. I do my best to make sure the info is accurate and useful, but I can’t promise it’s always perfect or up to date.

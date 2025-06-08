@@ -2,8 +2,6 @@
 title = "Terms of Service"
 description = "Guidelines for using this site and its content"
 url = "/terms-of-service"
-type = "miscellaneous"
-layout = "basic"
 +++
 
 Welcome to my little corner of the web. By browsing or using this site, you agree to these simple terms.

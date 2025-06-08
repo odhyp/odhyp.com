@@ -2,8 +2,6 @@
 title = "Privacy Policy"
 description = "How I collect, use, and protect your data"
 url = "/privacy-policy"
-type = "miscellaneous"
-layout = "basic"
 +++
 
 This site collects minimal data. Just enough to understand what’s working and to improve your experience.
