@@ -1,6 +1,6 @@
 <a
   href="{{ .RelPermalink }}"
-  class="not-prose group mb-8 flex break-inside-avoid flex-col rounded-md border border-neutral-300 bg-neutral-50/50 transition-all ease-in-out hover:shadow-md"
+  class="not-prose group flex flex-col rounded-md border border-neutral-300 bg-neutral-50/50 transition-all ease-in-out hover:shadow-md"
 >
   {{ with .Params.cover }}
     <img
@@ -9,7 +9,7 @@
       class="max-h-64 rounded-t-md object-cover object-center"
     />
   {{ end }}
-  <div class="flex flex-col gap-y-4 p-8">
+  <div class="flex h-full flex-col gap-y-4 p-8">
     <h2
       class="shrink-0 font-semibold transition-colors ease-in-out group-hover:text-red-700"
     >
@@ -17,9 +17,10 @@
     </h2>
     <p class="grow text-sm text-neutral-900/60">{{ .Description }}</p>
     <div
-      class="mt-2 flex shrink-0 items-center gap-x-4 text-sm text-neutral-900/60"
+      class="mt-2 w-full shrink-0 space-y-2 space-x-2 text-sm text-neutral-900/60"
     >
-      {{ partial "components/badges.html" . }}
+      <!-- TODO: we can add line-clamp-1 here -->
+      {{ partial "components/tech-stacks.html" . }}
     </div>
   </div>
 </a>
