@@ -1,8 +1,6 @@
 +++
 title = "Writings"
 description = "A growing collection of insights, musings, and discoveries."
-type = "pages"
-layout = "writings"
 +++
 
 A collection of articles, notes, logs, and ideas that I’m always tending.  

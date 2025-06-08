@@ -7,8 +7,6 @@ date = 2025-02-13
 draft = false
 
 # Page setting
-type = "page"
-layout = "writing"
 section_type = "article" # article, note, log, idea
 stage = "evergreen" # sapling, growing, evergreen
 toc = true
