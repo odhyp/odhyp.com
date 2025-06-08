@@ -13,7 +13,7 @@ description = "Personal website about automation, data visualization, and web de
 # Custom taxonomies
 [taxonomies]
 topic = "topics"
-tech = "techs"
+tech_stack = "tech_stacks"
 
 # Markup highlighting & ToC configuration
 [markup]
