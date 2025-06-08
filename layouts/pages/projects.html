@@ -1,0 +1,20 @@
+{{ define "main" }}
+  <section id="projects">
+    <!-- Pages Heading -->
+    <article class="lg:max-w-3xl lg:text-center xl:max-w-4xl 2xl:max-w-5xl">
+      <h1>{{ .Title }}</h1>
+      <div class="mx-auto w-full max-w-prose text-neutral-900/60 italic">
+        {{ .Content }}
+      </div>
+    </article>
+
+    <!-- Writing Cards -->
+    <div class="@container w-full columns-4 p-8">
+      {{- with site.GetPage "section" "projects" }}
+        {{- range .RegularPagesRecursive }}
+          {{ partial "components/cards/project.html" . }}
+        {{- end }}
+      {{- end }}
+    </div>
+  </section>
+{{ end }}
