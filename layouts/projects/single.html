@@ -1,3 +1,47 @@
 {{ define "main" }}
-  <span class="bg-red-400/20">This is a single page from layouts/projects</span>
+  <section data-pagefind-body>
+    <!-- Page Heading -->
+    <article
+      class="mb-16 lg:max-w-3xl lg:text-center xl:max-w-4xl 2xl:max-w-5xl"
+    >
+      <h1 class="">{{ .Title }}</h1>
+      <div
+        class="mb-4 flex w-full items-center justify-start gap-x-4 lg:justify-center"
+      >
+        {{ partial "components/tech-stacks-badge.html" . }}
+      </div>
+    </article>
+
+    <!-- Page Content -->
+    <div
+      class="@container w-full 2xl:grid 2xl:grid-cols-[1fr_auto_1fr] 2xl:gap-x-12"
+    >
+      <!-- Page Content - ToC -->
+      <div class="hidden px-8 py-2 2xl:block">
+        {{ partial "components/toc.html" . }}
+      </div>
+
+      <!-- Page Content - Main Content -->
+      <article>
+        {{ .Content }}
+        <a
+          href="/projects"
+          rel="up"
+          aria-label="Back to Projects"
+          class="mt-16! flex items-center gap-x-2"
+          ><i data-lucide="arrow-left" class="size-5"></i>Back to Projects</a
+        >
+      </article>
+
+      <!-- Page Info -->
+      <!-- TODO: Unused -->
+      <div class="hidden 2xl:block"></div>
+    </div>
+
+    <!-- Page Footing -->
+    {{ if or (eq .Section "projects") (eq .Section "writings") }}
+      {{ partial "components/giscus.html" . }}
+    {{ end }}
+
+  </section>
 {{ end }}
