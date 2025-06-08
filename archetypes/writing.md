@@ -7,8 +7,6 @@ date = {{ now.Format "2006-01-02T15:04:05+07:00" }}
 draft = true
 
 # Page setting
-type = "page"
-layout = "writing"
 section_type = "idea" # article, note, log, idea
 stage = "sapling" # sapling, growing, evergreen
 toc = true
