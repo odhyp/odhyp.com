@@ -155,8 +155,10 @@ function tocToggle() {
   const toggleBtn = document.getElementById("toc-toggle");
   const icon = document.getElementById("toc-icon");
   const content = document.getElementById("toc");
-  let isOpen = false;
 
+  if (!toggleBtn || !icon || !content) return;
+
+  let isOpen = false;
   toggleBtn.addEventListener("click", () => {
     isOpen = !isOpen;
 
