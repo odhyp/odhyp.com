@@ -5,9 +5,9 @@
     {{ with $.Site.GetPage (printf "/%s/%s" $taxonomy .) }}
       <a
         href="{{ .RelPermalink }}"
-        class="w-fit lowercase transition-all ease-in-out hover:text-neutral-900 hover:underline hover:underline-offset-2"
+        class="w-fit transition-all ease-in-out hover:text-neutral-900 hover:underline hover:underline-offset-2"
       >
-        #{{ .LinkTitle }}
+        {{ .LinkTitle }}
         <span>({{ .RegularPages.Len }})</span>
       </a>
     {{ end }}
