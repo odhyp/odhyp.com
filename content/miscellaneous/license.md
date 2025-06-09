@@ -11,13 +11,13 @@ All digital garden content, including articles, notes, logs, and other writings,
 
 You are allowed to:
 
-- Share: copy and redistribute the material in any medium or format  
+- Share: copy and redistribute the material in any medium or format
 - Adapt: remix, transform, and build upon the material
 
 As long as you follow these terms:
 
-- **Attribution**: Give proper credit.  
-- **NonCommercial**: Do not use the content for commercial purposes.  
+- **Attribution**: Give proper credit.
+- **NonCommercial**: Do not use the content for commercial purposes.
 - **ShareAlike**: If you make changes, you must distribute your contributions under the same license.
 
 ### Code License

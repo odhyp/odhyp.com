@@ -80,9 +80,8 @@ Since `tailwind.config.js` is no longer used, migrate your custom styles to `sty
 I renamed my `postcss.config.js` to `postcss.config.mjs` (this may not be necessary) to match the TailwindCSS docs, so we need to update the `css.html` with the new file name:
 
 ```html
-...
-{{- $styles := resources.Get "css/styles.css" | postCSS (dict "config" "./assets/css/postcss.config.mjs") -}}
-...
+... {{- $styles := resources.Get "css/styles.css" | postCSS (dict "config"
+"./assets/css/postcss.config.mjs") -}} ...
 ```
 
 ### Step 4: Running the site
