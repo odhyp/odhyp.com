@@ -11,7 +11,7 @@ toc = false
 cover = ""
 
 # Taxonomies & Routing
-tech_stacks = ["python","web-automation", "pandas"]
+tech_stacks = ["python","web automation", "pandas"]
 aliases = ["/sipd-ri-helper"]
 +++
 
