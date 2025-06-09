@@ -1,0 +1,19 @@
+{{ $quotes := shuffle (slice
+  "Mostly harmless since 1999"
+  "Causing minimal chaos since 1999"
+  "Operating with minimal harm since 1999"
+  "Somewhere between minimalism and chaos"
+  "On a mission to automate everything"
+  "Automating life, one line at a time"
+  "Importing peace of mind"
+  "Everything in its right place, even the scripts"
+  "Packed like sardines in a .py file"
+  "No surprises, just cron jobs"
+  )
+}}
+
+{{ if .IsHome }}
+  Fitter, happier, more automated
+{{ else }}
+  {{ index $quotes 0 }}
+{{ end }}

@@ -1,0 +1,11 @@
+{{ define "main" }}
+  <section>
+    <article>
+      <h1>{{ .Title }}</h1>
+      {{ .Content }}
+    </article>
+
+    <!-- GUESTBOOK -->
+    {{ partial "components/giscus.html" . }}
+  </section>
+{{ end }}

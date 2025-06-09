@@ -1,0 +1,41 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@plugin 'tailwind-scrollbar';
+@source "hugo_stats.json";
+
+@layer base {
+  @import "./base.css";
+}
+
+@layer components {
+  @import "./page.css";
+  @import "./navigation.css";
+  @import "./buttons.css";
+}
+
+@theme {
+  --font-inter: "Inter", sans-serif;
+  --font-geist: "Geist Mono", monospace;
+  --animate-fade-in-up: fade-in-up 0.5s ease-out;
+
+  @keyframes fade-in-up {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* Dev-only */
+/* TODO: remove before prod --------------------------------------------------------- */
+.dev-parent {
+  @apply border-2 border-dashed border-orange-400;
+}
+
+.dev-child {
+  @apply [&>*]:border-2 [&>*]:border-dashed [&>*]:border-emerald-400;
+}

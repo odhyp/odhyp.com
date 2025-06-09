@@ -1,0 +1,3 @@
+<script>
+  lucide.createIcons();
+</script>

@@ -1,36 +1,39 @@
 {
-  "name": "hugo-tailwindcss-starter",
-  "description": "Starter project for Hugo and TailwindCSS v4.0, ready to deploy in Vercel!",
-  "version": "2.0.0",
+  "name": "odhyp.com",
+  "description": "My Personal Website",
+  "version": "2.1.0",
   "license": "MIT",
-  "author": "Odhy Pradhana (odhyp.com)",
+  "author": "Odhy Pradhana",
   "keywords": [
     "hugo",
     "tailwindcss",
-    "tailwindcss-v4",
-    "vercel"
+    "tailwindcss v4",
+    "cloudflare",
+    "cloudflare pages"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/odhyp/hugo-tailwindcss-starter.git"
+    "url": "git+https://github.com/odhyp/odhyp.com.git"
   },
   "bugs": {
-    "url": "https://github.com/odhyp/hugo-tailwindcss-starter/issues"
+    "url": "https://github.com/odhyp/odhyp.com/issues"
   },
-  "homepage": "https://github.com/odhyp/hugo-tailwindcss-starter#readme",
+  "homepage": "https://github.com/odhyp/odhyp.com#readme",
   "scripts": {
-    "dev": "hugo server",
-    "build": "hugo --gc --minify",
-    "watch": "hugo server --disableFastRender --navigateToChanged"
+    "dev": "bash scripts/dev.sh",
+    "preview": "hugo server --disableFastRender --navigateToChanged --templateMetrics --templateMetricsHints --watch --forceSyncStatic -e production --minify",
+    "prebuild": "bash scripts/generate-changelog.sh",
+    "build": "hugo --gc --minify --templateMetrics --templateMetricsHints --forceSyncStatic",
+    "postbuild": "npx pagefind --site public",
+    "format": "npx prettier . --write"
   },
-  "dependencies": {
-    "@tailwindcss/postcss": "^4.0.1",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.7",
     "@tailwindcss/typography": "^0.5.16",
-    "postcss": "^8.5.1",
-    "postcss-cli": "^11.0.0",
-    "prettier": "^3.4.2",
+    "prettier": "^3.5.3",
+    "prettier-plugin-go-template": "^0.0.15",
     "prettier-plugin-tailwindcss": "^0.6.11",
-    "tailwind-scrollbar": "^4.0.0",
-    "tailwindcss": "^4.0.1"
+    "tailwind-scrollbar": "^4.0.2",
+    "tailwindcss": "^4.1.7"
   }
 }

@@ -1,20 +1,23 @@
 +++
-draft = false
-featured = false
-date = 2025-02-13
-slug = "upgrading-a-hugo-website-from-tailwind-css-v3-to-v4"
-aliases = ["/upgrading-a-hugo-website-from-tailwind-css-v3-to-v4", "/blog/upgrading-hugo-to-tailwindcss-v4"]
-type = "article" # Type of the page (article, note, idea, log)
-stage = "evergreen" # Progress of the idea (sprout, thriving, evergreen)
-cover = "https://tailwindcss.com/_next/static/media/card.d69e3d8c.jpg"
+# Metadata
 title = "Upgrading a Hugo Website from Tailwind CSS v3 to v4"
 description = "A step-by-step guide to upgrading your Hugo site from Tailwind CSS v3 to v4"
+slug = "upgrading-a-hugo-website-from-tailwind-css-v3-to-v4"
+date = 2025-02-13
+draft = false
+
+# Page setting
+section_type = "article" # article, note, log, idea
+stage = "evergreen" # sapling, growing, evergreen
+toc = true
+cover = "https://tailwindcss.com/_next/static/media/card.d69e3d8c.jpg"
+
+# Taxonomies & Routing
 topics = ["hugo", "tailwindcss"]
+aliases = ["/upgrading-a-hugo-website-from-tailwind-css-v3-to-v4", "/blog/upgrading-hugo-to-tailwindcss-v4"]
 +++
 
 I recently upgraded my site to use TailwindCSS v4. In this post, I'll guide you through the upgrade process, just as I did for my own website, step by step… hopefully.
-
-## What's Changed
 
 There are a few breaking changes, as stated in their [documentation]. Some of these will change the way we structure the Hugo project.
 
@@ -44,7 +47,6 @@ npm install @tailwindcss/postcss
 
 From here, you can safely remove `postcss`, `postcss-cli`, and `autoprefixer` from your `package.json`.
 
-{{% warning %}}
 When deploying the site on Vercel, make sure to install the dependencies as regular dependencies instead of DevDependencies to avoid this deployment error message:
 
 ```bash
@@ -52,8 +54,6 @@ When deploying the site on Vercel, make sure to install the dependencies as regu
 Error: error building site: POSTCSS: failed to transform "/css/styles.css" (text/css):
 Error: Loading PostCSS Plugin failed: Cannot find module '@tailwindcss/oxide-linux-x64-gnu'
 ```
-
-{{% /warning %}}
 
 ### Step 2: Removing old files
 
@@ -80,9 +80,8 @@ Since `tailwind.config.js` is no longer used, migrate your custom styles to `sty
 I renamed my `postcss.config.js` to `postcss.config.mjs` (this may not be necessary) to match the TailwindCSS docs, so we need to update the `css.html` with the new file name:
 
 ```html
-...
-{{- $styles := resources.Get "css/styles.css" | postCSS (dict "config" "./assets/css/postcss.config.mjs") -}}
-...
+... {{- $styles := resources.Get "css/styles.css" | postCSS (dict "config"
+"./assets/css/postcss.config.mjs") -}} ...
 ```
 
 ### Step 4: Running the site

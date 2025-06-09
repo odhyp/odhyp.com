@@ -7,19 +7,15 @@ enableGitInfo = true
 
 # SEO Optimization
 [params]
-author = { name = "Odhy Pradhana", email = "pradhana.odhy@gmail.com" }
+author = { name = "Odhy Pradhana", email = "hello@odhyp.com" }
 description = "Personal website about automation, data visualization, and web development."
 
 # Custom taxonomies
 [taxonomies]
 topic = "topics"
-tech-stack = "tech-stacks"
+tech_stack = "tech_stacks"
 
-[permalinks]
-projects = "/projects/:slug/"
-writings = "/writings/:slug/"
-
-# Markup highlighting configuration
+# Markup highlighting & ToC configuration
 [markup]
 [markup.highlight]
 style = "monokai"
@@ -40,7 +36,29 @@ section = ["HTML", "RSS"]
 taxonomy = ["HTML", "RSS"]
 term = ["HTML", "RSS"]
 
+# Sitemap
 [sitemap]
 changefreq = "weekly"
 filename = "sitemap.xml"
 priority = 0.5
+
+# Builds (TailwindCSS)
+[build]
+[build.buildStats]
+enable = true
+[[build.cachebusters]]
+source = 'assets/notwatching/hugo_stats\.json'
+target = 'css'
+[[build.cachebusters]]
+source = '(postcss|tailwind)\.config\.js'
+target = 'css'
+
+# Modules (TailwindCSS)
+[module]
+[[module.mounts]]
+source = 'assets'
+target = 'assets'
+[[module.mounts]]
+disableWatch = true
+source = 'hugo_stats.json'
+target = 'assets/notwatching/hugo_stats.json'

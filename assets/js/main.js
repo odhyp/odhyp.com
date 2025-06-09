@@ -1,220 +1,22 @@
 // TABLE OF CONTENTS
 
 // 00. LOAD ALL FUNCTIONS
-// 01. CODE BLOCK COPY
+// 01. UPDATE RELATIVE DATES
 // 02. OPEN EXTERNAL LINKS IN NEW TAB
-// 03. DROPDOWN MENU - WRITINGS
-// 04. HAMBURGER MENU
-// 05. UPDATE RELATIVE DATES
-// 06. HEADER SCROLL EFFECT
+// 03. CODE BLOCK COPY
+// 04. TABLE OF CONTENTS DROPDOWN
+// 05. TABLE OF CONTENTS HIGHLIGHT
 
 // 00. LOAD ALL FUNCTION ----------------------------------------------------------------
 document.addEventListener("DOMContentLoaded", () => {
-  copyCodeBlock();
-  openExternalLinksInNewTab();
-  dropdownHeaderWritings();
-  hamburgerMenu();
   updateRelativeDates();
+  openExternalLinksInNewTab();
+  codeBlockCopyButton();
+  tocToggle();
+  tocHighlight();
 });
 
-document.addEventListener("scroll", () => {
-  headerScrollEffect();
-});
-
-// 01. CODE BLOCK COPY ------------------------------------------------------------------
-function copyCodeBlock() {
-  let codeBlocks = document.querySelectorAll("pre > code");
-
-  if (codeBlocks.length > 0) {
-    codeBlocks.forEach((code) => {
-      let pre = code.parentElement;
-      let wrapper = document.createElement("div");
-      wrapper.classList.add("relative");
-
-      // Move <pre> inside the wrapper
-      pre.parentNode.insertBefore(wrapper, pre);
-      wrapper.appendChild(pre);
-
-      // Create Copy Button
-      let copyButton = document.createElement("button");
-      copyButton.innerText = "Copy";
-      copyButton.className =
-        "absolute top-4 right-4 bg-neutral-800 text-white px-2.5 py-1.5 text-xs rounded-md hover:bg-neutral-700 transition-all ease-in-out copy-btn hover:cursor-pointer";
-
-      // Append button inside wrapper instead of <pre>
-      wrapper.appendChild(copyButton);
-
-      // Copy Functionality
-      copyButton.addEventListener("click", function () {
-        let textToCopy = code.textContent.trim();
-
-        if (navigator.clipboard && navigator.clipboard.writeText) {
-          navigator.clipboard
-            .writeText(textToCopy)
-            .then(() => {
-              copyButton.innerText = "Copied!";
-              setTimeout(() => (copyButton.innerText = "Copy"), 1500);
-            })
-            .catch((err) => {
-              console.error("Copy failed", err);
-              fallbackCopy(textToCopy, copyButton);
-            });
-        } else {
-          fallbackCopy(textToCopy, copyButton);
-        }
-      });
-
-      function fallbackCopy(text, button) {
-        let textArea = document.createElement("textarea");
-        textArea.value = text;
-        document.body.appendChild(textArea);
-        textArea.select();
-
-        try {
-          let successful = document.execCommand("copy");
-          if (successful) {
-            button.innerText = "Copied!";
-            setTimeout(() => (button.innerText = "Copy"), 1500);
-          } else {
-            console.error("Fallback: Copy command was unsuccessful");
-          }
-        } catch (err) {
-          console.error("Fallback: Unable to copy", err);
-        }
-
-        document.body.removeChild(textArea);
-      }
-    });
-  }
-}
-
-// 02. OPEN EXTERNAL LINKS IN NEW TAB ---------------------------------------------------
-function openExternalLinksInNewTab() {
-  document.querySelectorAll('article a[href^="http"]').forEach((link) => {
-    link.setAttribute("target", "_blank");
-    link.setAttribute("rel", "noopener noreferrer");
-  });
-}
-
-// 03. DROPDOWN MENU - WRITINGS ---------------------------------------------------------
-function dropdownHeaderWritings() {
-  const dropdownButton = document.getElementById("dropdown-writings-button");
-  const dropdownMenu = document.getElementById("dropdown-writings-menu");
-
-  dropdownButton.addEventListener("click", function (event) {
-    event.stopPropagation();
-    const isOpen = dropdownMenu.classList.contains("opacity-100");
-
-    if (isOpen) {
-      dropdownMenu.classList.remove(
-        "opacity-100",
-        "scale-100",
-        "pointer-events-auto",
-      );
-      dropdownMenu.classList.add(
-        "opacity-0",
-        "scale-95",
-        "pointer-events-none",
-      );
-    } else {
-      dropdownMenu.classList.remove(
-        "opacity-0",
-        "scale-95",
-        "pointer-events-none",
-      );
-      dropdownMenu.classList.add(
-        "opacity-100",
-        "scale-100",
-        "pointer-events-auto",
-      );
-    }
-  });
-
-  document.addEventListener("click", function (event) {
-    if (
-      !dropdownMenu.contains(event.target) &&
-      !dropdownButton.contains(event.target)
-    ) {
-      dropdownMenu.classList.remove(
-        "opacity-100",
-        "scale-100",
-        "pointer-events-auto",
-      );
-      dropdownMenu.classList.add(
-        "opacity-0",
-        "scale-95",
-        "pointer-events-none",
-      );
-    }
-  });
-}
-
-// 04. HAMBURGER MENU -------------------------------------------------------------------
-function hamburgerMenu() {
-  const hamburgerButton = document.getElementById("hamburger-button");
-  const hamburgerMenu = document.getElementById("hamburger-menu");
-  const menuOpen = document.getElementById("menu-open");
-  const menuClose = document.getElementById("menu-close");
-  const header = document.getElementById("header");
-  const body = document.body;
-
-  // Open Menu
-  hamburgerButton.addEventListener("click", () => {
-    if (hamburgerMenu.classList.contains("hidden")) {
-      // Show Menu
-      hamburgerMenu.classList.remove("hidden");
-      header.classList.remove("bg-neutral-900/50");
-      header.classList.add("bg-neutral-900");
-      setTimeout(() => {
-        hamburgerMenu.classList.remove("translate-x-full");
-      }, 50);
-      setTimeout(() => {
-        header.classList.remove("backdrop-blur-sm");
-      }, 100);
-      body.style.overflow = "hidden";
-
-      // Toggle Icons
-      menuOpen.classList.add("hidden");
-      menuClose.classList.remove("hidden");
-    } else {
-      // Hide Menu
-      hamburgerMenu.classList.add("translate-x-full");
-      body.style.overflow = "";
-      header.classList.add("bg-neutral-900/50", "backdrop-blur-sm");
-      header.classList.remove("bg-neutral-900");
-
-      setTimeout(() => {
-        hamburgerMenu.classList.add("hidden");
-      }, 300);
-
-      // Toggle Icons
-      menuOpen.classList.remove("hidden");
-      menuClose.classList.add("hidden");
-    }
-  });
-
-  // Close Menu
-  document.addEventListener("click", (event) => {
-    if (
-      !hamburgerMenu.contains(event.target) &&
-      !hamburgerButton.contains(event.target) &&
-      !hamburgerMenu.classList.contains("hidden")
-    ) {
-      hamburgerMenu.classList.add("translate-x-full");
-      body.style.overflow = "";
-
-      setTimeout(() => {
-        hamburgerMenu.classList.add("hidden");
-      }, 300);
-
-      // Toggle Icons
-      menuOpen.classList.remove("hidden");
-      menuClose.classList.add("hidden");
-    }
-  });
-}
-
-// 05. UPDATE RELATIVE DATES ------------------------------------------------------------
+// 01. UPDATE RELATIVE DATES ------------------------------------------------------------
 function updateRelativeDates() {
   function timeAgo(date) {
     const now = new Date();
@@ -272,26 +74,129 @@ function updateRelativeDates() {
   });
 }
 
-// 06. HEADER SCROLL EFFECT -------------------------------------------------------------
-function headerScrollEffect() {
-  const threshold = 60;
-  const pageHeader = document.getElementById("header");
+// 02. OPEN EXTERNAL LINKS IN NEW TAB ---------------------------------------------------
+function openExternalLinksInNewTab() {
+  document.querySelectorAll('article a[href^="http"]').forEach((link) => {
+    link.setAttribute("target", "_blank");
+    link.setAttribute("rel", "noopener noreferrer");
+  });
+}
 
-  if (window.scrollY > threshold) {
-    pageHeader.classList.remove("border-neutral-800/0");
-    pageHeader.classList.add(
-      "border-neutral-800/50",
-      "shadow-md",
-      "bg-neutral-900/50",
-      "backdrop-blur-sm",
-    );
-  } else {
-    pageHeader.classList.remove(
-      "border-neutral-800/50",
-      "shadow-md",
-      "bg-neutral-900/50",
-      "backdrop-blur-sm",
-    );
-    pageHeader.classList.add("border-neutral-800/0");
+// 03. CODE BLOCK COPY BUTTON -----------------------------------------------------------
+function codeBlockCopyButton() {
+  let codeBlocks = document.querySelectorAll("pre > code");
+
+  if (codeBlocks.length > 0) {
+    codeBlocks.forEach((code) => {
+      let pre = code.parentElement;
+      let wrapper = document.createElement("div");
+      wrapper.classList.add("relative");
+
+      // Move <pre> inside the wrapper
+      pre.parentNode.insertBefore(wrapper, pre);
+      wrapper.appendChild(pre);
+
+      // Create Copy Button
+      let copyButton = document.createElement("button");
+      copyButton.innerText = "Copy";
+      copyButton.className =
+        "absolute top-4 right-4 bg-neutral-800 text-white px-2.5 py-1.5 text-xs rounded-md hover:bg-neutral-700 transition-all ease-in-out copy-btn hover:cursor-pointer";
+      copyButton.setAttribute("aria-label", "Copy code to clipboard");
+
+      // Append button inside wrapper instead of <pre>
+      wrapper.appendChild(copyButton);
+
+      // Copy Functionality
+      copyButton.addEventListener("click", function () {
+        let textToCopy = code.textContent.trim();
+
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard
+            .writeText(textToCopy)
+            .then(() => {
+              copyButton.innerText = "Copied!";
+              setTimeout(() => (copyButton.innerText = "Copy"), 1500);
+            })
+            .catch((err) => {
+              console.error("Copy failed", err);
+              fallbackCopy(textToCopy, copyButton);
+            });
+        } else {
+          fallbackCopy(textToCopy, copyButton);
+        }
+      });
+
+      function fallbackCopy(text, button) {
+        let textArea = document.createElement("textarea");
+        textArea.value = text;
+        document.body.appendChild(textArea);
+        textArea.select();
+
+        try {
+          let successful = document.execCommand("copy");
+          if (successful) {
+            button.innerText = "Copied!";
+            setTimeout(() => (button.innerText = "Copy"), 1500);
+          } else {
+            console.error("Fallback: Copy command was unsuccessful");
+          }
+        } catch (err) {
+          console.error("Fallback: Unable to copy", err);
+        }
+
+        document.body.removeChild(textArea);
+      }
+    });
   }
+}
+
+// 04. TABLE OF CONTENTS DROPDOWN -------------------------------------------------------
+function tocToggle() {
+  const toggleBtn = document.getElementById("toc-toggle");
+  const icon = document.getElementById("toc-icon");
+  const content = document.getElementById("toc");
+
+  if (!toggleBtn || !icon || !content) return;
+
+  let isOpen = false;
+  toggleBtn.addEventListener("click", () => {
+    isOpen = !isOpen;
+
+    if (isOpen) {
+      content.classList.remove("max-h-0", "opacity-0");
+      content.classList.add("max-h-[calc(100vh-8rem)]", "opacity-100");
+      icon.classList.add("rotate-180");
+    } else {
+      content.classList.remove("max-h-[calc(100vh-8rem)]", "opacity-100");
+      content.classList.add("max-h-0", "opacity-0");
+      icon.classList.remove("rotate-180");
+    }
+  });
+}
+
+// 05. TABLE OF CONTENTS HIGHLIGHT ------------------------------------------------------
+function tocHighlight() {
+  const tocLinks = document.querySelectorAll("#toc a");
+  const headingLinks = Array.from(tocLinks).map((link) =>
+    document.querySelector(decodeURIComponent(link.getAttribute("href"))),
+  );
+
+  const setActive = () => {
+    let index = headingLinks.findIndex((el, i) => {
+      if (!el) return false;
+      const next = headingLinks[i + 1];
+      return (
+        window.scrollY >= el.offsetTop - 120 &&
+        (!next || window.scrollY < next.offsetTop - 120)
+      );
+    });
+
+    tocLinks.forEach((link) => link.classList.remove("active"));
+    if (index >= 0 && tocLinks[index]) {
+      tocLinks[index].classList.add("active");
+    }
+  };
+
+  window.addEventListener("scroll", setActive);
+  setActive();
 }

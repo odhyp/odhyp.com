@@ -1,0 +1,10 @@
+<a
+  href="{{ .Get "href" }}"
+  target="_blank"
+  class="not-prose inline-flex items-baseline gap-x-2 border-b-2 border-neutral-200 transition-colors ease-in-out hover:border-neutral-400"
+>
+  {{ with .Get "icon" }}
+    <i data-lucide="{{ . }}" class="ml-1 size-4"></i>
+  {{ end }}
+  <span class="">{{ .Get "title" }}</span>
+</a>

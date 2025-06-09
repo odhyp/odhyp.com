@@ -1,48 +1,54 @@
-# Odhy's Digital Garden 🪴
+**[odhyp.com](https://odhyp.com)**
 
-Welcome to my digital garden—where I plant ideas, debug thoughts, and occasionally scream at my code.
+my personal website and digital garden
 
-Built with Hugo, JavaScript, and TailwindCSS. Deployed in Vercel.
+<br>
 
-## Roadmap
+<samp>code is licensed under <a href='./LICENSE'>MIT</a>,<br> words and images are licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC BY-NC-SA 4.0</a></samp>.
 
-- [ ] Add testimonial section in Home and Service page
-- [ ] Work on the Taxonomy pages
-- [ ] Add search and sort feature in Writings page
-- [ ] Add Single page Table of Contents
-- [ ] Add back-to-top button
-- [x] update CTA for work inquiry and get in touch
-- [x] Add Services section
+<br>
 
-## Self-note
+<details>
+<summary>&nbsp;<code>self-note</code></summary>
 
-1️⃣ Use a Hugo Debug Page to Detect Duplicates
-Create a special Hugo template (layouts/_default/list.html) to log and check duplicate slugs:
+### Future additions?
+
+- [ ] Shortcodes
+  - [ ] Callouts (success, warning, danger, important, info)
+  - [ ] Image side-by-side comparison
+  - [ ] Image gallery/slider
+- [ ] Design a good logo
+- [ ] Enlarge images when clicked (image modal)
+- [ ] Search function using Pagefind (put in on top-right corner)
+- [ ] Dark mode?
+- [ ] Include pagefind in package.json (`npm install pagefind`)
+- [x] Table Of Contents for Writings and Projects page (sticks to the left side of the screen, large screen only)
+
+### Running on local connection
+
+```bash
+hugo server --bind 0.0.0.0 --baseURL http://<YOUR_IP> --port 1313 --disableFastRender
+```
+
+### New content/page
+
+```bash
+hugo new --kind writing writings/2024-10-27-sample-post.md
+```
 
 ```html
-{{ define "main" }}
-<h1>Duplicate Slug Checker</h1>
-<ul>
-  {{ $slugs := dict }}
-  {{ range .Site.RegularPages }}
-    {{ $slug := .Params.slug }}
-    {{ if index $slugs $slug }}
-      <li style="color: red;">Duplicate slug found: {{ $slug }} (from {{ .RelPermalink }})</li>
-    {{ else }}
-      {{ $slugs = merge $slugs (dict $slug true) }}
-    {{ end }}
-  {{ end }}
-</ul>
+<h2>Sections Range</h2>
+{{ range .Sections }}
+<a href="{{ .RelPermalink }}">{{ .Title }}</a>
+<p>{{ .Description }}</p>
+{{ end }}
+
+<hr />
+<h2>Pages Range</h2>
+{{ range .RegularPagesRecursive }}
+<a href="{{ .RelPermalink }}">{{ .Title }}</a>
+<p>{{ .Description }}</p>
 {{ end }}
 ```
 
-📌 How to Use It:
-
-Save this file as layouts/_default/list.html.
-Run hugo server.
-Visit /duplicate-check/ in your browser to see any duplicate slugs in red.
-
-### Using fffuel assets
-
-fill 1: `hsl(161, 100%, 42%)`
-fill 2: `hsl(161, 10%, 40%)`
+</details>

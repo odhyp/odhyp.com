@@ -1,5 +1,19 @@
-/node_modules
-/public
+# Generated files by hugo
+/public/
 /resources/_gen/
-/hugo_stats.json
-.hugo_build.lock
+/assets/jsconfig.json
+hugo_stats.json
+
+# Executable may be added to repository
+hugo.exe
+hugo.darwin
+hugo.linux
+
+# Temporary lock file while building
+/.hugo_build.lock
+
+# Node modules
+/node_modules
+
+# This site data/
+data/

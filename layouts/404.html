@@ -1,16 +1,28 @@
 {{ define "main" }}
-<section>
-  <div class="w-full">
-    <div class="site-container my-16 md:my-32">
-      <h2
-        class="text-center text-3xl font-bold md:text-4xl md:leading-16 lg:text-5xl"
-      >
+  {{ $quotes := shuffle (slice
+    "No alarms and no surprises, just a missing page"
+    "Everything in its right place, except this page"
+    "A fake plastic page. Not the real one"
+    )
+  }}
+
+
+  <section class="flex items-center justify-center">
+    <div class="flex flex-col items-center gap-y-4 py-16">
+      <h2 class="text-3xl font-bold md:text-4xl md:leading-16 lg:text-5xl">
         404
       </h2>
-      <h3 class="text-center text-xl text-white/75 md:text-2xl">
-        No alarms and no surprises, just a missing page.
+
+      <h3
+        class="max-w-[40ch] text-center text-xl text-neutral-900/80 md:text-2xl"
+      >
+        {{ index $quotes 0 }}
       </h3>
+
+      <a href="/" class="btn-text mt-8">
+        <i data-lucide="arrow-left"></i>
+        Back to Home
+      </a>
     </div>
-  </div>
-</section>
+  </section>
 {{ end }}

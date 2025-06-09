@@ -1,5 +1,0 @@
-User-agent: *
-Disallow: /drafts/
-Allow: /
-
-Sitemap: {{ .Site.BaseURL }}sitemap.xml

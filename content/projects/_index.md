@@ -1,7 +1,7 @@
 +++
 title = "Projects"
-description = "Curated selection of projects that demonstrate my expertise in coding, problem-solving, and developing efficient solutions."
-layout = "projects"
+description = ""
 +++
 
-These are the projects I’ve put the most care and intention into. Each one solves a clear problem using automation, data, or design. They reflect how I approach building tools that are practical, reliable, and built to last.
+A collection of projects, tools, and workflows I’m developing and iterating on.  
+Or browse by [tech stacks](/tech_stacks).

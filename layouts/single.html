@@ -1,0 +1,14 @@
+{{ define "main" }}
+  <section>
+    <article data-pagefind-body>
+      <h1 data-pagefind-body>{{ .Title }}</h1>
+      <h2 class="not-prose text-neutral-900/60 italic">{{ .Description }}</h2>
+      <hr />
+      {{ .Content }}
+    </article>
+
+    {{ if or (eq .Section "projects") (eq .Section "writings") }}
+      {{ partial "components/giscus.html" . }}
+    {{ end }}
+  </section>
+{{ end }}
