@@ -13,7 +13,7 @@ toc = true
 cover = ""
 
 # Taxonomies & Routing
-topics = ["digital-garden", "updates"]
+topics = ["digital garden", "updates"]
 aliases = ["/site-updates", "/a-new-look", "/blog/a-new-look"]
 +++
 
