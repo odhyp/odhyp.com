@@ -4,7 +4,7 @@
   <img
     src="{{ .Get "src" }}"
     alt="{{ .Get "alt" }}"
-    class="block h-auto w-auto rounded-lg"
+    class="{{ .Get "class" }} block h-auto w-auto rounded-lg"
     loading="lazy"
   />
   {{ with .Get "caption" }}
