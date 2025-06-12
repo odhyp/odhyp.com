@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Note:
+# This file was used to generate data/changelog.log for the changelog page.
+# It's no longer needed now that the repository is public.
+
 # Get current date and time
 timestamp=$(date "+%Y-%m-%d %H:%M:%S")
 
