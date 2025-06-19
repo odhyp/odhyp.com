@@ -1,7 +1,6 @@
 +++
 title = "Topics"
-description = ""
+description = "Browse everything by theme."
 +++
 
-Explore my writings by its topics.  
-Or explore [all writings](/writings) instead.
+Browse writings by topic, or view [all writings](/writings).

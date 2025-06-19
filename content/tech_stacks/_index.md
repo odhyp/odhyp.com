@@ -1,7 +1,7 @@
 +++
 title = "Tech Stacks"
-description = ""
+description = "Tools and technologies behind my work."
 +++
 
-Explore the tools and technologies behind my projects.  
-Or explore [all projects](/projects) instead.
+A list of tools and technologies I use across projects.  
+See [all projects](/projects) for context.
