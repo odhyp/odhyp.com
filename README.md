@@ -13,6 +13,9 @@ my personal website and digital garden
 
 ### Future additions?
 
+- [ ] Removed `LICENSE` page
+  - [ ] Move content to other page under Legal section
+  - [ ] Delete `miscellaneous/license.md`
 - [ ] Shortcodes
   - [ ] Callouts (success, warning, danger, important, info)
   - [ ] Image side-by-side comparison
@@ -22,7 +25,6 @@ my personal website and digital garden
 - [ ] Search function using Pagefind (put in on top-right corner)
 - [ ] Dark mode?
 - [ ] Include pagefind in package.json (`npm install pagefind`)
-- [x] Table Of Contents for Writings and Projects page (sticks to the left side of the screen, large screen only)
 
 ### Running on local connection
 
