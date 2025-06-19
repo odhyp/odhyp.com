@@ -2,8 +2,8 @@ header a {
   @apply block w-fit text-neutral-900/60 transition-colors ease-in-out hover:text-neutral-900 hover:underline hover:underline-offset-2;
 }
 
-footer a {
-  @apply w-fit text-neutral-50/60 transition-colors ease-in-out hover:text-neutral-50 hover:underline hover:underline-offset-2;
+.footer-link a {
+  @apply w-fit font-light text-neutral-50/60 transition-colors ease-in-out hover:text-neutral-50 hover:underline hover:underline-offset-2;
 }
 
 /* Table of Contents */
