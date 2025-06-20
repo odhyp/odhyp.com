@@ -42,8 +42,6 @@ Every post on this site has a growth stage indicating how complete and comprehen
 | Growing   | 🌿 40–90%    | Developing with more structure and clarity. Still evolving.        |
 | Evergreen | 🌳 90–100%   | Mature and stable. Well-formed, regularly reviewed and maintained. |
 
-> In a perfect world, every post would become Evergreen. But some ideas linger as Saplings... half-grown, half-forgotten, and waiting for rain.
-
 ## Notes
 
 This site is always evolving. It's part personal lab, part public notebook. If you're curious about what's changed over time, check [this site repository](https://github.com/odhyp/odhyp.com).
