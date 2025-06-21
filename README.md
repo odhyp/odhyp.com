@@ -13,9 +13,6 @@ my personal website and digital garden
 
 ### Future additions?
 
-- [ ] Removed `LICENSE` page
-  - [ ] Move content to other page under Legal section
-  - [ ] Delete `miscellaneous/license.md`
 - [ ] Shortcodes
   - [ ] Callouts (success, warning, danger, important, info)
   - [ ] Image side-by-side comparison
