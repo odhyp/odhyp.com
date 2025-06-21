@@ -4,9 +4,8 @@
     <article
       class="mb-16 lg:max-w-3xl lg:text-center xl:max-w-4xl 2xl:max-w-5xl"
     >
-      <h1 class="">{{ .Title }}</h1>
       <div
-        class="mb-4 flex w-full items-center justify-start gap-x-4 text-sm lg:justify-center"
+        class="mb-2 flex w-full items-center justify-start gap-x-4 text-sm text-neutral-900/60 lg:justify-center"
       >
         <a
           href="/writings/welcome-to-my-digital-garden/#writing-types"
@@ -19,6 +18,12 @@
           class="not-prose flex cursor-help items-center gap-x-2 p-1 hover:underline hover:underline-offset-2"
           >{{ partial "components/stage-icon.html" . }}{{ .Params.stage | title }}
         </a>
+      </div>
+      <h1 class="mb-4">{{ .Title }}</h1>
+      <div
+        class="not-prose mb-4 flex flex-wrap justify-start gap-4 text-sm text-neutral-900/60 lg:justify-center"
+      >
+        {{ partial "components/topics-badge.html" . }}
       </div>
     </article>
 
@@ -38,7 +43,7 @@
           href="/writings"
           rel="up"
           aria-label="Back to Writings"
-          class="mt-16! flex items-center gap-x-2"
+          class="mt-8! flex items-center gap-x-2 sm:mt-16!"
           ><i data-lucide="arrow-left" class="size-5"></i>Back to Writings</a
         >
       </article>
@@ -54,20 +59,6 @@
           </span>
         </div>
 
-        <div class="flex flex-col items-end gap-y-2">
-          <span class="font-bold">Last tended</span>
-          {{ with .GitInfo }}
-            <a
-              href="https://github.com/odhyp/odhyp.com/commit/{{ .Hash }}"
-              target="_blank"
-              class="relative-time w-fit underline underline-offset-2 transition-colors ease-in-out hover:text-neutral-900/80"
-              data-time="{{ .CommitDate.Format "2006-01-02T15:04:05Z07:00" }}"
-            >
-              {{ .CommitDate.Format "Jan 2, 2006" }}
-            </a>
-          {{ end }}
-        </div>
-
         <div class="flex flex-col gap-y-2">
           <span class="font-bold">Planted</span>
           <p
@@ -79,8 +70,17 @@
         </div>
 
         <div class="flex flex-col items-end gap-y-2">
-          <span class="font-bold">Topics</span>
-          {{ partial "components/topics-badge.html" . }}
+          <span class="font-bold">Last tended</span>
+          {{ with .GitInfo }}
+            <a
+              href="https://github.com/odhyp/odhyp.com/commit/{{ .Hash }}"
+              target="_blank"
+              class="relative-time w-fit border-b border-neutral-400 transition-colors ease-in-out hover:border-neutral-600 hover:text-neutral-900/80"
+              data-time="{{ .CommitDate.Format "2006-01-02T15:04:05Z07:00" }}"
+            >
+              {{ .CommitDate.Format "Jan 2, 2006" }}
+            </a>
+          {{ end }}
         </div>
       </div>
     </div>
