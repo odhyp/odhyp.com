@@ -15,11 +15,9 @@
       </div>
     </article>
 
-    <!-- Terms - Project Cards -->
+    <!-- Terms - Writings Cards -->
     <div class="@container w-full py-4 md:p-8">
-      <div
-        class="grid grid-cols-1 gap-4 @xl:grid-cols-2 @4xl:grid-cols-3 @4xl:gap-8 @7xl:grid-cols-4"
-      >
+      <div class="columns-1 @xl:columns-2 @4xl:columns-3 @7xl:columns-4">
         {{ range .Pages }}
           {{ partial "components/cards/writing.html" . }}
         {{ end }}
