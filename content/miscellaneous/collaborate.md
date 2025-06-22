@@ -10,10 +10,9 @@ If you need help with Python scripting, data visualization, Excel cleanup, web s
 
 I’m especially interested in practical projects that solve real problems.
 
-> _Note: I’m currently available for freelance or short-term collaborations._
-
-Contact me at [hello@odhyp.com] or say hi in the [Guestbook].
+{{< callout type="tip" title="Status:" >}}
+I’m currently available for freelance or short-term collaborations.  
+Contact me at [hello@odhyp.com](mailto:hello@odhyp.com) or say hi in the [Guestbook](/guestbook).
+{{< /callout >}}
 
 [projects]: /projects
-[hello@odhyp.com]: mailto:hello@odhyp.com
-[Guestbook]: /guestbook
