@@ -11,43 +11,106 @@ my personal website and digital garden
 <details>
 <summary>&nbsp;<code>self-note</code></summary>
 
-### Future additions?
+## Future additions?
 
 - [ ] Shortcodes
-  - [ ] Callouts (success, warning, danger, important, info)
   - [ ] Image side-by-side comparison
   - [ ] Image gallery/slider
+  - [x] Callouts (success, warning, danger, important, info)
 - [ ] Design a good logo
 - [ ] Enlarge images when clicked (image modal)
 - [ ] Search function using Pagefind (put in on top-right corner)
 - [ ] Dark mode?
 - [ ] Include pagefind in package.json (`npm install pagefind`)
 
-### Running on local connection
+## Adding new content
+
+### Writings page
 
 ```bash
-hugo server --bind 0.0.0.0 --baseURL http://<YOUR_IP> --port 1313 --disableFastRender
+hugo new --kind writing writings/2025-06-22-sample-writing.md
 ```
 
-### New content/page
+### Projects page
 
 ```bash
-hugo new --kind writing writings/2024-10-27-sample-post.md
+hugo new --kind project projects/2025-06-22-sample-project.md
 ```
 
-```html
-<h2>Sections Range</h2>
-{{ range .Sections }}
-<a href="{{ .RelPermalink }}">{{ .Title }}</a>
-<p>{{ .Description }}</p>
-{{ end }}
+## Using custom shortcodes
 
-<hr />
-<h2>Pages Range</h2>
-{{ range .RegularPagesRecursive }}
-<a href="{{ .RelPermalink }}">{{ .Title }}</a>
-<p>{{ .Description }}</p>
-{{ end }}
+### 1. Wrapper
+
+Wrap content with a custom TailwindCSS class.
+
+```md
+{{< wrapper class="your-tailwind-classes" >}}
+**Your content here**
+{{< /wrapper >}}
 ```
 
-</details>
+**Parameters:**
+
+- class – (required) TailwindCSS classes to style the wrapper container
+
+### 2. Image/Figure
+
+Insert responsive images with optional captions and custom styles.
+
+```md
+{{< img src="path/to/image.jpg" alt="Descriptive alt text" caption="Optional caption" class="your-tailwind-classes" >}}
+```
+
+**Parameters:**
+
+- `src`: (required) URL or path to the image file
+- `alt`: (required) Alternative text for accessibility and SEO
+- `caption`: (optional) Text shown below the image
+- `class`: (optional) TailwindCSS classes for styling
+
+### 3. Icon Link
+
+Insert styled links with optional icons, ideal for external resources or references.
+
+```md
+{{< icon href="https://example.com" title="Link text" icon="external-link" >}}
+```
+
+**Parameters:**
+
+- `href`: (required) URL to link to
+- `title`: (required) Text displayed as the link label
+- `icon`: (optional) Lucide icon name to display beside the text
+
+### 4. Callouts
+
+Insert callouts with icon based on type. Currently, there are 6 types:
+
+1. Tip
+2. Info
+3. Warning
+4. Important
+5. Todo
+6. Note (default)
+
+```md
+{{< callout type="tip" title="Quick Trick" >}}
+Callout content here.
+{{< /callout >}}
+```
+
+**Parameters:**
+
+- `type`: (optional) Controls icon and color
+- `title`: (optional) Heading title (default title based on type)
+
+### 5. Threads (Instagram)
+
+```md
+{{< threads username="odhypradhana" id="tuNapAN1n1" >}}
+```
+
+**Parameters:**
+
+- `username`: (required) Username
+- `id`: (required) Post ID
