@@ -47,13 +47,9 @@ npm install @tailwindcss/postcss
 
 From here, you can safely remove `postcss`, `postcss-cli`, and `autoprefixer` from your `package.json`.
 
-When deploying the site on Vercel, make sure to install the dependencies as regular dependencies instead of DevDependencies to avoid this deployment error message:
-
-```bash
-...
-Error: error building site: POSTCSS: failed to transform "/css/styles.css" (text/css):
-Error: Loading PostCSS Plugin failed: Cannot find module '@tailwindcss/oxide-linux-x64-gnu'
-```
+{{< callout type="warning" >}}
+When deploying the site on Vercel, make sure to install the dependencies as regular dependencies instead of DevDependencies to avoid deployment error.
+{{< /callout >}}
 
 ### Step 2: Removing old files
 
