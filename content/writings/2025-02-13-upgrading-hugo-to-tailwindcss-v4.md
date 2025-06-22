@@ -48,7 +48,14 @@ npm install @tailwindcss/postcss
 From here, you can safely remove `postcss`, `postcss-cli`, and `autoprefixer` from your `package.json`.
 
 {{< callout type="warning" >}}
-When deploying the site on Vercel, make sure to install the dependencies as regular dependencies instead of DevDependencies to avoid deployment error.
+When deploying the site on Vercel, make sure to install the dependencies as regular dependencies instead of DevDependencies to avoid deployment error:
+
+```bash
+...
+Error: error building site: POSTCSS: failed to transform "/css/styles.css" (text/css):
+Error: Loading PostCSS Plugin failed: Cannot find module '@tailwindcss/oxide-linux-x64-gnu'
+```
+
 {{< /callout >}}
 
 ### Step 2: Removing old files
@@ -76,8 +83,9 @@ Since `tailwind.config.js` is no longer used, migrate your custom styles to `sty
 I renamed my `postcss.config.js` to `postcss.config.mjs` (this may not be necessary) to match the TailwindCSS docs, so we need to update the `css.html` with the new file name:
 
 ```html
-... {{- $styles := resources.Get "css/styles.css" | postCSS (dict "config"
-"./assets/css/postcss.config.mjs") -}} ...
+...
+{{- $styles := resources.Get "css/styles.css" | postCSS (dict "config" "./assets/css/postcss.config.mjs") -}} 
+...
 ```
 
 ### Step 4: Running the site
