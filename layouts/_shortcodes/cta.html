@@ -1,0 +1,14 @@
+{{- $href := .Get "href" -}}
+{{- $text := .Get "text" | default "Do Something" -}}
+{{- $icon := .Get "icon" | default "github" -}}
+
+
+<a
+  href="{{ $href }}"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="not-prose inline-flex items-center gap-2 rounded-md border border-neutral-300 bg-neutral-50 px-8 py-3 text-sm font-medium text-neutral-800 shadow-sm transition hover:bg-neutral-100 hover:shadow-md md:text-base"
+>
+  <i data-lucide="{{ $icon }}" class="size-4"></i>
+  <span>{{ $text }}</span>
+</a>
