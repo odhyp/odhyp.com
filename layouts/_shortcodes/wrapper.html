@@ -1,1 +1,4 @@
-<div class="{{ .Get "class" }}">{{ .Inner }}</div>
+{{- $class := .Get "class" -}}
+
+
+<div class="{{ $class }}">{{ .Inner }}</div>
