@@ -1,6 +1,6 @@
 <a
   href="{{ .RelPermalink }}"
-  class="not-prose group flex flex-col rounded-md border border-neutral-300 bg-neutral-50/50 transition-all ease-in-out hover:shadow-md"
+  class="not-prose group flex flex-col rounded-md border border-neutral-300 bg-neutral-50 transition-all ease-in-out hover:shadow-md"
 >
   {{ with .Params.cover }}
     <img
@@ -19,7 +19,6 @@
     <div
       class="mt-2 w-full shrink-0 space-y-2 space-x-2 text-sm text-neutral-900/60"
     >
-      <!-- TODO: we can add line-clamp-1 here -->
       {{ partial "components/tech-stacks.html" . }}
     </div>
   </div>
