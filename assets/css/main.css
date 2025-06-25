@@ -30,8 +30,7 @@
   }
 }
 
-/* Dev-only */
-/* TODO: remove before prod --------------------------------------------------------- */
+/* Dev tools */
 .dev-parent {
   @apply border-2 border-dashed border-orange-400;
 }
