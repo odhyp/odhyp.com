@@ -18,6 +18,10 @@ aliases = ["/sipd-ri-helper"]
 
 **SIPD-RI Helper** is a Python-based command-line application that automates tasks on the [SIPD-RI](https://sipd.kemendagri.go.id/landing) web application. It helps reduce human error and saves time by automating browser actions using Playwright, from login to form submission and data retrieval.
 
+{{< wrapper class="flex justify-center" >}}
+{{< cta href="https://github.com/odhyp/sipd-ri" text="View Repository" icon="github" >}}
+{{< /wrapper >}}
+
 ## Features
 
 - Automates browser workflows: login, navigation, form submission, and file downloads
