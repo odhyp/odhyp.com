@@ -9,7 +9,7 @@
   />
   {{ with .Get "caption" }}
     <figcaption class="mt-4 text-center text-neutral-900/60">
-      {{ . }}
+      {{ . | markdownify }}
     </figcaption>
   {{ end }}
 </figure>
