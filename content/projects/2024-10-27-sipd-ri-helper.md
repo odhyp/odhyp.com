@@ -1,7 +1,7 @@
 +++
 # Metadata
 title = "SIPD-RI Helper"
-description = "Simple command-line Python application to help with SIPD-RI web application"
+description = "A command-line automation tool for SIPD-RI 2025 web application 💼"
 slug = "sipd-ri-helper"
 date = 2024-10-27
 draft = false
@@ -12,7 +12,7 @@ cover = ""
 
 # Taxonomies & Routing
 tech_stacks = ["python","web automation", "playwright", "pandas", "CLI"]
-aliases = ["/sipd-ri-helper"]
+aliases = ["/sipd-ri-helper", "/sipd-ri"]
 +++
 
 
