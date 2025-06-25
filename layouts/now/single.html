@@ -33,14 +33,18 @@
           </span>
         </div>
 
-        <div class="flex flex-col gap-y-2">
+        <div class="flex flex-col items-end gap-y-2">
           <span class="font-bold">Last tended</span>
-          <p
-            class="relative-time"
-            data-time="{{ .GitInfo.CommitDate.Format "2006-01-02T15:04:05Z07:00" }}"
-          >
-            {{ .GitInfo.CommitDate.Format "Jan 2, 2006" }}
-          </p>
+          {{ with .GitInfo }}
+            <a
+              href="https://github.com/odhyp/odhyp.com/commit/{{ .Hash }}"
+              target="_blank"
+              class="relative-time w-fit border-b border-neutral-400 transition-colors ease-in-out hover:border-neutral-600 hover:text-neutral-900/80"
+              data-time="{{ .CommitDate.Format "2006-01-02T15:04:05Z07:00" }}"
+            >
+              {{ .CommitDate.Format "Jan 2, 2006" }}
+            </a>
+          {{ end }}
         </div>
       </div>
     </div>
