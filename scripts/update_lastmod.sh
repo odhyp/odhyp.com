@@ -20,49 +20,58 @@ if [[ "$1" == "--dry-run" ]]; then
     echo "🔍 Dry-run mode — no files will be modified."
 fi
 
+# Function: check if file has meaningful change (excluding lastmod)
+has_meaningful_change() {
+    local file="$1"
+    local full_commit lastmod_commit
+
+    full_commit=$(git log -1 --format="%H" -- "$file")
+    lastmod_commit=$(git log -L'/^lastmod\s*=/,+1':"$file" --pretty=format:"%H" 2>/dev/null | head -n1)
+
+    [[ "$full_commit" != "$lastmod_commit" ]]
+}
+
+# Main loop
 for dir in "${DIRS[@]}"; do
     for file in $(find "$dir" -type f -name "*.md"); do
 
-        # Skip if no lastmod
+        # Skip if file has no lastmod
         if ! grep -q '^lastmod[[:space:]]*=' "$file"; then
-            if [[ "$DRY_RUN" = true ]]; then
+            if [[ "$DRY_RUN" == true ]]; then
                 SKIPPED_FILES+=("$file")
             fi
             continue
         fi
 
-        # Get git lastmod per file
+        # Get Git lastmod date in ISO 8601
         lastmod_git=$(git log -1 --format="%aI" -- "$file")
         if [[ -z "$lastmod_git" ]]; then
             echo "⚠️  Skipping untracked file: $file"
             continue
         fi
 
-        # Get current lastmod in file
-        current_lastmod=$(grep '^lastmod[[:space:]]*=' "$file" | sed -E 's/^lastmod[[:space:]]*=[[:space:]]*"([^"]*)"/\1/')
+        # Get current lastmod value from file
+        current_lastmod=$(grep '^lastmod[[:space:]]*=' "$file" | sed -E 's/^lastmod[[:space:]]*=[[:space:]]*//')
 
-        if [[ "$lastmod_git" != "$current_lastmod" ]]; then
+        # Only update if actual content changed
+        if has_meaningful_change "$file" && [[ "$lastmod_git" != "$current_lastmod" ]]; then
             lastmod_human=$(date -d "$lastmod_git" +"%a, %d %b %Y %H:%M %Z")
 
             echo "📄 $file"
             echo "    → current: $current_lastmod"
             echo "    → updated: $lastmod_human"
 
-            if [[ "$DRY_RUN" = false ]]; then
-                # Replace the lastmod line (with backup suffix if on macOS)
+            if [[ "$DRY_RUN" == false ]]; then
                 sed -i$SED_EXT "s/^lastmod[[:space:]]*=.*/lastmod = $lastmod_git/" "$file"
-
-                # Remove backup created by macOS sed
-                if [[ -n "$SED_EXT" ]]; then rm -f "${file}${SED_EXT}"; fi
-
+                [[ -n "$SED_EXT" ]] && rm -f "$file$SED_EXT"
                 UPDATED_FILES+=("$file")
             fi
         fi
     done
 done
 
-# Show skipped files in dry-run
-if [[ "$DRY_RUN" = true && ${#SKIPPED_FILES[@]} -gt 0 ]]; then
+# Report skipped files (dry-run only)
+if [[ "$DRY_RUN" == true && ${#SKIPPED_FILES[@]} -gt 0 ]]; then
     echo ""
     echo "🚫 Skipped files (no lastmod present):"
     for f in "${SKIPPED_FILES[@]}"; do
