@@ -1,8 +1,8 @@
 +++
 # Metadata
-title = "Python Built-in Module Summary: datetime"
-description = "A personal summary of Python’s `datetime` module"
-slug = "python-datetime-summary"
+title = "Python Module: datetime"
+description = "Cheatsheet for handling date and time in Python"
+slug = "python-module-datetime"
 date = 2025-06-27T20:44:19+07:00
 draft = false
 
