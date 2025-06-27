@@ -1,8 +1,7 @@
 #!/bin/bash
 
 # Note:
-# This script is used to update the `lastmod` parameter in markdown file
-# Front matter under 'content/'.
+# This script is used to update the `lastmod` parameter in Front matter
 
 DIRS=("content/writings" "content/projects")
 DRY_RUN=false
