@@ -4,6 +4,7 @@ title = "SIPD-RI Helper"
 description = "A command-line automation tool for SIPD-RI 2025 web application 💼"
 slug = "sipd-ri-helper"
 date = 2024-10-27
+lastmod = 2024-10-27
 draft = false
 
 # Page setting

@@ -4,6 +4,7 @@ title = "Hugo TailwindCSS Starter"
 description = "Starter project for Hugo and TailwindCSS v4, ready to deploy in Vercel" 
 slug = "hugo-tailwindcss-starter"
 date = 2024-09-22
+lastmod = 2024-09-22
 draft = false
 
 # Page setting

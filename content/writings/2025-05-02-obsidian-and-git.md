@@ -4,6 +4,7 @@ title = "Obsidian Note Syncing using Git"
 description = "Setting up an Obsidian notes with Git for auto-sync"
 slug = "obsidian-and-git"
 date = 2025-05-02T10:10:32+07:00
+lastmod = 2025-05-02T10:10:32+07:00
 draft = false
 
 # Page setting
