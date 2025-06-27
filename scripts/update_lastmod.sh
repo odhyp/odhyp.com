@@ -6,38 +6,56 @@
 
 # Directories to scan
 DIRS=("content/writings" "content/projects")
-
-# Dry-run flag
 DRY_RUN=false
+SKIPPED_FILES=()
 
-# Parse flags
+# Parse argument
 if [[ "$1" == "--dry-run" ]]; then
     DRY_RUN=true
-    echo "🔍 Running in dry-run mode — no files will be modified."
+    echo "🔍 Dry-run mode — no files will be modified."
 fi
 
-# Loop through directories
 for dir in "${DIRS[@]}"; do
     for file in $(find "$dir" -type f -name "*.md"); do
-        # Get last modified date from Git
-        lastmod=$(git log -1 --format="%aI" -- "$file")
 
-        if [[ -z "$lastmod" ]]; then
+        # Skip if file doesn't have lastmod
+        if ! grep -q '^lastmod = ' "$file"; then
+            if [[ "$DRY_RUN" = true ]]; then
+                SKIPPED_FILES+=("$file")
+            fi
+            continue
+        fi
+
+        # Get Git last commit date for file
+        lastmod_git=$(git log -1 --format="%aI" -- "$file")
+        if [[ -z "$lastmod_git" ]]; then
             echo "⚠️  Skipping untracked file: $file"
             continue
         fi
 
-        # Extract existing lastmod
-        current_lastmod=$(grep '^lastmod = ' "$file" | cut -d'"' -f2)
+        # Extract current lastmod value
+        current_lastmod=$(grep '^lastmod = ' "$file" | sed -E 's/^lastmod = "(.*)"/\1/')
 
-        if [[ "$lastmod" != "$current_lastmod" ]]; then
+        if [[ "$lastmod_git" != "$current_lastmod" ]]; then
+            # Human-readable display version
+            lastmod_human=$(date -d "$lastmod_git" +"%a, %d %b %Y %H:%M %Z")
+
             echo "📄 $file"
-            echo "    → lastmod update: $current_lastmod → $lastmod"
+            echo "    → current: $current_lastmod"
+            echo "    → updated: $lastmod_human"
 
             if [[ "$DRY_RUN" = false ]]; then
-                # Update the lastmod line in place
-                sed -i "s/^lastmod = \".*\"/lastmod = \"$lastmod\"/" "$file"
+                sed -i "s/^lastmod = \".*\"/lastmod = \"$lastmod_git\"/" "$file"
             fi
         fi
     done
 done
+
+# Show skipped files in dry-run
+if [[ "$DRY_RUN" = true && ${#SKIPPED_FILES[@]} -gt 0 ]]; then
+    echo ""
+    echo "🚫 Skipped files (no lastmod present):"
+    for f in "${SKIPPED_FILES[@]}"; do
+        echo " - $f"
+    done
+fi
