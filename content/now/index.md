@@ -5,7 +5,6 @@ toc = true
 lastmod = 2025-02-13
 +++
 
-
 ## April 2025
 
 Not long ago, I stumbled upon a new concept, a new way to write things. A [digital garden](https://maggieappleton.com/garden-history). It's different from a _personal blog_, because you don't write a polished article and display them based on the release date. A garden is where you plant things, water and tend it, for it to grow and nurtured. Instead of writing about some topic with a clear finish line and publish it, you write something as-is and let it grow. You add more as you learn and research more about the topic.
