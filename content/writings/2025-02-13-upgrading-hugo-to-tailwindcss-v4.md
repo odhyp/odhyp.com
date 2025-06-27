@@ -4,7 +4,7 @@ title = "Upgrading a Hugo Website from Tailwind CSS v3 to v4"
 description = "A step-by-step guide to upgrading your Hugo site from Tailwind CSS v3 to v4"
 slug = "upgrading-a-hugo-website-from-tailwind-css-v3-to-v4"
 date = 2025-02-13
-lastmod = 2025-02-13
+lastmod = 2025-06-27T22:56:41+07:00
 draft = false
 
 # Page setting
