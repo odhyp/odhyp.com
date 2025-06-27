@@ -3,7 +3,7 @@
 # Note:
 # This script is used to update the `lastmod` parameter in Front matter
 
-DIRS=("content/writings" "content/projects")
+DIRS=("content/writings" "content/projects" "content/now")
 DRY_RUN=false
 SKIPPED_FILES=()
 UPDATED_FILES=()
