@@ -24,6 +24,8 @@
     "preview": "hugo server --disableFastRender --navigateToChanged --templateMetrics --templateMetricsHints --watch --forceSyncStatic -e production --minify",
     "build": "hugo --gc --minify --templateMetrics --templateMetricsHints --forceSyncStatic",
     "postbuild": "npx pagefind --site public",
+    "lastmod:check": "bash scripts/update_lastmod.sh --dry-run",
+    "lastmod:update": "bash scripts/update_lastmod.sh",
     "format": "npx prettier . --write"
   },
   "devDependencies": {

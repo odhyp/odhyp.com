@@ -4,6 +4,7 @@ title = "SIPD-RI Helper"
 description = "A command-line automation tool for SIPD-RI 2025 web application 💼"
 slug = "sipd-ri-helper"
 date = 2024-10-27
+lastmod = 2025-06-27T22:56:41+07:00
 draft = false
 
 # Page setting
@@ -14,7 +15,6 @@ cover = ""
 tech_stacks = ["python","web automation", "playwright", "pandas", "CLI"]
 aliases = ["/sipd-ri-helper", "/sipd-ri"]
 +++
-
 
 **SIPD-RI Helper** is a Python-based command-line application that automates tasks on the [SIPD-RI](https://sipd.kemendagri.go.id/landing) web application. It helps reduce human error and saves time by automating browser actions using Playwright, from login to form submission and data retrieval.
 
@@ -44,21 +44,21 @@ Before installing, make sure you have the following installed:
 
 1. Clone and move to the repository
 
-    ```bash
-    git clone https://github.com/odhyp/sipd-ri.git && cd sipd-ri
-    ```
+   ```bash
+   git clone https://github.com/odhyp/sipd-ri.git && cd sipd-ri
+   ```
 
 2. Sync dependencies
 
-    ```bash
-    uv sync
-    ```
+   ```bash
+   uv sync
+   ```
 
 3. Install Playwright
 
-    ```bash
-    playwright install chromium
-    ```
+   ```bash
+   playwright install chromium
+   ```
 
 4. Voila! installation success
 
@@ -102,9 +102,9 @@ If you'd like to contribute:
 1. Fork the repository and clone it
 2. Create your new branch:
 
-    ```bash
-    git checkout -b feature/your-feature
-    ```
+   ```bash
+   git checkout -b feature/your-feature
+   ```
 
 3. Commit your changes
 4. Submit a Pull Request with a clear description

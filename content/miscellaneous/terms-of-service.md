@@ -21,14 +21,14 @@ All digital garden content, including articles, notes, logs, and other writings,
 
 You may:
 
-- Copy and redistribute the material in any medium or format  
-- Remix, transform, and build upon it  
+- Copy and redistribute the material in any medium or format
+- Remix, transform, and build upon it
 
 As long as you:
 
-- Give proper credit  
-- Do not use it for commercial purposes  
-- Use the same license if you adapt the content  
+- Give proper credit
+- Do not use it for commercial purposes
+- Use the same license if you adapt the content
 
 Any source code on this site, whether in snippets or linked repositories, is licensed under the **[MIT License](https://opensource.org/licenses/MIT)**. You are free to use, modify, and distribute it with proper attribution and license inclusion.
 

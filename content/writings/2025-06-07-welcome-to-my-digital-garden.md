@@ -4,6 +4,7 @@ title = "Welcome to My Digital Garden"
 description = "A quick tour of my digital garden, where ideas grow in public" 
 slug = "welcome-to-my-digital-garden"
 date = 2025-06-07T20:37:35+07:00
+lastmod = 2025-06-27T22:35:59+07:00
 draft = false
 
 # Page setting

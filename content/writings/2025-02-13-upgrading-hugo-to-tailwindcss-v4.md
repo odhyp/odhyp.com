@@ -4,6 +4,7 @@ title = "Upgrading a Hugo Website from Tailwind CSS v3 to v4"
 description = "A step-by-step guide to upgrading your Hugo site from Tailwind CSS v3 to v4"
 slug = "upgrading-a-hugo-website-from-tailwind-css-v3-to-v4"
 date = 2025-02-13
+lastmod = 2025-06-27T22:56:41+07:00
 draft = false
 
 # Page setting
@@ -83,9 +84,8 @@ Since `tailwind.config.js` is no longer used, migrate your custom styles to `sty
 I renamed my `postcss.config.js` to `postcss.config.mjs` (this may not be necessary) to match the TailwindCSS docs, so we need to update the `css.html` with the new file name:
 
 ```html
-...
-{{- $styles := resources.Get "css/styles.css" | postCSS (dict "config" "./assets/css/postcss.config.mjs") -}} 
-...
+... {{- $styles := resources.Get "css/styles.css" | postCSS (dict "config"
+"./assets/css/postcss.config.mjs") -}} ...
 ```
 
 ### Step 4: Running the site

@@ -4,6 +4,7 @@ title = "Goodbye pip, Hello uv"
 description = "A quick look at why I replaced pip and virtualenv with uv" 
 slug = "goodbye-pip-hello-uv"
 date = 2025-06-23T17:04:12+07:00
+lastmod = 2025-06-27T22:35:59+07:00
 draft = false
 
 # Page setting

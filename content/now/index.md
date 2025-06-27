@@ -2,8 +2,8 @@
 title = "Now"
 description = "A personal log of my shifting interests, explorations, and reflections."
 toc = true
+lastmod = 2025-06-27T22:56:41+07:00
 +++
-
 
 ## April 2025
 
