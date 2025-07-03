@@ -44,4 +44,4 @@ Every post on this site has a growth stage indicating how complete and comprehen
 
 ## Notes
 
-This site is always evolving. It's part personal lab, part public notebook. If you're curious about what's changed over time, check [this site repository](https://github.com/odhyp/odhyp.com).
+This site is always evolving. It's part personal lab, part public notebook.
