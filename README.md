@@ -1,6 +1,6 @@
 **[odhyp.com](https://odhyp.com)**
 
-my personal website and digital garden
+my personal website
 
 <br>
 
@@ -10,6 +10,10 @@ my personal website and digital garden
 
 <details>
 <summary>&nbsp;<code>self-note</code></summary>
+
+<br>
+
+> For my future self:
 
 ## Future additions?
 
