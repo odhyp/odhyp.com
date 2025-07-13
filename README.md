@@ -13,19 +13,19 @@ my personal website
 
 <br>
 
-> For my future self:
+_For my future self._
 
-## Future additions?
+## Get-shit-done list
 
+- [ ] Re-write icon-related content using Iconify
 - [ ] Shortcodes
   - [ ] Image side-by-side comparison
   - [ ] Image gallery/slider
-  - [x] Callouts (success, warning, danger, important, info)
-- [ ] Design a good logo
 - [ ] Enlarge images when clicked (image modal)
+- [ ] Filter function for list pages
 - [ ] Search function using Pagefind (put in on top-right corner)
-- [ ] Dark mode?
 - [ ] Include pagefind in package.json (`npm install pagefind`)
+- [ ] Dark mode?
 
 ## Adding new content
 
