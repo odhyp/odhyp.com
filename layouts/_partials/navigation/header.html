@@ -1,40 +1,114 @@
 {{ $current := .RelPermalink }}
 
 
-<header class="@container w-full shrink-0">
-  <div class="flex items-center justify-between px-12 py-8">
+<header class="@container relative w-full shrink-0">
+  <div class="flex items-center justify-between p-6 py-8 lg:px-12">
+    <!-- Logo -->
     <a href="/" class="group flex items-center gap-x-4">
       <img src="/logo.png" alt="Logo" class="size-12 rounded-full" />
       <span
-        class="font-geist border-b-2 border-b-black/0 font-medium tracking-wide lowercase group-hover:border-b-neutral-400"
+        class="font-geist border-b-2 border-b-black/0 font-medium tracking-wide whitespace-nowrap lowercase group-hover:border-b-neutral-400"
         >{{ .Site.Params.author.name }}</span
       >
     </a>
 
-    <nav class="font-geist flex gap-x-12">
+    <!-- Hamburger Menu Button -->
+    <button
+      id="menu-toggle"
+      aria-label="Toggle Menu"
+      class="flex items-center rounded-md border border-neutral-200 p-1.5 md:hidden"
+    >
+      <span class="relative h-6 w-6 overflow-hidden">
+        <iconify-icon
+          id="menu-open"
+          icon="material-symbols:menu-rounded"
+          width="24"
+          height="24"
+          class="absolute inset-0 size-6 scale-100 opacity-100 transition-all duration-300 ease-in-out"
+        ></iconify-icon>
+        <iconify-icon
+          id="menu-close"
+          icon="material-symbols:close-rounded"
+          width="24"
+          height="24"
+          class="absolute inset-0 size-6 scale-50 opacity-0 transition-all duration-300 ease-in-out"
+        ></iconify-icon>
+      </span>
+    </button>
+
+    <!-- Desktop Nav -->
+    <nav class="font-geist hidden md:flex md:gap-x-6 lg:gap-x-12">
       <a
-        {{ if eq $current "/projects/" }}aria-current="page"{{ end }}
+        {{ if eq $current "/" }}aria-current="page"{{ end }}
+        href="/"
+        >home
+      </a>
+      <a
+        {{ if strings.HasPrefix $current "/projects/" }}
+          aria-current="page"
+        {{ end }}
         href="/projects"
-        >projects</a
-      >
+        >projects
+      </a>
       <a
-        {{ if eq $current "/writings/" }}aria-current="page"{{ end }}
+        {{ if strings.HasPrefix $current "/writings/" }}
+          aria-current="page"
+        {{ end }}
         href="/writings"
-        >writings</a
-      >
+        >writings
+      </a>
       <a
-        {{ if eq $current "/notes/" }}aria-current="page"{{ end }}
+        {{ if strings.HasPrefix $current "/notes/" }}
+          aria-current="page"
+        {{ end }}
         href="/notes"
-        >notes</a
-      >
-      <a {{ if eq $current "/now/" }}aria-current="page"{{ end }} href="/now"
-        >now</a
-      >
+        >notes
+      </a>
+      <a
+        {{ if eq $current "/now/" }}aria-current="page"{{ end }}
+        href="/now"
+        >now
+      </a>
       <a
         {{ if eq $current "/about/" }}aria-current="page"{{ end }}
         href="/about"
-        >about</a
-      >
+        >about
+      </a>
     </nav>
   </div>
+
+  <!-- Mobile Nav -->
+  <nav
+    id="menu"
+    class="absolute top-20 right-6 z-40 mt-2 flex hidden w-fit scale-95 transform flex-col items-end gap-y-4 rounded-md border border-neutral-200 bg-neutral-50 px-6 py-4 opacity-0 shadow-md transition-all duration-300 ease-out md:hidden"
+  >
+    <a
+      {{ if eq $current "/" }}aria-current="page"{{ end }}
+      href="/"
+      >home
+    </a>
+    <a
+      {{ if eq $current "/projects/" }}aria-current="page"{{ end }}
+      href="/projects"
+      >projects
+    </a>
+    <a
+      {{ if eq $current "/writings/" }}aria-current="page"{{ end }}
+      href="/writings"
+      >writings
+    </a>
+    <a
+      {{ if eq $current "/notes/" }}aria-current="page"{{ end }}
+      href="/notes"
+      >notes
+    </a>
+    <a {{ if eq $current "/now/" }}aria-current="page"{{ end }} href="/now"
+      >now
+    </a>
+    <a
+      {{ if eq $current "/about/" }}aria-current="page"{{ end }}
+      href="/about"
+      >about
+    </a>
+  </nav>
 </header>
