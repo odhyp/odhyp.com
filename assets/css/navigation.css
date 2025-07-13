@@ -7,7 +7,7 @@ header nav a {
 }
 
 .footer-icon {
-  @apply flex items-center rounded-md p-2 transition-colors ease-in-out hover:bg-neutral-200/50;
+  @apply flex items-center rounded-md transition-colors ease-in-out hover:bg-neutral-200/50 @4xl:p-2;
 }
 
 /* Table of Contents */

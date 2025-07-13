@@ -1,8 +1,13 @@
 <footer
   class="@container w-full shrink-0 border-t border-t-neutral-300 text-sm"
 >
-  <div class="flex items-center justify-between px-12 py-8">
-    <div class="flex gap-x-16">
+  <div
+    class="flex flex-col-reverse gap-y-8 px-12 py-8 @xl:flex-row @xl:items-center @xl:justify-between"
+  >
+    <!-- Copyright and Nav -->
+    <div
+      class="grid grid-cols-2 gap-4 @md:gap-8 @3xl:flex @4xl:gap-x-8 @5xl:gap-x-12"
+    >
       <div class="flex flex-col gap-y-1">
         <span class="font-semibold">&copy; {{ now.Year }}</span>
         <span class="font-light">{{ .Site.Params.author.name }}</span>
@@ -15,7 +20,7 @@
 
       <div class="flex flex-col gap-y-1">
         <span class="font-semibold">Social</span>
-        <div class="flex gap-x-1">
+        <div class="flex flex-wrap gap-x-1">
           <a
             class="footer-link"
             href="https://www.threads.com/@odhypradhana"
@@ -34,11 +39,14 @@
 
       <div class="flex flex-col gap-y-1">
         <span class="font-semibold">Legal</span>
-        <a class="footer-link" href="/privacy-policy">Privacy Policy</a>
+        <a class="footer-link whitespace-nowrap" href="/privacy-policy"
+          >Privacy Policy</a
+        >
       </div>
     </div>
 
-    <div class="flex items-center gap-x-2">
+    <!-- Social Icons -->
+    <div class="flex items-center gap-x-4 @4xl:gap-x-2">
       <!-- Github -->
       <a
         title="GitHub"
