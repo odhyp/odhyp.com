@@ -1,12 +1,40 @@
+{{ $current := .RelPermalink }}
+
+
 <header class="@container w-full shrink-0">
-  <div class="flex items-center justify-center">
-    <nav
-      class="flex w-full flex-wrap items-center justify-between gap-4 px-6 py-8 md:px-8 @md:w-md"
-    >
-      <a href="/" class="">home</a>
-      <a href="/projects" class="">projects</a>
-      <a href="/writings" class="">writings</a>
-      <a href="/now" class="">now</a>
+  <div class="flex items-center justify-between px-12 py-8">
+    <a href="/" class="group flex items-center gap-x-4">
+      <img src="/logo.png" alt="Logo" class="size-12 rounded-full" />
+      <span
+        class="font-geist border-b-2 border-b-black/0 font-medium tracking-wide group-hover:border-b-neutral-400"
+        >odhy pradhana</span
+      >
+    </a>
+
+    <nav class="font-geist flex gap-x-12">
+      <a
+        {{ if eq $current "/projects/" }}aria-current="page"{{ end }}
+        href="/projects"
+        >projects</a
+      >
+      <a
+        {{ if eq $current "/writings/" }}aria-current="page"{{ end }}
+        href="/writings"
+        >writings</a
+      >
+      <a
+        {{ if eq $current "/notes/" }}aria-current="page"{{ end }}
+        href="/notes"
+        >notes</a
+      >
+      <a {{ if eq $current "/now/" }}aria-current="page"{{ end }} href="/now"
+        >now</a
+      >
+      <a
+        {{ if eq $current "/about/" }}aria-current="page"{{ end }}
+        href="/about"
+        >about</a
+      >
     </nav>
   </div>
 </header>
