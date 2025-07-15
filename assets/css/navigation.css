@@ -1,13 +1,13 @@
 header nav a {
-  @apply block w-fit border-b-2 border-b-black/0 font-medium tracking-wide hover:border-b-neutral-400 aria-[current=page]:border-b-red-700 aria-[current=page]:text-red-700;
+  @apply block w-fit border-b-2 border-b-neutral-400/0 font-medium tracking-wide transition-colors duration-300 ease-in-out hover:border-b-neutral-400 aria-[current=page]:border-b-red-700 aria-[current=page]:text-red-700;
 }
 
 .footer-link {
-  @apply block w-fit border-b border-b-neutral-400 font-light hover:border-b-neutral-800 hover:font-normal;
+  @apply block w-fit border-b border-b-neutral-400 font-light transition-colors duration-300 ease-in-out hover:border-b-neutral-800 hover:font-normal;
 }
 
 .footer-icon {
-  @apply flex items-center rounded-md transition-colors ease-in-out hover:bg-neutral-200/50 @4xl:p-2;
+  @apply flex items-center rounded-md transition-colors duration-300 ease-in-out hover:bg-neutral-200/50 @4xl:p-2;
 }
 
 /* Table of Contents */
