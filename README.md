@@ -17,7 +17,6 @@ _For my future self._
 
 ## Get-shit-done list
 
-- [ ] Re-write icon-related content using Iconify
 - [ ] Shortcodes
   - [ ] Image side-by-side comparison
   - [ ] Image gallery/slider
