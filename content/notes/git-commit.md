@@ -4,6 +4,7 @@ title = "Git Commit"
 description = "Write Git commits that make sense, stay readable, and help track changes clearly" 
 slug = "git-commit"
 date = 2025-07-14T17:25:31+07:00
+lastmod = 2025-07-14T17:25:31+07:00
 draft = false
 
 # Page setting

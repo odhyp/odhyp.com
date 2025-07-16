@@ -4,6 +4,7 @@ title = "Git Branch"
 description = "Using git branch to create, switch, merge, and keep things clean by isolating work"
 slug = "git-branch"
 date = 2025-07-13T22:43:08+07:00
+lastmod = 2025-07-13T22:43:08+07:00
 draft = false
 
 # Page setting
