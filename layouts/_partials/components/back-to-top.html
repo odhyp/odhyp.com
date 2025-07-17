@@ -1,27 +1,9 @@
 <!-- TODO: Currently unused -->
 <button
-  id="backToTop"
+  id="back-to-top"
   aria-label="Back to top"
   title="Back to top"
   class="fixed right-8 bottom-8 z-50 scale-0 cursor-pointer rounded-full bg-neutral-900/50 p-2 opacity-0 transition-all duration-300 ease-in-out hover:bg-neutral-900"
 >
   <i data-lucide="arrow-up" class="size-6 text-neutral-50"></i>
 </button>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const btn = document.getElementById("backToTop");
-
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 300) {
-        btn.classList.remove("scale-0", "opacity-0");
-      } else {
-        btn.classList.add("scale-0", "opacity-0");
-      }
-    });
-
-    btn.addEventListener("click", () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-  });
-</script>
