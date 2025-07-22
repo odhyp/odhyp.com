@@ -23,5 +23,5 @@ article .footnote-backref {
 }
 
 h1 {
-  @apply mb-4 leading-tight font-light;
+  @apply mb-4 leading-tight font-bold;
 }
