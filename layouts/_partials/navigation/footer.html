@@ -10,7 +10,9 @@
     >
       <div class="flex flex-col gap-y-1">
         <span class="font-semibold">&copy; {{ now.Year }}</span>
-        <span class="font-light">{{ .Site.Params.author.name }}</span>
+        <a href="{{ .Site.BaseURL }}" class="footer-link"
+          >{{ .Site.Params.author.name }}</a
+        >
       </div>
 
       <div class="flex flex-col gap-y-1">
