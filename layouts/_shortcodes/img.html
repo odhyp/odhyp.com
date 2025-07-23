@@ -14,7 +14,9 @@
     loading="lazy"
   />
   {{ with $caption }}
-    <figcaption class="mt-4 text-center text-neutral-900/60">
+    <figcaption
+      class="mx-auto mt-4 w-full max-w-prose text-center text-neutral-500"
+    >
       {{ . | markdownify }}
     </figcaption>
   {{ end }}
