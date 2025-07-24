@@ -1,13 +1,13 @@
 {{ $current := .RelPermalink }}
 
 
-<header class="@container relative w-full shrink-0">
-  <div class="flex items-center justify-between p-6 py-8 lg:px-12">
+<header class="font-geist @container relative w-full shrink-0">
+  <div class="flex items-center justify-between p-6 lg:px-12">
     <!-- Logo -->
     <a href="/" class="group flex items-center gap-x-4">
-      <img src="/logo.png" alt="Logo" class="size-12 rounded-full" />
+      <img src="/logo.png" alt="Logo" class="size-10 rounded-full md:size-12" />
       <span
-        class="font-geist border-b-2 border-b-neutral-400/0 font-medium tracking-wide whitespace-nowrap lowercase transition-colors duration-300 ease-in-out group-hover:border-b-neutral-400"
+        class="border-b-2 border-b-neutral-400/0 text-sm font-medium tracking-wide whitespace-nowrap transition-colors duration-300 ease-in-out group-hover:border-b-neutral-400 md:text-base"
         >{{ .Site.Params.author.name }}</span
       >
     </a>
@@ -16,7 +16,7 @@
     <button
       id="menu-toggle"
       aria-label="Toggle Menu"
-      class="flex items-center rounded-md border border-neutral-200 p-1.5 md:hidden"
+      class="flex items-center rounded-md border border-neutral-200 p-1.5 lg:hidden"
     >
       <span class="relative h-6 w-6 overflow-hidden">
         <iconify-icon
@@ -37,42 +37,42 @@
     </button>
 
     <!-- Desktop Nav -->
-    <nav class="font-geist hidden md:flex md:gap-x-6 lg:gap-x-12">
+    <nav class="hidden lg:flex lg:gap-x-12">
       <a
         {{ if eq $current "/" }}aria-current="page"{{ end }}
         href="/"
-        >home
+        >Home
       </a>
       <a
         {{ if strings.HasPrefix $current "/projects/" }}
           aria-current="page"
         {{ end }}
         href="/projects"
-        >projects
+        >Projects
       </a>
       <a
         {{ if strings.HasPrefix $current "/writings/" }}
           aria-current="page"
         {{ end }}
         href="/writings"
-        >writings
+        >Writings
       </a>
       <a
         {{ if strings.HasPrefix $current "/notes/" }}
           aria-current="page"
         {{ end }}
         href="/notes"
-        >notes
+        >Notes
       </a>
       <a
         {{ if eq $current "/now/" }}aria-current="page"{{ end }}
         href="/now"
-        >now
+        >Now
       </a>
       <a
         {{ if eq $current "/about/" }}aria-current="page"{{ end }}
         href="/about"
-        >about
+        >About
       </a>
     </nav>
   </div>
@@ -80,35 +80,35 @@
   <!-- Mobile Nav -->
   <nav
     id="menu"
-    class="absolute top-20 right-6 z-40 mt-2 flex hidden w-fit scale-95 transform flex-col items-end gap-y-4 rounded-md border border-neutral-200 bg-neutral-50 px-6 py-4 opacity-0 shadow-md transition-all duration-300 ease-out md:hidden"
+    class="absolute top-20 right-6 z-40 mt-2 flex hidden w-fit scale-95 transform flex-col items-end gap-y-4 rounded-md border border-neutral-200 bg-neutral-50 px-6 py-4 opacity-0 shadow-md transition-all duration-300 ease-out lg:hidden"
   >
     <a
       {{ if eq $current "/" }}aria-current="page"{{ end }}
       href="/"
-      >home
+      >Home
     </a>
     <a
       {{ if eq $current "/projects/" }}aria-current="page"{{ end }}
       href="/projects"
-      >projects
+      >Projects
     </a>
     <a
       {{ if eq $current "/writings/" }}aria-current="page"{{ end }}
       href="/writings"
-      >writings
+      >Writings
     </a>
     <a
       {{ if eq $current "/notes/" }}aria-current="page"{{ end }}
       href="/notes"
-      >notes
+      >Notes
     </a>
     <a {{ if eq $current "/now/" }}aria-current="page"{{ end }} href="/now"
-      >now
+      >Now
     </a>
     <a
       {{ if eq $current "/about/" }}aria-current="page"{{ end }}
       href="/about"
-      >about
+      >About
     </a>
   </nav>
 </header>
