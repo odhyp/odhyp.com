@@ -269,7 +269,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   window.addEventListener("scroll", () => {
     const showAfter = 300;
-    const hideBeforeBottom = 300;
+    const hideBeforeBottom = 100;
 
     const scrollY = window.scrollY;
     const pageHeight = document.documentElement.scrollHeight;
