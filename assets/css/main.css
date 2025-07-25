@@ -33,7 +33,7 @@
   }
 
   section {
-    @apply w-full px-6 py-12 md:px-0 md:py-24 lg:py-32;
+    @apply w-full px-6 py-12 md:py-24 lg:px-12 lg:py-32;
   }
 
   /* Article related */
