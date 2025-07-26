@@ -1,7 +1,10 @@
 {{ define "main" }}
   <section>
-    <article>
-      <h1>{{ .Title }}</h1>
+    <article class="mb-12">
+      <h1 class="mb-4!">{{ .Title }}</h1>
+      <div class="flex flex-wrap gap-2">
+        {{ partial "components/tech-stacks.html" . }}
+      </div>
     </article>
 
     <div
