@@ -1,14 +1,21 @@
 {{ define "main" }}
   <section>
-    <article data-pagefind-body>
-      <h1 data-pagefind-body>{{ .Title }}</h1>
-      <h2 class="not-prose text-neutral-900/60 italic">{{ .Description }}</h2>
-      <hr />
-      {{ .Content }}
+    <article>
+      <h1>{{ .Title }}</h1>
     </article>
 
-    {{ if or (eq .Section "projects") (eq .Section "writings") }}
-      {{ partial "components/giscus.html" . }}
-    {{ end }}
+    <div
+      class="@container w-full 2xl:grid 2xl:grid-cols-[1fr_auto_1fr] 2xl:gap-x-12"
+    >
+      <div class="hidden py-2 2xl:block">
+        {{ partial "components/toc.html" . }}
+      </div>
+
+      <article>{{ .Content }}</article>
+
+      <div class="hidden"></div>
+    </div>
+
+    {{ partial "components/giscus.html" . }}
   </section>
 {{ end }}
