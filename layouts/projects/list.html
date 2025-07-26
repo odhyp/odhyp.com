@@ -1,23 +1,94 @@
 {{ define "main" }}
-  <section id="projects">
-    <!-- Pages Heading -->
-    <article class="lg:max-w-3xl lg:text-center xl:max-w-4xl 2xl:max-w-5xl">
-      <h1>{{ .Title }}</h1>
-      <div class="mx-auto w-full max-w-prose text-neutral-900/60 italic">
-        {{ .Content }}
-      </div>
+  <section
+    id="main-projects"
+    class="w-full sm:mx-auto sm:max-w-lg md:max-w-xl lg:max-w-6xl"
+  >
+    <article class="lg:mx-0!">
+      <h1 class="mb-0! font-bold tracking-tight">Main Projects</h1>
+      <p class="text-neutral-500 italic">
+        Core projects with ongoing attention and long-term goals.
+      </p>
     </article>
 
-    <!-- Projects Cards -->
-    <div class="@container w-full py-4 md:p-8">
+    <div class="@container my-16">
       <div
-        class="grid grid-cols-1 gap-4 @xl:grid-cols-2 @4xl:grid-cols-3 @4xl:gap-8 @7xl:grid-cols-4"
+        class="grid w-full max-w-full grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16"
       >
-        {{- with site.GetPage "section" "projects" }}
-          {{- range .RegularPagesRecursive }}
-            {{ partial "components/cards/project.html" . }}
-          {{- end }}
-        {{- end }}
+        {{ range sort (where .Pages "Params.project_type" "main") "Lastmod" "desc" }}
+          <div class="flex flex-col gap-y-4">
+            <a
+              href="{{ .RelPermalink }}"
+              class="group overflow-hidden rounded-md border border-neutral-300 bg-neutral-50 transition-all duration-300 ease-in-out hover:shadow-lg"
+            >
+              <img
+                src="{{ .Params.Cover }}"
+                alt="{{ .Title }} Cover Image"
+                class="block h-64 w-full rounded-md object-cover object-center transition-all duration-300 ease-in-out group-hover:scale-105"
+              />
+            </a>
+
+            <div class="flex flex-col gap-y-2 px-4">
+              <a
+                href="{{ .RelPermalink }}"
+                class="w-fit text-xl font-bold transition-colors duration-300 ease-in-out hover:text-red-700 sm:text-2xl"
+                >{{ .Title }}
+              </a>
+              <p class="font-inter text-neutral-600 sm:text-lg">
+                {{ .Description }}
+              </p>
+              <div class="mt-2 flex flex-wrap gap-2">
+                {{ partial "components/tech-stacks.html" . }}
+              </div>
+            </div>
+          </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+
+  <section
+    id="other-projects"
+    class="w-full max-w-3xl pt-16 lg:mx-auto lg:max-w-6xl lg:pt-0"
+  >
+    <article class="mx-0!">
+      <h1 class="mb-0! font-bold tracking-tight">Other Projects</h1>
+      <p class="text-neutral-500 italic">
+        Side projects, experiments, and past builds.
+      </p>
+    </article>
+
+    <div class="@container my-16">
+      <div
+        class="grid w-full max-w-full grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16"
+      >
+        {{ range sort (where .Pages "Params.project_type" "other") "Lastmod" "desc" }}
+          <div class="flex flex-col gap-y-4">
+            <a
+              href="{{ .RelPermalink }}"
+              class="group overflow-hidden rounded-md border border-neutral-300 bg-neutral-50 transition-all duration-300 ease-in-out hover:shadow-lg"
+            >
+              <img
+                src="{{ .Params.Cover }}"
+                alt="{{ .Title }} Cover Image"
+                class="block h-64 w-full rounded-md object-cover object-center transition-all duration-300 ease-in-out group-hover:scale-105"
+              />
+            </a>
+
+            <div class="flex flex-col gap-y-2 px-4">
+              <a
+                href="{{ .RelPermalink }}"
+                class="w-fit text-xl font-bold transition-colors duration-300 ease-in-out hover:text-red-700 sm:text-2xl"
+                >{{ .Title }}
+              </a>
+              <p class="font-inter text-neutral-600 sm:text-lg">
+                {{ .Description }}
+              </p>
+              <div class="mt-2 flex flex-wrap gap-2">
+                {{ partial "components/tech-stacks.html" . }}
+              </div>
+            </div>
+          </div>
+        {{ end }}
       </div>
     </div>
   </section>
