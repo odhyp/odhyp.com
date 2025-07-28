@@ -8,15 +8,15 @@ lastmod = 2025-06-27T22:35:59+07:00
 draft = false
 
 # Page setting
-section_type = "log" # article, note, log, idea
-stage = "growing" # sapling, growing, evergreen
 toc = true
-cover = ""
+cover = "https://placehold.co/1200x675"
 
 # Taxonomies & Routing
 topics = ["digital garden", "updates"]
 aliases = ["/site-updates", "/a-new-look", "/blog/a-new-look"]
 +++
+
+## July 2025
 
 ## April 2025
 
