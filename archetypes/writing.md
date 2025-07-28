@@ -8,10 +8,8 @@ lastmod = {{ now.Format "2006-01-02T15:04:05+07:00" }}
 draft = true
 
 # Page setting
-section_type = "idea" # article, note, log, idea
-stage = "sapling" # sapling, growing, evergreen
 toc = true
-cover = "https://placehold.co/1200x400"
+cover = "https://placehold.co/1200x675"
 
 # Taxonomies & Routing
 topics = []
