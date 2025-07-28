@@ -9,7 +9,9 @@ draft = false
 
 # Page setting
 toc = true
-cover = ""
+featured = true
+project_type = "main" # main or other
+cover = "https://www.notion.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Fspoqsaf9291f%2F3SCnrzrIahW7ZjVCPGu8Zz%2F74aabfce93e6ce46d55a35296a463255%2Fmail02-final.png&w=3840&q=75"
 
 # Taxonomies & Routing
 tech_stacks = ["python","web automation", "playwright", "pandas", "CLI"]
@@ -18,8 +20,9 @@ aliases = ["/sipd-ri-helper", "/sipd-ri"]
 
 **SIPD-RI Helper** is a Python-based command-line application that automates tasks on the [SIPD-RI](https://sipd.kemendagri.go.id/landing) web application. It helps reduce human error and saves time by automating browser actions using Playwright, from login to form submission and data retrieval.
 
-{{< wrapper class="flex justify-center" >}}
-{{< cta href="https://github.com/odhyp/sipd-ri" text="View Repository" icon="github" >}}
+{{< wrapper class="grid grid-cols-1 gap-y-4 sm:grid-cols-2 sm:gap-x-8" >}}
+{{< cta href="https://github.com/odhyp/sipd-ri" icon="github" text="View Repository" >}}
+{{< cta href="/" group="material-symbols" icon="book-5-rounded" text="Visit Documentation" >}}
 {{< /wrapper >}}
 
 ## Features
