@@ -8,22 +8,11 @@ lastmod = {{ now.Format "2006-01-02T15:04:05+07:00" }}
 draft = true
 
 # Page setting
-toc = true
-cover = "https://placehold.co/1200x675"
+toc = false
 
 # Taxonomies & Routing
-topics = []
-aliases = ["/{{ .File.BaseFileName | strings.TrimPrefix (substr .File.BaseFileName 0 11) }}"]
+category = ""
+aliases = ["/{{ .File.ContentBaseName | lower }}"]
 +++
 
-> A brief summary of what this writing is about.
-
-## Content
-
-Start writing your idea, thought, or insight here.
-
----
-
-## References
-
-Reference here
+> Your note here!

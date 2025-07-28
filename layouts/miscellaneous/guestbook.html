@@ -1,8 +1,10 @@
 {{ define "main" }}
   <section>
-    <article>
-      <h1>{{ .Title }}</h1>
-      {{ .Content }}
+    <article class="mb-12 text-center">
+      <h1 class="my-0! mb-2! leading-tight">{{ .Title }}</h1>
+      <p class="my-0! text-neutral-500 italic">
+        {{ .Params.Description }}
+      </p>
     </article>
 
     <!-- GUESTBOOK -->

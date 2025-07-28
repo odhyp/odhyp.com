@@ -6,6 +6,8 @@
 // 03. CODE BLOCK COPY
 // 04. TABLE OF CONTENTS DROPDOWN
 // 05. TABLE OF CONTENTS HIGHLIGHT
+// 06. HAMBURGER MENU
+// 07. BACK TO TOP BUTTON
 
 // 00. LOAD ALL FUNCTION ----------------------------------------------------------------
 document.addEventListener("DOMContentLoaded", () => {
@@ -14,6 +16,8 @@ document.addEventListener("DOMContentLoaded", () => {
   codeBlockCopyButton();
   tocToggle();
   tocHighlight();
+  hamburgerMenu();
+  backToTopButton();
 });
 
 // 01. UPDATE RELATIVE DATES ------------------------------------------------------------
@@ -200,3 +204,86 @@ function tocHighlight() {
   window.addEventListener("scroll", setActive);
   setActive();
 }
+
+// 06. HAMBURGER MENU -------------------------------------------------------------------
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleBtn = document.getElementById("menu-toggle");
+  const menu = document.getElementById("menu");
+  const iconOpen = document.getElementById("menu-open");
+  const iconClose = document.getElementById("menu-close");
+
+  let isOpen = false;
+
+  const openMenu = () => {
+    // Jump out open, jump in close
+    iconOpen.classList.remove("opacity-100", "scale-100");
+    iconOpen.classList.add("opacity-0", "scale-0");
+
+    iconClose.classList.remove("opacity-0", "scale-0");
+    iconClose.classList.add("opacity-100", "scale-100");
+
+    menu.classList.remove("hidden");
+    requestAnimationFrame(() => {
+      menu.classList.add("opacity-100", "scale-100");
+      menu.classList.remove("opacity-0", "scale-95");
+    });
+
+    toggleBtn.setAttribute("aria-expanded", "true");
+    isOpen = true;
+  };
+
+  const closeMenu = () => {
+    // Jump out close, jump in open
+    iconOpen.classList.remove("opacity-0", "scale-0");
+    iconOpen.classList.add("opacity-100", "scale-100");
+
+    iconClose.classList.remove("opacity-100", "scale-100");
+    iconClose.classList.add("opacity-0", "scale-0");
+
+    menu.classList.add("opacity-0", "scale-95");
+    menu.classList.remove("opacity-100", "scale-100");
+    toggleBtn.setAttribute("aria-expanded", "false");
+    isOpen = false;
+
+    menu.addEventListener("transitionend", function handler() {
+      if (!isOpen) menu.classList.add("hidden");
+      menu.removeEventListener("transitionend", handler);
+    });
+  };
+
+  toggleBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    isOpen ? closeMenu() : openMenu();
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!menu.contains(e.target) && !toggleBtn.contains(e.target) && isOpen) {
+      closeMenu();
+    }
+  });
+});
+
+// 07. BACK TO TOP BUTTON ---------------------------------------------------------------
+document.addEventListener("DOMContentLoaded", () => {
+  const btn = document.getElementById("back-to-top");
+
+  window.addEventListener("scroll", () => {
+    const showAfter = 300;
+    const hideBeforeBottom = 100;
+
+    const scrollY = window.scrollY;
+    const pageHeight = document.documentElement.scrollHeight;
+    const windowHeight = window.innerHeight;
+    const fromBottom = pageHeight - (scrollY + windowHeight);
+
+    if (scrollY > showAfter && fromBottom > hideBeforeBottom) {
+      btn.classList.remove("scale-0", "opacity-0");
+    } else {
+      btn.classList.add("scale-0", "opacity-0");
+    }
+  });
+
+  btn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+});

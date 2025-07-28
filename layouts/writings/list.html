@@ -1,62 +1,54 @@
 {{ define "main" }}
-  <section id="writings">
-    <!-- Pages Heading -->
-    <article class="lg:max-w-3xl lg:text-center xl:max-w-4xl 2xl:max-w-5xl">
-      <h1>{{ .Title }}</h1>
-      <div class="mx-auto w-full max-w-prose text-neutral-900/60 italic">
-        {{ .Content }}
-      </div>
+  <section
+    id="writings"
+    class="w-full sm:mx-auto sm:max-w-lg md:max-w-xl lg:max-w-6xl"
+  >
+    <article class="lg:mx-0!">
+      <h1 class="mb-0! font-bold tracking-tight">Writings</h1>
+      <p class="text-neutral-500 italic">
+        A growing collection of insights, musings, and discoveries.
+      </p>
     </article>
 
-    <!-- Page Content - Filters -->
-    <!-- TODO: make a better filter -->
-    <div class="hidden p-8 2xl:hidden">
-      <div class="sticky top-8">
-        <label for="topicFilter" class="mb-1 block text-sm font-medium"
-          >Filter by Topic</label
-        >
-        <select id="topicFilter" class="w-64 rounded border p-2">
-          <option value="">All Topics</option>
-          {{- $allTopics := slice -}}
-          {{- range .Site.RegularPages -}}
-            {{- with .Params.topics -}}
-              {{- range . }}
-                {{- $allTopics = $allTopics | append . }}
-              {{- end }}
-            {{- end }}
-          {{- end }}
-          {{- range ($allTopics | uniq | sort) }}
-            <option value="{{ . }}">{{ . }}</option>
-          {{- end }}
-        </select>
-      </div>
-    </div>
+    <div class="@container my-8 lg:my-16">
+      <div
+        class="grid w-full max-w-full grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16"
+      >
+        {{ range sort .Pages "Lastmod" "desc" }}
+          <div class="flex flex-col gap-y-4">
+            <a
+              href="{{ .RelPermalink }}"
+              class="group overflow-hidden rounded-md border border-neutral-200 bg-neutral-50 transition-all duration-300 ease-in-out hover:border-neutral-300 hover:shadow-lg"
+            >
+              <img
+                src="{{ .Params.Cover }}"
+                alt="{{ .Title }} Cover Image"
+                class="block aspect-16/9 rounded-md object-cover object-center transition-all duration-300 ease-in-out group-hover:scale-105"
+              />
+            </a>
 
-    <!-- Writing Cards -->
-    <div id="writingsList" class="@container w-full py-4 md:p-8">
-      <div class="columns-1 @xl:columns-2 @4xl:columns-3 @7xl:columns-4">
-        {{- with site.GetPage "section" "writings" }}
-          {{- range .RegularPagesRecursive }}
-            {{ partial "components/cards/writing.html" . }}
-          {{- end }}
-        {{- end }}
+            <div class="flex flex-col gap-y-2 px-4">
+              <a
+                href="{{ .RelPermalink }}"
+                class="font-geist w-fit text-xl font-bold tracking-tight transition-colors duration-300 ease-in-out hover:text-red-700 sm:text-2xl"
+                >{{ .Title }}
+              </a>
+              <p class="font-inter text-neutral-600 sm:text-lg">
+                {{ .Description }}
+              </p>
+              <p class="text-sm text-neutral-500">
+                <span class="font-medium">Updated:</span>
+                <span
+                  class="relative-time"
+                  data-time="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}"
+                >
+                  {{ .Lastmod.Format "Jan 02, 2006" }}
+                </span>
+              </p>
+            </div>
+          </div>
+        {{ end }}
       </div>
     </div>
   </section>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const filter = document.getElementById("topicFilter");
-      const cards = document.querySelectorAll(".writing-card");
-
-      filter.addEventListener("change", () => {
-        const selected = filter.value.toLowerCase();
-        cards.forEach((card) => {
-          const topics = card.dataset.topics.toLowerCase().split(",");
-          const match = selected === "" || topics.includes(selected);
-          card.style.display = match ? "block" : "none";
-        });
-      });
-    });
-  </script>
 {{ end }}

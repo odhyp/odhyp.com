@@ -9,10 +9,12 @@ draft = false
 
 # Page setting
 toc = false
-cover = ""
+featured = true
+project_type = "other" # main or other
+cover = "https://placehold.co/1200x675"
 
 # Taxonomies & Routing
-tech_stacks = ["hugo", "tailwindcss", "vercel"]
+tech_stacks = ["hugo", "tailwindcss", "vercel", "GitHub Pages", "Netlify"]
 aliases = ["/hugo-tailwindcss-starter"]
 +++
 

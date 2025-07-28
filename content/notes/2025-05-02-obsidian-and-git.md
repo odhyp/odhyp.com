@@ -8,10 +8,8 @@ lastmod = 2025-06-27T22:35:59+07:00
 draft = false
 
 # Page setting
-section_type = "idea" # article, note, log, idea
-stage = "sapling" # sapling, growing, evergreen
 toc = false
-cover = ""
+cover = "https://placehold.co/1200x675"
 
 # Taxonomies & Routing
 topics = ["obsidian", "git"]

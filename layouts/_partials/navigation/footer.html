@@ -1,135 +1,93 @@
-<footer class="@container relative w-full shrink-0 text-neutral-50">
-  <!-- BACKGROUND PATTERN START -->
+<footer
+  class="font-geist @container w-full shrink-0 border-t border-t-neutral-200 bg-neutral-50 text-sm"
+>
   <div
-    class="absolute -z-40 h-full w-full bg-neutral-900 bg-[radial-gradient(#333333_1px,transparent_1px)] [background-size:32px_32px]"
-  ></div>
-  <!-- BACKGROUND PATTERN END -->
-
-  <div class="flex flex-col items-center justify-center">
-    <!-- Footer Heading & Nav -->
+    class="flex flex-col-reverse gap-y-8 px-6 py-8 lg:px-12 @3xl:flex-row @3xl:items-center @3xl:justify-between"
+  >
+    <!-- Copyright and Nav -->
     <div
-      class="my-8 flex w-full max-w-lg flex-col gap-y-12 p-8 @3xl:max-w-3xl @4xl:max-w-4xl @6xl:max-w-6xl @6xl:flex-row @6xl:justify-between @7xl:max-w-7xl"
+      class="grid grid-cols-2 gap-4 @md:gap-8 @xl:flex @xl:justify-between @4xl:gap-x-12 @5xl:gap-x-16"
     >
-      <!-- Nav Heading and Socials -->
-      <div
-        class="flex w-full max-w-sm flex-col gap-y-2 @6xl:max-w-xs @7xl:max-w-sm"
-      >
-        <a
-          href="/"
-          class="w-fit border-b border-neutral-300/0 text-4xl font-light transition-all ease-in-out hover:border-neutral-300"
-          >Pradhana.</a
+      <div class="flex flex-col gap-y-1">
+        <span class="font-semibold">&copy; {{ now.Year }}</span>
+        <a href="{{ .Site.BaseURL }}" class="footer-link"
+          >{{ .Site.Params.author.name }}</a
         >
-        <span class="font-light text-neutral-50/60">
-          {{ partial "navigation/footer-quotes.html" . }}
-        </span>
+      </div>
 
-        <!-- Socials -->
-        <div
-          class="footer-link my-4 flex flex-wrap items-center gap-x-6 @4xl:gap-x-8"
-        >
-          <!-- Github -->
+      <div class="flex flex-col gap-y-1">
+        <span class="font-semibold">Connect</span>
+        <a class="footer-link" href="/guestbook">Guestbook</a>
+      </div>
+
+      <div class="flex flex-col gap-y-1">
+        <span class="font-semibold">Social</span>
+        <div class="flex flex-wrap gap-x-1">
           <a
-            title="GitHub"
+            class="footer-link"
+            href="https://www.threads.com/@odhypradhana"
             target="_blank"
-            href="https://github.com/odhyp/"
-            class="flex items-center gap-x-2 hover:underline hover:underline-offset-4"
-            ><i data-lucide="github" class="size-6"></i>
-          </a>
-
-          <!-- LinkedIn -->
+            >Threads</a
+          >
+          <span>/</span>
           <a
-            title="LinkedIn"
+            class="footer-link"
+            href="https://bsky.app/profile/odhyp.com"
             target="_blank"
-            href="https://www.linkedin.com/in/odhy/"
-            class="flex items-center gap-x-2 hover:underline hover:underline-offset-4"
-            ><i data-lucide="linkedin" class="size-6"></i>
-          </a>
-
-          <!-- Instagram -->
-          <a
-            title="Instagram"
-            target="_blank"
-            href="https://www.instagram.com/odhypradhana"
-            class="flex items-center gap-x-2 hover:underline hover:underline-offset-4"
-            ><i data-lucide="instagram" class="size-6"></i>
-          </a>
-
-          <!-- Buymeacoffee -->
-          <a
-            title="Sponsor"
-            target="_blank"
-            href="https://buymeacoffee.com/odhyp"
-            class="flex items-center gap-x-2 hover:underline hover:underline-offset-4"
-            ><i data-lucide="coffee" class="size-6"></i>
-          </a>
-
-          <!-- RSS Feed -->
-          <a
-            title="RSS Feed"
-            href="/index.xml"
-            class="flex items-center gap-x-2 hover:underline hover:underline-offset-4"
-            ><i data-lucide="rss" class="size-6"></i>
-          </a>
+            >Bluesky</a
+          >
         </div>
       </div>
 
-      <div
-        class="footer-link grid shrink-0 grid-cols-2 gap-8 @3xl:grid-cols-4 @3xl:gap-x-4 @7xl:gap-x-8"
-      >
-        <!-- Nav - Explore -->
-        <div class="flex flex-col gap-2">
-          <span class="mb-2">Explore</span>
-          <a href="/projects">Projects</a>
-          <a href="/writings">Writings</a>
-          <a href="/now">Now</a>
-        </div>
-
-        <!-- Nav - Resources -->
-        <div class="flex flex-col gap-2">
-          <span class="mb-2">Resources</span>
-          <a href="/tech_stacks">Tech Stacks</a>
-          <a href="/topics">Topics</a>
-          <a href="/colophon">Colophon</a>
-        </div>
-
-        <!-- Nav - Connect -->
-        <div class="flex flex-col gap-2">
-          <span class="mb-2">Connect</span>
-          <a href="/collaborate">Collaborate</a>
-          <a href="/guestbook">Guestbook</a>
-          <a href="/support">Support</a>
-        </div>
-
-        <!-- Nav - Legal -->
-        <div class="flex flex-col gap-2">
-          <span class="mb-2">Legal</span>
-          <a href="/privacy-policy">Privacy Policy</a>
-          <a href="/terms-of-service">Terms of Service</a>
-          <a href="/disclaimer">Disclaimer</a>
-        </div>
+      <div class="flex flex-col gap-y-1">
+        <span class="font-semibold">Legal</span>
+        <a class="footer-link whitespace-nowrap" href="/privacy-policy"
+          >Privacy Policy</a
+        >
       </div>
     </div>
 
-    <!-- Footer Email & Copyright -->
-    <div class="w-full border-t border-neutral-800 bg-neutral-900">
-      <div
-        class="footer-link mx-auto flex w-full max-w-lg flex-col gap-y-2 px-8 py-6 text-sm @md:flex-row @md:justify-between @3xl:max-w-3xl @4xl:max-w-4xl @6xl:max-w-6xl @7xl:max-w-7xl"
+    <!-- Social Icons -->
+    <div class="flex items-center gap-x-4 @4xl:gap-x-2">
+      <!-- Github -->
+      <a
+        title="GitHub"
+        target="_blank"
+        href="https://github.com/odhyp/"
+        class="footer-icon"
       >
-        <a
-          title="Email"
-          target="_blank"
-          href="mailto:{{ .Site.Params.author.email }}"
-          class="flex items-center gap-x-2 hover:underline hover:underline-offset-4"
-          ><i data-lucide="mail" class="size-5"></i
-          >{{ .Site.Params.author.email }}
-        </a>
+        <iconify-icon
+          icon="simple-icons:github"
+          width="20"
+          height="20"
+          class="size-5"
+        ></iconify-icon>
+      </a>
 
-        <span class="text-neutral-50/60"
-          >&copy;
-          {{ now.Year }}
-          {{ .Site.Params.author.name }}
-        </span>
-      </div>
+      <!-- Buymeacoffee -->
+      <a
+        title="Sponsor"
+        target="_blank"
+        href="https://buymeacoffee.com/odhyp"
+        class="footer-icon"
+      >
+        <iconify-icon
+          icon="simple-icons:buymeacoffee"
+          width="20"
+          height="20"
+          class="size-5"
+        ></iconify-icon>
+      </a>
+
+      <!-- RSS Feed -->
+      <a title="RSS Feed" href="/index.xml" class="footer-icon">
+        <iconify-icon
+          icon="material-symbols:rss-feed-rounded"
+          width="20"
+          height="20"
+          class="size-5"
+        ></iconify-icon>
+      </a>
     </div>
   </div>
 </footer>

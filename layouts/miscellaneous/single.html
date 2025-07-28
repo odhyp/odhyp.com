@@ -1,15 +1,13 @@
 {{ define "main" }}
-  <!-- 
-  A basic page for all miscellaneous pages. 
-  This layout is identic to the default single page,
-  with slight modification.
-  -->
-  <section data-pagefind-ignore>
+  <section>
+    <article class="mb-12">
+      <h1 class="my-0! mb-2! leading-tight">{{ .Title }}</h1>
+      <p class="my-0! text-neutral-500 italic">
+        {{ .Params.Description }}
+      </p>
+    </article>
+
     <article>
-      <h1>{{ .Title }}</h1>
-      <h2 class="not-prose mb-8 text-neutral-900/60 italic">
-        {{ .Description }}
-      </h2>
       {{ .Content }}
     </article>
   </section>

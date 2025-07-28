@@ -1,21 +1,18 @@
 +++
 # Metadata
 title = "Python Module: datetime"
-description = "Cheatsheet for handling date and time in Python"
+description = "Cheatsheet for handling date and time in Python" 
 slug = "python-module-datetime"
-date = 2025-06-27T20:44:19+07:00
-lastmod = 2025-06-27T22:35:59+07:00
+date = 2025-07-14T21:27:03+07:00
+lastmod = 2025-07-14T21:27:03+07:00
 draft = false
 
 # Page setting
-section_type = "note" # article, note, log, idea
-stage = "sapling" # sapling, growing, evergreen
-toc = true
-cover = ""
+toc = false
 
 # Taxonomies & Routing
-topics = ["python", "cheatsheet"]
-aliases = ["/python-datetime-summary"]
+category = "python"
+aliases = ["/python-module-datetime"]
 +++
 
 A summary/cheatsheet for Python built-in `datetime` module.

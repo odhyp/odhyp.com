@@ -9,7 +9,9 @@ draft = true
 
 # Page setting
 toc = true
-cover = "https://placehold.co/1200x600"
+featured = false
+project_type = "main" # main or other
+cover = "https://placehold.co/1200x675"
 
 # Taxonomies & Routing
 tech_stacks = []

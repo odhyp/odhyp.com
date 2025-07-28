@@ -1,15 +1,21 @@
 {{- $href := .Get "href" -}}
-{{- $icon := .Get "icon" -}}
-{{- $title := .Get "title" -}}
+{{- $icon := .Get "icon" | default "github" -}}
+{{- $title := .Get "title" | default "Icon Title" -}}
 
 
 <a
   href="{{ $href }}"
   target="_blank"
-  class="not-prose inline-flex items-baseline gap-x-2 border-b-2 border-neutral-200 transition-colors ease-in-out hover:border-neutral-400"
+  class="not-prose group flex items-center gap-x-2 transition-colors duration-300 ease-in-out hover:text-red-700"
 >
-  {{ with $icon }}
-    <i data-lucide="{{ . }}" class="ml-1 size-4"></i>
-  {{ end }}
-  <span class="">{{ $title }}</span>
+  <iconify-icon
+    icon="simple-icons:{{ $icon }}"
+    width="24"
+    height="24"
+    class="size-6"
+  ></iconify-icon>
+  <span
+    class="font-medium underline decoration-neutral-300 underline-offset-4 transition-colors duration-300 ease-in-out group-hover:decoration-red-700"
+    >{{ $title }}</span
+  >
 </a>

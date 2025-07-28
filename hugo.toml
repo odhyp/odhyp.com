@@ -28,12 +28,12 @@ ordered = true
 [minify]
 minifyOutput = true
 
-# Robots.txt Configuration
+# Sitemap Configuration (Taxonomy and Term are currently disabled)
 [outputs]
 home = ["HTML", "RSS", "JSON"]
 section = ["HTML", "RSS"]
-taxonomy = ["HTML", "RSS"]
-term = ["HTML", "RSS"]
+taxonomy = ["HTML"]
+term = ["HTML"]
 
 # Sitemap
 [sitemap]

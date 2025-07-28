@@ -1,10 +1,14 @@
 **[odhyp.com](https://odhyp.com)**
 
-my personal website
+<samp>**my personal website**</samp>
 
 <br>
 
 <samp>code is licensed under <a href='./LICENSE'>MIT</a>,<br> words and images are licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC BY-NC-SA 4.0</a></samp>.
+
+<br>
+
+> <samp>You're welcome to use this as inspiration. Credit is appreciated, but please don't copy it directly.</samp>
 
 <br>
 
@@ -13,19 +17,19 @@ my personal website
 
 <br>
 
-> For my future self:
+_For my future self._
 
-## Future additions?
+## Get-shit-done list
 
 - [ ] Shortcodes
   - [ ] Image side-by-side comparison
   - [ ] Image gallery/slider
-  - [x] Callouts (success, warning, danger, important, info)
-- [ ] Design a good logo
 - [ ] Enlarge images when clicked (image modal)
+- [ ] Filter function for list pages
 - [ ] Search function using Pagefind (put in on top-right corner)
+- [ ] Include Pagefind in package.json (`npm install pagefind`)
 - [ ] Dark mode?
-- [ ] Include pagefind in package.json (`npm install pagefind`)
+- [x] Temporarily disable Pagefind postbuild
 
 ## Adding new content
 

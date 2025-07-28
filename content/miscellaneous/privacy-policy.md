@@ -14,14 +14,6 @@ This site collects minimal data. Just enough to understand what’s working and 
 
 Analytics services may use cookies or similar technologies to function properly. These are used only for analytics purposes.
 
-### Contact Form
-
-A contact form will be added soon. When it's available:
-
-- Your name, email, and message will be used only to respond to your inquiry.
-- I won’t share your message or email with anyone.
-- You won’t be added to any mailing list. I don’t even have one.
-
 ### No Ads or Trackers
 
 This site does not:

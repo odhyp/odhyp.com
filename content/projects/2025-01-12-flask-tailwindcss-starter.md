@@ -9,7 +9,9 @@ draft = false
 
 # Page setting
 toc = false
-cover = ""
+featured = true
+project_type = "other" # main or other
+cover = "https://placehold.co/1200x675"
 
 # Taxonomies & Routing
 tech_stacks = ["python", "flask", "tailwindcss", "vercel"]

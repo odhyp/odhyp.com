@@ -8,8 +8,6 @@ lastmod = 2025-06-27T22:56:41+07:00
 draft = false
 
 # Page setting
-section_type = "article" # article, note, log, idea
-stage = "evergreen" # sapling, growing, evergreen
 toc = true
 cover = "https://tailwindcss.com/_next/static/media/card.d69e3d8c.jpg"
 
