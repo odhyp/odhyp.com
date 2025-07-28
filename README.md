@@ -1,6 +1,6 @@
 **[odhyp.com](https://odhyp.com)**
 
-<samp>**my personal website**</samp>
+my personal website
 
 <br>
 
@@ -8,7 +8,7 @@
 
 <br>
 
-> <samp>You're welcome to use this as inspiration. Credit is appreciated, but please don't copy it directly.</samp>
+<samp>You're welcome to use this as inspiration. Credit is appreciated, but please don't copy it directly.</samp>
 
 <br>
 
@@ -33,16 +33,22 @@ _For my future self._
 
 ## Adding new content
 
-### Writings page
-
-```bash
-hugo new --kind writing writings/2025-06-22-sample-writing.md
-```
-
 ### Projects page
 
 ```bash
-hugo new --kind project projects/2025-06-22-sample-project.md
+hugo new --kind project projects/2025-07-26-sample-project.md
+```
+
+### Writings page
+
+```bash
+hugo new --kind writing writings/2025-07-26-sample-writing.md
+```
+
+### Notes page
+
+```bash
+hugo new --kind note notes/2025-07-26-sample-note.md
 ```
 
 ## Using custom shortcodes
