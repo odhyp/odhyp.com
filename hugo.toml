@@ -9,10 +9,10 @@ enableRobotsTXT = true
 author = { name = "Odhy Pradhana", email = "hello@odhyp.com" }
 description = "Personal website about automation, data visualization, and web development."
 
-# Custom taxonomies
+# Taxonomy (Currently disabled)
 [taxonomies]
-topic = "topics"
-tech_stack = "tech_stacks"
+tag = ""
+category = ""
 
 # Markup highlighting & ToC configuration
 [markup]
@@ -28,12 +28,12 @@ ordered = true
 [minify]
 minifyOutput = true
 
-# Robots.txt Configuration
+# Sitemap Configuration (Taxonomy and Term are currently disabled)
 [outputs]
 home = ["HTML", "RSS", "JSON"]
 section = ["HTML", "RSS"]
-taxonomy = ["HTML", "RSS"]
-term = ["HTML", "RSS"]
+taxonomy = []
+term = []
 
 # Sitemap
 [sitemap]
