@@ -9,10 +9,10 @@ enableRobotsTXT = true
 author = { name = "Odhy Pradhana", email = "hello@odhyp.com" }
 description = "Personal website about automation, data visualization, and web development."
 
-# Taxonomy (Currently disabled)
+# Custom taxonomies
 [taxonomies]
-tag = ""
-category = ""
+topic = "topics"
+tech_stack = "tech_stacks"
 
 # Markup highlighting & ToC configuration
 [markup]
@@ -32,8 +32,8 @@ minifyOutput = true
 [outputs]
 home = ["HTML", "RSS", "JSON"]
 section = ["HTML", "RSS"]
-taxonomy = []
-term = []
+taxonomy = ["HTML"]
+term = ["HTML"]
 
 # Sitemap
 [sitemap]
