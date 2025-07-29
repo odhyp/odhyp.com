@@ -3,10 +3,6 @@
     <article class="mb-12">
       <h1 class="my-0! mb-2! leading-tight">{{ .Title }}</h1>
 
-      <p class="my-0! mb-2! text-neutral-500 italic">
-        {{ .Params.Description }}
-      </p>
-
       <p class="my-0! text-sm text-neutral-500">
         <span class="font-medium">Updated:</span>
         <span
@@ -30,6 +26,6 @@
       <div class="hidden"></div>
     </div>
 
-    {{ partial "components/giscus.html" . }}
+    <!-- {{ partial "components/giscus.html" . }} -->
   </section>
 {{ end }}
