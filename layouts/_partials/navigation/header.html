@@ -5,7 +5,12 @@
   <div class="flex items-center justify-between p-6 lg:px-12">
     <!-- Logo -->
     <a href="/" class="group flex items-center gap-x-4">
-      <img src="/logo.png" alt="Logo" class="size-10 rounded-full md:size-12" />
+      <img
+        src="/logo.png"
+        alt="Logo"
+        loading="eager"
+        class="size-10 rounded-full md:size-12"
+      />
       <span
         class="border-b-2 border-b-neutral-400/0 text-sm font-medium tracking-wide whitespace-nowrap transition-colors duration-300 ease-in-out group-hover:border-b-neutral-400 md:text-base"
         >{{ .Site.Params.author.name }}</span
