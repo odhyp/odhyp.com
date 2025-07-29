@@ -9,7 +9,7 @@ draft = false
 
 # Page setting
 toc = false
-featured = true
+featured = false
 project_type = "other" # main or other
 cover = "https://placehold.co/1200x675"
 
