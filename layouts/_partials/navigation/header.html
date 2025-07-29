@@ -44,11 +44,6 @@
     <!-- Desktop Nav -->
     <nav class="hidden lg:flex lg:gap-x-12">
       <a
-        {{ if eq $current "/" }}aria-current="page"{{ end }}
-        href="/"
-        >Home
-      </a>
-      <a
         {{ if strings.HasPrefix $current "/projects/" }}
           aria-current="page"
         {{ end }}
@@ -68,11 +63,6 @@
         {{ end }}
         href="/notes"
         >Notes
-      </a>
-      <a
-        {{ if eq $current "/now/" }}aria-current="page"{{ end }}
-        href="/now"
-        >Now
       </a>
       <a
         {{ if eq $current "/about/" }}aria-current="page"{{ end }}
