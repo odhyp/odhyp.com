@@ -19,8 +19,16 @@ my personal website
 
 _For my future self._
 
+## My Workflow
+
+1. Create/modify page
+2. Commit changes
+3. Run `npm run final` to finalize
+4. Push
+
 ## Get-shit-done list
 
+- [ ] Add shortcodes guide/how-to-use (hl, cta, album)
 - [ ] Shortcodes
   - [ ] Image side-by-side comparison
   - [ ] Image gallery/slider
