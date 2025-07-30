@@ -11,7 +11,7 @@ draft = false
 toc = true
 featured = true
 project_type = "main" # main or other
-cover = "https://www.notion.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Fspoqsaf9291f%2F3SCnrzrIahW7ZjVCPGu8Zz%2F74aabfce93e6ce46d55a35296a463255%2Fmail02-final.png&w=3840&q=75"
+cover = "/images/2024-10-27/cover-sipd-ri-helper.webp"
 
 # Taxonomies & Routing
 tech_stacks = ["python","web automation", "playwright", "pandas", "CLI"]
