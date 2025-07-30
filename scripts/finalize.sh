@@ -7,7 +7,7 @@
 set -e
 
 echo "🔄 Updating lastmod..."
-bash update_lastmod.sh
+bash scripts/update_lastmod.sh
 
 echo "🎨 Formatting..."
 npx prettier . --write
