@@ -22,6 +22,7 @@
   "scripts": {
     "dev": "bash scripts/dev.sh",
     "preview": "hugo server --disableFastRender --navigateToChanged --templateMetrics --templateMetricsHints --watch --forceSyncStatic -e production --minify",
+    "prebuild": "npm run lastmod:update",
     "build": "hugo --gc --minify --templateMetrics --templateMetricsHints --forceSyncStatic",
     "disabled-postbuild": "npx pagefind --site public",
     "lastmod:check": "bash scripts/update_lastmod.sh --dry-run",
