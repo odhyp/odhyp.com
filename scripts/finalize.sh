@@ -20,7 +20,7 @@ if git diff --quiet; then
 fi
 
 echo "📦 Staging and committing changes..."
-git add contents/
+git add content/
 git commit -m "chore(final): update lastmod and format content"
 
 echo "✅ Done. You can now push the changes manually."
