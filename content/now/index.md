@@ -1,7 +1,7 @@
 +++
 title = "Now"
 toc = false
-lastmod = 2025-06-27T22:56:41+07:00
+lastmod = 2025-07-30T09:51:13+07:00
 +++
 
 ## Work
@@ -53,6 +53,7 @@ These are the albums I listen to the most:
 Most of the time, it's about minimalism, though I usually prefer watching it on YouTube. Sometimes in life, you’re stuck waiting in a long queue or for the train to arrive. I’d rather listen to this than fall into doomscrolling, honestly.
 
 {{< wrapper class="flex flex-col gap-y-4 w-full items-center sm:justify-between sm:flex-row sm:gap-x-4" >}}
+
 <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/show/6vesMIAKe4rv2MpvTvkWPg/video?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/show/41Av6Rq81LfOT3Volz7W9D?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 {{< /wrapper >}}
