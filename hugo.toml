@@ -7,7 +7,7 @@ enableRobotsTXT = true
 # SEO Optimization
 [params]
 author = { name = "Odhy Pradhana", email = "hello@odhyp.com" }
-description = "Personal website about automation, data visualization, and web development."
+description = "Writings on automation, data visualization, and web development."
 
 # Custom taxonomies
 [taxonomies]
