@@ -1,17 +1,34 @@
 {{ define "main" }}
   <section class="@container space-y-16 p-0 md:px-8 lg:px-12">
     <!-- 1. HERO -->
-    <section class="w-full max-w-3xl lg:mx-auto lg:max-w-6xl">
+    <section
+      class="w-full max-w-3xl md:max-w-5xl lg:mx-auto lg:max-w-6xl lg:pb-24"
+    >
       <h1
-        class="font-geist mb-8 text-3xl leading-tight font-light tracking-tight sm:text-4xl lg:text-6xl"
+        class="font-geist mb-8 text-5xl leading-tight font-bold tracking-tight md:text-6xl"
       >
-        <span class="font-bold">Streamlined systems</span>
-        built through automation, data visualization, and web development.
+        Automate. Structure. Build.
       </h1>
+
       <div
-        class="prose prose-neutral md:prose-lg xl:prose-xl 2xl:prose-2xl prose-a:text-red-700"
+        class="prose prose-neutral md:prose-lg xl:prose-xl 2xl:prose-2xl prose-a:text-red-700 w-full max-w-3xl"
       >
         {{ .Content }}
+      </div>
+
+      <div class="my-4 md:my-8">
+        <a
+          href="mailto:{{ .Site.Params.author.email }}"
+          class="group flex w-fit items-center gap-x-2.5 rounded-md border border-neutral-200 bg-neutral-50 px-8 py-2.5 shadow-md transition-all duration-300 ease-in-out hover:border-neutral-300 hover:shadow-lg"
+        >
+          <span class="text-sm md:text-base">Say Hello</span>
+          <iconify-icon
+            icon="material-symbols:arrow-right-alt-rounded"
+            width="20"
+            height="20"
+            class="size-5 transition-transform duration-300 ease-in-out group-hover:translate-x-1"
+          ></iconify-icon>
+        </a>
       </div>
     </section>
 
@@ -23,7 +40,7 @@
 
     <section
       id="featured-projects"
-      class="w-full max-w-3xl pt-0 lg:mx-auto lg:max-w-6xl"
+      class="w-full max-w-3xl pt-0 md:max-w-5xl lg:mx-auto lg:max-w-6xl"
     >
       <article class="mx-0!">
         <h1 class="mb-0! font-semibold tracking-tight">Featured Projects</h1>
@@ -34,7 +51,7 @@
 
       <div class="@container my-8 lg:my-16">
         <div
-          class="grid w-full max-w-full grid-cols-1 gap-12 @5xl:grid-cols-2 @5xl:gap-16"
+          class="grid w-full max-w-full grid-cols-1 gap-12 md:grid-cols-2 md:gap-8 lg:gap-16"
         >
           {{ range first 4 $sorted }}
             <div class="flex flex-col gap-y-4">
@@ -91,7 +108,7 @@
 
     <section
       id="latest-writings"
-      class="w-full max-w-3xl pt-0 lg:mx-auto lg:max-w-6xl"
+      class="w-full max-w-3xl pt-0 md:max-w-5xl lg:mx-auto lg:max-w-6xl"
     >
       <article class="mx-0!">
         <h1 class="mb-0! font-semibold tracking-tight">Latest Writings</h1>
@@ -102,7 +119,7 @@
 
       <div class="@container my-8 lg:my-16">
         <div
-          class="grid w-full max-w-full grid-cols-1 gap-12 @5xl:grid-cols-2 @5xl:gap-16"
+          class="grid w-full max-w-full grid-cols-1 gap-12 md:grid-cols-2 md:gap-8 lg:gap-16"
         >
           {{ range first 4 $sorted }}
             <div class="flex flex-col gap-y-4">
