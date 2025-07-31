@@ -9,10 +9,9 @@ draft = false
 
 # Page setting
 toc = false
-cover = "https://placehold.co/1200x675"
 
 # Taxonomies & Routing
-topics = ["obsidian", "git"]
+category = "Obsidian"
 aliases = ["/obsidian-and-git"]
 +++
 
