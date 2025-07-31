@@ -4,7 +4,7 @@ title = "Kalkulator PKB"
 description = "A simple web app to estimate Indonesian vehicle tax (PKB & PKBOP) based on your vehicle data" 
 slug = "kalkulator-pkb"
 date = 2025-07-25T07:45:52+07:00
-lastmod = 2025-07-28T22:54:12+07:00
+lastmod = 2025-07-31T14:41:04+07:00
 draft = false
 
 # Page setting

@@ -33,25 +33,25 @@ Each CRON job uses a 5-field format:
 
 ## Examples
 
-| Schedule              | CRON Expression     | Description                      |
-|-----------------------|---------------------|----------------------------------|
-| Every minute          | `* * * * *`         | Runs every minute                |
-| Every day at 7 AM     | `0 7 * * *`         | Runs daily at 07:00              |
-| Every Monday at 9 AM  | `0 9 * * 1`         | Runs every Monday at 09:00       |
-| First day of month    | `0 0 1 * *`         | Runs monthly at midnight on the 1st |
-| Every 15 minutes      | `*/15 * * * *`      | Runs every 15 minutes            |
+| Schedule             | CRON Expression | Description                         |
+| -------------------- | --------------- | ----------------------------------- |
+| Every minute         | `* * * * *`     | Runs every minute                   |
+| Every day at 7 AM    | `0 7 * * *`     | Runs daily at 07:00                 |
+| Every Monday at 9 AM | `0 9 * * 1`     | Runs every Monday at 09:00          |
+| First day of month   | `0 0 1 * *`     | Runs monthly at midnight on the 1st |
+| Every 15 minutes     | `*/15 * * * *`  | Runs every 15 minutes               |
 
 ## Special Strings
 
 CRON also supports special time strings:
 
-| String      | Equivalent         |
-|-------------|--------------------|
-| `@reboot`   | Run once at startup|
-| `@daily`    | `0 0 * * *`        |
-| `@weekly`   | `0 0 * * 0`        |
-| `@monthly`  | `0 0 1 * *`        |
-| `@yearly`   | `0 0 1 1 *`        |
+| String     | Equivalent          |
+| ---------- | ------------------- |
+| `@reboot`  | Run once at startup |
+| `@daily`   | `0 0 * * *`         |
+| `@weekly`  | `0 0 * * 0`         |
+| `@monthly` | `0 0 1 * *`         |
+| `@yearly`  | `0 0 1 1 *`         |
 
 ## Notes
 
