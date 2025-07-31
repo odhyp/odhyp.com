@@ -15,6 +15,21 @@
       >
         {{ .Content }}
       </div>
+
+      <div class="my-4 md:my-8">
+        <a
+          href="mailto:{{ .Site.Params.author.email }}"
+          class="group flex w-fit items-center gap-x-2.5 rounded-md border border-neutral-200 bg-neutral-50 px-8 py-2.5 shadow-md transition-all duration-300 ease-in-out hover:border-neutral-300 hover:shadow-lg"
+        >
+          <span class="text-sm md:text-base">Say Hello</span>
+          <iconify-icon
+            icon="material-symbols:arrow-right-alt-rounded"
+            width="20"
+            height="20"
+            class="size-5 transition-transform duration-300 ease-in-out group-hover:translate-x-1"
+          ></iconify-icon>
+        </a>
+      </div>
     </section>
 
     <!-- 2. FEATURED PROJECTS -->
