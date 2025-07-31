@@ -11,10 +11,7 @@
         loading="eager"
         class="size-10 rounded-full md:size-12"
       />
-      <span
-        class="border-b-2 border-b-neutral-400/0 text-sm font-medium tracking-wide whitespace-nowrap transition-colors duration-300 ease-in-out group-hover:border-b-neutral-400 md:text-base"
-        >{{ .Site.Params.author.name }}</span
-      >
+      <span class="logo-item">{{ .Site.Params.author.name }}</span>
     </a>
 
     <!-- Hamburger Menu Button -->
@@ -63,6 +60,11 @@
         {{ end }}
         href="/notes"
         >Notes
+      </a>
+      <a
+        {{ if eq $current "/now/" }}aria-current="page"{{ end }}
+        href="/now"
+        >Now
       </a>
       <a
         {{ if eq $current "/about/" }}aria-current="page"{{ end }}
