@@ -1,5 +1,6 @@
 +++
 title = "Now"
+description = "What I’m currently building, exploring, and thinking about."
 toc = false
 lastmod = 2025-07-30T09:51:13+07:00
 +++
