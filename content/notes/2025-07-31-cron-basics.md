@@ -4,7 +4,7 @@ title = "CRON Basics"
 description = "A quick reference to CRON syntax, common schedules, and tips" 
 slug = "cron-basics"
 date = 2025-07-31T14:46:50+07:00
-lastmod = 2025-07-31T14:46:50+07:00
+lastmod = 2025-07-31T14:55:15+07:00
 draft = false
 
 # Page setting
