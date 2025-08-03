@@ -11,7 +11,6 @@ draft = false
 toc = true
 featured = false
 project_type = "other" # main or other
-version = "1.0.0"
 cover = "/images/2024-06-30/wedding-invitation-cover.webp"
 
 # Taxonomies & Routing

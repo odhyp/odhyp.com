@@ -11,7 +11,6 @@ draft = true
 toc = true
 featured = false
 project_type = "main" # main or other
-version = "0.0.1"
 cover = "https://placehold.co/1200x675"
 
 # Taxonomies & Routing

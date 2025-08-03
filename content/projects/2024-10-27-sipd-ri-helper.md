@@ -11,7 +11,6 @@ draft = false
 toc = true
 featured = true
 project_type = "main" # main or other
-version = "2.3"
 cover = "/images/2024-10-27/cover-sipd-ri-helper.webp"
 
 # Taxonomies & Routing
