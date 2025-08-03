@@ -38,10 +38,7 @@
     {{ $sorted := sort $featured "Lastmod" "desc" }}
 
 
-    <section
-      id="featured-projects"
-      class="w-full max-w-3xl pt-0 md:max-w-5xl lg:mx-auto lg:max-w-6xl"
-    >
+    <section id="featured-projects" class="mx-auto w-full max-w-6xl pt-0">
       <article class="mx-0!">
         <h1 class="mb-0! font-semibold tracking-tight">Featured Projects</h1>
         <p class="text-neutral-500 italic">
@@ -51,7 +48,7 @@
 
       <div class="@container my-8 lg:my-16">
         <div
-          class="grid w-full max-w-full grid-cols-1 gap-12 md:grid-cols-2 md:gap-8 lg:gap-16"
+          class="grid w-full max-w-full grid-cols-1 gap-12 @3xl:grid-cols-2 @3xl:gap-8 @5xl:gap-12"
         >
           {{ range first 4 $sorted }}
             <div class="flex flex-col gap-y-4">
@@ -106,10 +103,7 @@
     {{ $sorted := sort $writings "Lastmod" "desc" }}
 
 
-    <section
-      id="latest-writings"
-      class="w-full max-w-3xl pt-0 md:max-w-5xl lg:mx-auto lg:max-w-6xl"
-    >
+    <section id="latest-writings" class="mx-auto w-full max-w-6xl pt-0">
       <article class="mx-0!">
         <h1 class="mb-0! font-semibold tracking-tight">Latest Writings</h1>
         <p class="text-neutral-500 italic">
@@ -119,7 +113,7 @@
 
       <div class="@container my-8 lg:my-16">
         <div
-          class="grid w-full max-w-full grid-cols-1 gap-12 md:grid-cols-2 md:gap-8 lg:gap-16"
+          class="grid w-full max-w-full grid-cols-1 gap-12 @3xl:grid-cols-2 @3xl:gap-8 @5xl:gap-12"
         >
           {{ range first 4 $sorted }}
             <div class="flex flex-col gap-y-4">
