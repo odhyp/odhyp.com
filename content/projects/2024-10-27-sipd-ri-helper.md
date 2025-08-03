@@ -11,6 +11,7 @@ draft = false
 toc = true
 featured = true
 project_type = "main" # main or other
+version = "2.3"
 cover = "/images/2024-10-27/cover-sipd-ri-helper.webp"
 
 # Taxonomies & Routing
@@ -20,9 +21,8 @@ aliases = ["/sipd-ri-helper", "/sipd-ri"]
 
 **SIPD-RI Helper** is a Python-based command-line application that automates tasks on the [SIPD-RI](https://sipd.kemendagri.go.id/landing) web application. It helps reduce human error and saves time by automating browser actions using Playwright, from login to form submission and data retrieval.
 
-{{< wrapper class="grid grid-cols-1 gap-y-4 sm:grid-cols-2 sm:gap-x-8" >}}
+{{< wrapper class="flex justify-center items-center [&>*]:w-fit" >}}
 {{< cta href="https://github.com/odhyp/sipd-ri" icon="github" text="View Repository" >}}
-{{< cta href="/" group="material-symbols" icon="book-5-rounded" text="Visit Documentation" >}}
 {{< /wrapper >}}
 
 ## Features

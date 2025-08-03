@@ -11,6 +11,7 @@ draft = false
 toc = false
 featured = false
 project_type = "other" # main or other
+version = "1.2"
 cover = "/images/2025-07-25/cover-kalkulator-pkb.webp"
 
 # Taxonomies & Routing

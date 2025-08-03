@@ -1,9 +1,6 @@
 {{ define "main" }}
-  <section
-    id="main-projects"
-    class="w-full sm:mx-auto sm:max-w-lg md:max-w-xl lg:max-w-6xl"
-  >
-    <article class="lg:mx-0!">
+  <section id="main-projects" class="mx-auto w-full max-w-6xl">
+    <article class="mx-0!">
       <h1 class="mb-0! font-bold tracking-tight">Main Projects</h1>
       <p class="text-neutral-500 italic">
         Core projects with ongoing attention and long-term goals.
@@ -12,7 +9,7 @@
 
     <div class="@container my-8 lg:my-16">
       <div
-        class="grid w-full max-w-full grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16"
+        class="grid w-full max-w-full grid-cols-1 gap-12 @3xl:grid-cols-2 @3xl:gap-8 @5xl:gap-12"
       >
         {{ range sort (where .Pages "Params.project_type" "main") "Lastmod" "desc" }}
           <div class="flex flex-col gap-y-4">
@@ -38,6 +35,10 @@
                 {{ .Description }}
               </p>
               <div class="mt-2 flex flex-wrap gap-2">
+                <span
+                  class="font-geist rounded-md bg-red-200 px-2 py-1 text-xs font-semibold text-red-900"
+                  >v{{ .Params.version }}
+                </span>
                 {{ partial "components/tech-stacks.html" . }}
               </div>
             </div>
@@ -47,10 +48,7 @@
     </div>
   </section>
 
-  <section
-    id="other-projects"
-    class="w-full max-w-3xl pt-16 lg:mx-auto lg:max-w-6xl lg:pt-0"
-  >
+  <section id="other-projects" class="mx-auto w-full max-w-6xl lg:pt-0">
     <article class="mx-0!">
       <h1 class="mb-0! font-bold tracking-tight">Other Projects</h1>
       <p class="text-neutral-500 italic">
@@ -60,7 +58,7 @@
 
     <div class="@container my-8 lg:my-16">
       <div
-        class="grid w-full max-w-full grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16"
+        class="grid w-full max-w-full grid-cols-1 gap-12 @3xl:grid-cols-2 @3xl:gap-8 @5xl:gap-12"
       >
         {{ range sort (where .Pages "Params.project_type" "other") "Lastmod" "desc" }}
           <div class="flex flex-col gap-y-4">
@@ -79,13 +77,17 @@
             <div class="flex flex-col gap-y-2 px-4">
               <a
                 href="{{ .RelPermalink }}"
-                class="font-geist w-fit text-xl font-bold transition-colors duration-300 ease-in-out hover:text-red-700 sm:text-2xl"
+                class="font-geist w-fit text-xl font-bold tracking-tight transition-colors duration-300 ease-in-out hover:text-red-700 sm:text-2xl"
                 >{{ .Title }}
               </a>
               <p class="font-inter text-neutral-600 sm:text-lg">
                 {{ .Description }}
               </p>
               <div class="mt-2 flex flex-wrap gap-2">
+                <span
+                  class="font-geist rounded-md bg-red-200 px-2 py-1 text-xs font-semibold text-red-900"
+                  >v{{ .Params.version }}
+                </span>
                 {{ partial "components/tech-stacks.html" . }}
               </div>
             </div>
