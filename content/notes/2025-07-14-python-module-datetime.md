@@ -1,6 +1,6 @@
 +++
 # Metadata
-title = "Python Module: datetime"
+title = "Python Module: Datetime"
 description = "Cheatsheet for handling date and time in Python" 
 slug = "python-module-datetime"
 date = 2025-07-14T21:27:03+07:00
