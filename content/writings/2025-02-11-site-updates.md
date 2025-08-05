@@ -5,18 +5,16 @@ description = "A simple record of the ongoing tweaks and changes I’m making to
 slug = "site-updates"
 date = 2025-02-11T19:45:32+07:00
 lastmod = 2025-07-28T14:54:10+07:00
-draft = false
+draft = true
 
 # Page setting
 toc = true
-cover = "https://placehold.co/1200x675"
+cover = "/images/2025-02-11/05-orion-extended.webp"
 
 # Taxonomies & Routing
 topics = ["digital garden", "updates"]
 aliases = ["/site-updates", "/a-new-look", "/blog/a-new-look"]
 +++
-
-## July 2025
 
 ## April 2025
 
