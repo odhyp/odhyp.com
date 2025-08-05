@@ -9,7 +9,7 @@ draft = false
 
 # Page setting
 toc = true
-cover = "https://placehold.co/1200x675"
+cover = "https://astral.sh/static/OpenGraph/UV.png"
 
 # Taxonomies & Routing
 topics = ["python"]
