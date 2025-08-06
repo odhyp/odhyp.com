@@ -11,7 +11,7 @@ draft = false
 toc = false
 featured = false
 project_type = "other" # main or other
-cover = "https://placehold.co/1200x675"
+cover = "/images/2025-01-12/flask-tailwind-cover.webp"
 
 # Taxonomies & Routing
 tech_stacks = ["python", "flask", "tailwindcss", "vercel"]
